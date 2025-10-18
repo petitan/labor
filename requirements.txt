@@ -1,0 +1,5 @@
+# Production dependencies
+# Add your runtime dependencies here
+# Example:
+# requests>=2.31.0
+# click>=8.1.0
