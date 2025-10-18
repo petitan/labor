@@ -6,14 +6,14 @@ from pathlib import Path
 import pytest
 
 from labor.generic_converter import (
-    get_nested_value,
-    set_nested_value,
-    replace_in_structure,
     apply_transform,
-    substitute_simple_placeholders,
-    expand_repeatable_tables,
+    convert_with_format,
     expand_repeatable_lists,
-    convert_with_format
+    expand_repeatable_tables,
+    get_nested_value,
+    replace_in_structure,
+    set_nested_value,
+    substitute_simple_placeholders,
 )
 
 # Paths
@@ -47,13 +47,13 @@ class TestHelperFunctions:
 
     def test_set_nested_value_simple(self):
         """Test setting value with simple path."""
-        data = {}
+        data: dict[str, str] = {}
         set_nested_value(data, "procedure_code", "TEST-001")
         assert data == {"procedure_code": "TEST-001"}
 
     def test_set_nested_value_nested(self):
         """Test setting value with nested path."""
-        data = {}
+        data: dict[str, dict[str, str]] = {}
         set_nested_value(data, "scope.equipment_description", "Test")
         assert data == {"scope": {"equipment_description": "Test"}}
 
@@ -84,7 +84,7 @@ class TestHelperFunctions:
         """Test standards_description transform."""
         value = [
             {"name": "Standard 1", "accuracy": "0.01%"},
-            {"name": "Standard 2", "accuracy": "0.02%"}
+            {"name": "Standard 2", "accuracy": "0.02%"},
         ]
         result = apply_transform(value, "standards_description")
         assert "Standard 1 (Pontosság: 0.01%)" in result
@@ -101,18 +101,12 @@ class TestPlaceholderSubstitution:
 
     def test_substitute_simple_placeholders(self):
         """Test simple placeholder substitution."""
-        template = {
-            "title": "{{ELJARAS_CIM}}",
-            "code": "{{ELJARAS_KOD}}"
-        }
-        input_data = {
-            "procedure_title": "Test Procedure",
-            "procedure_code": "TEST-001"
-        }
+        template = {"title": "{{ELJARAS_CIM}}", "code": "{{ELJARAS_KOD}}"}
+        input_data = {"procedure_title": "Test Procedure", "procedure_code": "TEST-001"}
         format_config = {
             "simple_mappings": {
                 "{{ELJARAS_CIM}}": "procedure_title",
-                "{{ELJARAS_KOD}}": "procedure_code"
+                "{{ELJARAS_KOD}}": "procedure_code",
             }
         }
 
@@ -122,19 +116,11 @@ class TestPlaceholderSubstitution:
 
     def test_substitute_array_mappings(self):
         """Test array placeholder substitution."""
-        template = {
-            "ranges": ["{{TARTOMANY_1}}", "{{TARTOMANY_2}}"]
-        }
-        input_data = {
-            "scope": {
-                "measurement_ranges": ["Range 1", "Range 2", "Range 3"]
-            }
-        }
+        template = {"ranges": ["{{TARTOMANY_1}}", "{{TARTOMANY_2}}"]}
+        input_data = {"scope": {"measurement_ranges": ["Range 1", "Range 2", "Range 3"]}}
         format_config = {
             "array_mappings": {
-                "scope.measurement_ranges": {
-                    "placeholders": ["{{TARTOMANY_1}}", "{{TARTOMANY_2}}"]
-                }
+                "scope.measurement_ranges": {"placeholders": ["{{TARTOMANY_1}}", "{{TARTOMANY_2}}"]}
             }
         }
 
@@ -143,18 +129,11 @@ class TestPlaceholderSubstitution:
 
     def test_substitute_custom_mappings(self):
         """Test custom mappings with transforms."""
-        template = {
-            "references": "{{HIVATKOZASOK}}"
-        }
-        input_data = {
-            "references": ["Ref1", "Ref2", "Ref3"]
-        }
+        template = {"references": "{{HIVATKOZASOK}}"}
+        input_data = {"references": ["Ref1", "Ref2", "Ref3"]}
         format_config = {
             "custom_mappings": {
-                "{{HIVATKOZASOK}}": {
-                    "source": "references",
-                    "transform": "join_with_comma"
-                }
+                "{{HIVATKOZASOK}}": {"source": "references", "transform": "join_with_comma"}
             }
         }
 
@@ -173,7 +152,7 @@ class TestRepeatableBlocks:
                     "type": "table",
                     "caption": "Jelölések és mértékegységek",
                     "note": "ISMÉTELHETŐ",
-                    "rows": [["{{JELOLES_1}}", "{{SZIMBOLUM_1}}", "{{EGYSEG_1}}"]]
+                    "rows": [["{{JELOLES_1}}", "{{SZIMBOLUM_1}}", "{{EGYSEG_1}}"]],
                 }
             ]
         }
@@ -181,7 +160,7 @@ class TestRepeatableBlocks:
             "notations": [
                 {"name": "CO", "symbol": "$CO$", "unit": "%"},
                 {"name": "CO₂", "symbol": "$CO_2$", "unit": "%"},
-                {"name": "HC", "symbol": "$HC$", "unit": "ppm"}
+                {"name": "HC", "symbol": "$HC$", "unit": "ppm"},
             ]
         }
         format_config = {
@@ -191,9 +170,9 @@ class TestRepeatableBlocks:
                     "source": "notations",
                     "identification": {
                         "has_note_containing": "ISMÉTELHETŐ",
-                        "has_caption_containing": "Jelölések"
+                        "has_caption_containing": "Jelölések",
                     },
-                    "row_fields": ["name", "symbol", "unit"]
+                    "row_fields": ["name", "symbol", "unit"],
                 }
             }
         }
@@ -214,9 +193,9 @@ class TestRepeatableBlocks:
                     "items": [
                         [
                             {"type": "math", "content": "{{VALTOZO_1}}"},
-                            {"type": "text", "content": "{{VALTOZO_1_LEIRAS}}"}
+                            {"type": "text", "content": "{{VALTOZO_1_LEIRAS}}"},
                         ]
-                    ]
+                    ],
                 }
             ]
         }
@@ -224,7 +203,7 @@ class TestRepeatableBlocks:
             "calibration_method": {
                 "equation_variables": [
                     {"symbol": "h", "description": "mérési hiba", "unit": "%"},
-                    {"symbol": "X_m", "description": "mért érték", "unit": "%"}
+                    {"symbol": "X_m", "description": "mért érték", "unit": "%"},
                 ]
             }
         }
@@ -233,13 +212,11 @@ class TestRepeatableBlocks:
                 "equation_variables": {
                     "type": "list_unordered",
                     "source": "calibration_method.equation_variables",
-                    "identification": {
-                        "has_items_containing": "{{VALTOZO"
-                    },
+                    "identification": {"has_items_containing": "{{VALTOZO"},
                     "item_template": [
                         {"type": "math", "content": "{symbol}"},
-                        {"type": "text", "content": " -- {description} [{unit}]"}
-                    ]
+                        {"type": "text", "content": " -- {description} [{unit}]"},
+                    ],
                 }
             }
         }
@@ -263,9 +240,7 @@ class TestFullConversion:
             pytest.skip("Required files not found")
 
         docjl_data = convert_with_format(
-            str(EMISSION_INPUT_PATH),
-            str(TEMPLATE_PATH),
-            str(FORMAT_PATH)
+            str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
         # Check basic structure
@@ -283,9 +258,7 @@ class TestFullConversion:
             pytest.skip("Required files not found")
 
         docjl_data = convert_with_format(
-            str(EMISSION_INPUT_PATH),
-            str(TEMPLATE_PATH),
-            str(FORMAT_PATH)
+            str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
         # Find notations table
@@ -304,9 +277,7 @@ class TestFullConversion:
             pytest.skip("Required files not found")
 
         docjl_data = convert_with_format(
-            str(EMISSION_INPUT_PATH),
-            str(TEMPLATE_PATH),
-            str(FORMAT_PATH)
+            str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
         # Find equation variables list
@@ -314,12 +285,16 @@ class TestFullConversion:
         for block in docjl_data["docjll"]:
             if block.get("type") == "list_unordered":
                 items = block.get("items", [])
-                if items and len(items) >= 6:
-                    # Check if first item contains math
-                    if isinstance(items[0], list) and len(items[0]) > 0:
-                        if items[0][0].get("type") == "math":
-                            eq_vars_list = block
-                            break
+                # Check if first item contains math
+                if (
+                    items
+                    and len(items) >= 6
+                    and isinstance(items[0], list)
+                    and len(items[0]) > 0
+                    and items[0][0].get("type") == "math"
+                ):
+                    eq_vars_list = block
+                    break
 
         assert eq_vars_list is not None
         assert len(eq_vars_list["items"]) == 6  # Emission data has 6 equation variables
@@ -330,9 +305,7 @@ class TestFullConversion:
             pytest.skip("Required files not found")
 
         docjl_data = convert_with_format(
-            str(EMISSION_INPUT_PATH),
-            str(TEMPLATE_PATH),
-            str(FORMAT_PATH)
+            str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
         # Find measurement results table
@@ -351,9 +324,7 @@ class TestFullConversion:
             pytest.skip("Required files not found")
 
         docjl_data = convert_with_format(
-            str(EMISSION_INPUT_PATH),
-            str(TEMPLATE_PATH),
-            str(FORMAT_PATH)
+            str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
         # Find validation criteria table

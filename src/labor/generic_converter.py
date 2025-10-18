@@ -4,10 +4,10 @@ This module provides a universal converter that works with ANY calibration proce
 It reads format configuration from calibration_format.json and applies it to input data.
 """
 
-import json
 import copy
+import json
 from pathlib import Path
-from typing import Any, Dict, List, Union
+from typing import Any
 
 
 def get_nested_value(data: dict, json_path: str, default: Any = "") -> Any:
@@ -31,7 +31,7 @@ def get_nested_value(data: dict, json_path: str, default: Any = "") -> Any:
     if not json_path:
         return default
 
-    keys = json_path.split('.')
+    keys = json_path.split(".")
     current = data
 
     for key in keys:
@@ -52,7 +52,7 @@ def set_nested_value(data: dict, json_path: str, value: Any) -> None:
         json_path: Path like "scope.equipment_description"
         value: Value to set
     """
-    keys = json_path.split('.')
+    keys = json_path.split(".")
     current = data
 
     for key in keys[:-1]:
@@ -85,18 +85,19 @@ def replace_in_structure(obj: Any, placeholder: str, value: str) -> Any:
         return obj
 
 
-def apply_transform(value: Any, transform: str, context: dict = None) -> str:
+def apply_transform(value: Any, transform: str, context: dict | None = None) -> str:
     """
     Apply transformation to a value.
 
     Args:
         value: Value to transform
         transform: Transform name
-        context: Additional context for transformation
+        context: Additional context for transformation (reserved for future use)
 
     Returns:
         Transformed string value
     """
+    _ = context  # Reserved for future use
     if transform == "join_with_comma":
         if isinstance(value, list):
             return ", ".join(str(v) for v in value)
@@ -106,8 +107,8 @@ def apply_transform(value: Any, transform: str, context: dict = None) -> str:
         if isinstance(value, list):
             lines = []
             for std in value:
-                name = std.get('name', '')
-                accuracy = std.get('accuracy', '')
+                name = std.get("name", "")
+                accuracy = std.get("accuracy", "")
                 lines.append(f"{name} (Pontosság: {accuracy})")
             return "\n".join(lines)
         return str(value)
@@ -120,7 +121,9 @@ def apply_transform(value: Any, transform: str, context: dict = None) -> str:
     return str(value)
 
 
-def substitute_simple_placeholders(template_data: dict, input_data: dict, format_config: dict) -> dict:
+def substitute_simple_placeholders(
+    template_data: dict, input_data: dict, format_config: dict
+) -> dict:
     """
     Substitute simple 1:1 placeholder mappings.
 
@@ -180,7 +183,7 @@ def expand_repeatable_tables(template_data: dict, input_data: dict, format_confi
     """
     result = copy.deepcopy(template_data)
 
-    for block_name, block_config in format_config.get("repeatable_blocks", {}).items():
+    for _block_name, block_config in format_config.get("repeatable_blocks", {}).items():
         if block_config.get("type") != "table":
             continue
 
@@ -194,29 +197,33 @@ def expand_repeatable_tables(template_data: dict, input_data: dict, format_confi
         identification = block_config.get("identification", {})
         row_fields = block_config.get("row_fields", [])
 
-        for i, block in enumerate(result.get('docjll', [])):
-            if block.get('type') != 'table':
+        for i, block in enumerate(result.get("docjll", [])):
+            if block.get("type") != "table":
                 continue
 
             # Check identification criteria
-            note = block.get('note', '')
-            caption = block.get('caption', '')
+            note = block.get("note", "")
+            caption = block.get("caption", "")
 
             matches = True
-            if 'has_note_containing' in identification:
-                if identification['has_note_containing'] not in note:
-                    matches = False
-            if 'has_caption_containing' in identification:
-                if identification['has_caption_containing'] not in caption:
-                    matches = False
+            if (
+                "has_note_containing" in identification
+                and identification["has_note_containing"] not in note
+            ):
+                matches = False
+            if (
+                "has_caption_containing" in identification
+                and identification["has_caption_containing"] not in caption
+            ):
+                matches = False
 
             if not matches:
                 continue
 
             # Found matching table - expand rows
-            new_rows = []
+            new_rows: list[list[Any]] = []
             for item in source_data:
-                row = []
+                row: list[str | list[Any]] = []
                 for field in row_fields:
                     value = item.get(field, "")
                     # Megőrizzük az inline array struktúrát (lista)
@@ -227,7 +234,7 @@ def expand_repeatable_tables(template_data: dict, input_data: dict, format_confi
                         row.append(str(value))  # String konverzió csak nem-lista esetén
                 new_rows.append(row)
 
-            result['docjll'][i]['rows'] = new_rows
+            result["docjll"][i]["rows"] = new_rows
             break
 
     return result
@@ -247,7 +254,7 @@ def expand_repeatable_lists(template_data: dict, input_data: dict, format_config
     """
     result = copy.deepcopy(template_data)
 
-    for block_name, block_config in format_config.get("repeatable_blocks", {}).items():
+    for _block_name, block_config in format_config.get("repeatable_blocks", {}).items():
         if block_config.get("type") != "list_unordered":
             continue
 
@@ -261,18 +268,20 @@ def expand_repeatable_lists(template_data: dict, input_data: dict, format_config
         identification = block_config.get("identification", {})
         item_template = block_config.get("item_template", [])
 
-        for i, block in enumerate(result.get('docjll', [])):
-            if block.get('type') != 'list_unordered':
+        for i, block in enumerate(result.get("docjll", [])):
+            if block.get("type") != "list_unordered":
                 continue
 
             # Check identification criteria
-            items = block.get('items', [])
+            items = block.get("items", [])
             items_str = json.dumps(items)
 
             matches = True
-            if 'has_items_containing' in identification:
-                if identification['has_items_containing'] not in items_str:
-                    matches = False
+            if (
+                "has_items_containing" in identification
+                and identification["has_items_containing"] not in items_str
+            ):
+                matches = False
 
             if not matches:
                 continue
@@ -286,26 +295,24 @@ def expand_repeatable_lists(template_data: dict, input_data: dict, format_config
                     part = copy.deepcopy(template_part)
 
                     # Replace {field} placeholders with actual data
-                    if 'content' in part:
-                        content = part['content']
+                    if "content" in part:
+                        content = part["content"]
                         for field, value in item_data.items():
                             content = content.replace(f"{{{field}}}", str(value))
-                        part['content'] = content
+                        part["content"] = content
 
                     new_item.append(part)
 
                 new_items.append(new_item)
 
-            result['docjll'][i]['items'] = new_items
+            result["docjll"][i]["items"] = new_items
             break
 
     return result
 
 
 def convert_with_format(
-    input_json_path: str,
-    template_json_path: str,
-    format_json_path: str
+    input_json_path: str, template_json_path: str, format_json_path: str
 ) -> dict:
     """
     Convert calibration input to docjl format using format configuration.
@@ -333,13 +340,13 @@ def convert_with_format(
         >>> latex = converter.convert(json.dumps(docjl_data))
     """
     # Load files
-    with open(input_json_path, 'r', encoding='utf-8') as f:
+    with Path(input_json_path).open(encoding="utf-8") as f:
         input_data = json.load(f)
 
-    with open(template_json_path, 'r', encoding='utf-8') as f:
+    with Path(template_json_path).open(encoding="utf-8") as f:
         template_data = json.load(f)
 
-    with open(format_json_path, 'r', encoding='utf-8') as f:
+    with Path(format_json_path).open(encoding="utf-8") as f:
         format_config = json.load(f)
 
     # Step 1: Substitute simple placeholders
