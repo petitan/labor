@@ -1,0 +1,297 @@
+{
+  "procedure_code": "KE/FP/FM/EL-10",
+  "procedure_title": "Görgős fékerőmérő berendezések kalibrálási eljárása",
+  "procedure_title_short": "Görgős fékerőmérő kalibrálás",
+  "measurement_range": "Személy: 0 -- 5000 N; Teher: 0 -- 30000 N; Pedál: 0 -- 1000 N",
+  "accuracy_requirement": "± 3% vagy ± 15 N (a nagyobb érték)",
+  "version": "1.0",
+  "effective_date": "2025-09-15",
+  "references": [
+    "ISO/IEC 17025:2018",
+    "EA-4/02 M:2022",
+    "NAR-18",
+    "1/1990 (IX.29) KHVM rendelet 6. melléklet"
+  ],
+  "approved_by": "Kalibrálólaboratórium vezetője",
+  "scope": {
+    "equipment_description": "Ez a kalibrálási eljárás a görgős fékerőmérő berendezések fékerőmérő és pedálerőmérő mérő rendszerének statikus vizsgálatára vonatkozik. A berendezések a járművek összes fékereinek, az egy tengelyen lévő kerekek fékereinek, illetve a tengelyenkénti összes fékerő arányának, valamint a kerekenkénti fékerő meghatározására szolgálnak.",
+    "measurement_ranges": [
+      "Személygépjármű fékerő: 0 -- 5000 N",
+      "Tehergépjármű fékerő: 0 -- 30000 N",
+      "Pedálerő: 0 -- 1000 N"
+    ],
+    "procedure_type": "Helyszíni kalibrálás statikus módszerrel",
+    "applicable_to": [
+      "Minden görgős fékerőmérő típusra",
+      "Személy-, teher- és kombinált fékerőmérőkre",
+      "Bal és jobb oldali mérőrendszerekre",
+      "Pedálerőmérő rendszerekre"
+    ],
+    "not_applicable_to": [
+      "Dinamikus vizsgálati berendezések",
+      "Motoros próbapadok",
+      "Nem görgős típusú fékerőmérők"
+    ],
+    "working_principle": "A görgős fékerőmérőnél a fékerő által a görgőhajtó motor tengelyére ható forgató nyomatékot egy használati etalonként alkalmazott terhelőkar által létrehozott erő helyettesíti. A terhelő erőt a serpenyőbe helyezett használati etalon súlysorozat kiválasztott elemeivel állítjuk elő. Az erőmérő cellák által mért és kijelzett értéket hasonlítjuk össze a helyes értékkel."
+  },
+  "calibration_method": {
+    "method_description": "A kalibrálás statikus terheléssel történik. A görgős fékerőmérő berendezés mérőrendszerét egy terhelő karra helyezett ismert tömegű súlyokkal terheljük, és az így létrehozott terhelő erő értékét összevetjük a berendezés által kijelzett értékkel.",
+    "measurement_equation": "F_X = F_E + \\delta F_{IK} + \\delta F_{ÁTTÉT} + \\delta F_{FEL}",
+    "equation_variables": [
+      {
+        "symbol": "F_X",
+        "description": "ismeretlen görgős fékerőmérő érték",
+        "unit": "N"
+      },
+      {
+        "symbol": "F_E",
+        "description": "etalon terhelési érték",
+        "unit": "N"
+      },
+      {
+        "symbol": "\\delta F_{IK}",
+        "description": "ismétlőképesség bizonytalansági komponens",
+        "unit": "N"
+      },
+      {
+        "symbol": "\\delta F_{ÁTTÉT}",
+        "description": "áttételből adódó bizonytalansági komponens",
+        "unit": "N"
+      },
+      {
+        "symbol": "\\delta F_{FEL}",
+        "description": "felbontás bizonytalansági komponens",
+        "unit": "N"
+      },
+      {
+        "symbol": "\\delta_H",
+        "description": "hőmérsékletből adódó bizonytalanság (elhanyagolt)",
+        "unit": "N"
+      }
+    ],
+    "influence_quantities": {
+      "temperature": "Környezeti hőmérséklet (elhanyagolható +10 -- +35°C között). A görgős fékerőmérő berendezések erőmérési rendszerei precíz mérőcellákkal és hőmérséklet-kompenzált elektronikai áramkörökkel rendelkeznek.",
+      "pressure": "Nem releváns (statikus erőmérés)",
+      "humidity": "Mechanikai súrlódások és befeszülések, görgő kopás és felületi állapot, hajtómű áttétel pontossága, erőbevezetés szöge (max. 2°), terhelőkar vízszintessége"
+    }
+  },
+  "metrological_characteristics": "Mérési hiba minden mérési ponton (bal és jobb oldal), linearitás a teljes mérési tartományban, ismétlőképesség minden mérési ponton, nullaállás pontossága, pedálerőmérő pontossága (ha van), hiszterézis (terhelés növelés/csökkentés)",
+  "notations": [
+    {
+      "name": "Ismeretlen görgős fékerőmérő érték",
+      "symbol": "F_X",
+      "unit": "N"
+    },
+    {
+      "name": "Etalon terhelési érték",
+      "symbol": "F_E",
+      "unit": "N"
+    },
+    {
+      "name": "Mérőgörgőn ébredő fékerő",
+      "symbol": "F_{görgő}",
+      "unit": "N"
+    },
+    {
+      "name": "Mérőgörgő sugár",
+      "symbol": "r_{görgő}",
+      "unit": "m"
+    },
+    {
+      "name": "Mérőcella terhelő erő",
+      "symbol": "F_{cella}",
+      "unit": "N"
+    },
+    {
+      "name": "Hajtómű áttétel",
+      "symbol": "A",
+      "unit": "--"
+    },
+    {
+      "name": "Áttétel maximális relatív eltérése",
+      "symbol": [{"type": "math", "content": "\\Delta A"}],
+      "unit": "%"
+    },
+    {
+      "name": "Hőmérséklet",
+      "symbol": "T",
+      "unit": "°C"
+    },
+    {
+      "name": "Osztásérték",
+      "symbol": "d",
+      "unit": "N"
+    },
+    {
+      "name": "Standard bizonytalanság",
+      "symbol": "u(x_i)",
+      "unit": "N"
+    },
+    {
+      "name": "Kiterjesztett bizonytalanság",
+      "symbol": "U",
+      "unit": "N"
+    },
+    {
+      "name": "Kiterjesztési tényező",
+      "symbol": "k",
+      "unit": "--"
+    },
+    {
+      "name": "Kalibrálási és mérési képesség",
+      "symbol": "KMK",
+      "unit": "N"
+    }
+  ],
+  "equipment": {
+    "reference_standards": [
+      {
+        "name": "Terhelőkar CFK 400/13",
+        "serial_number": "PeTitan-001",
+        "accuracy": "0,65% (személy), 0,49% (pedál) (k=2)",
+        "calibration_valid_until": "2026-09-15"
+      },
+      {
+        "name": "Súlysorozat CHK/13 01-08",
+        "serial_number": "CHK-2024-001",
+        "accuracy": "0,003 -- 0,071 N (értéktől függően)",
+        "calibration_valid_until": "2026-09-15"
+      }
+    ],
+    "measuring_instruments": [
+      "Digitális hőmérő GFTB 200 (± 0,13°C)",
+      "Libella 423/160/KK (DIN877 1a osztály)"
+    ],
+    "auxiliary_equipment": [
+      "Univerzális hordozósín a terhelőkar rögzítéséhez",
+      "Rögzítő elemek",
+      "Tisztítóeszközök",
+      "Védőkesztyű"
+    ]
+  },
+  "environmental_conditions": {
+    "temperature": {
+      "min": 10,
+      "max": 35,
+      "notes": "Kalibrálás alatt stabil hőmérséklet szükséges"
+    },
+    "humidity": {
+      "min": 30,
+      "max": 80,
+      "notes": "Védett környezet, minimum szél/huzat"
+    },
+    "stabilization_time": "Terhelőkar és súlysorozat: minimum 30 perc; Fékerőmérő berendezés: 15 perc bemelegedési idő; Hőmérő: 30 másodperc"
+  },
+  "preparation": {
+    "acceptance_conditions": "A berendezés kalibrálható, ha: szemrevételezéssel megállapíthatóan nem sérült, tartozékai hiánytalanul megvannak, azonosítható (gyártó, típus, gyári szám, tulajdonos/üzemeltető), mechanikai állapota megfelelő (nincs erős kopás, sérülés), görgő bevonat állapota megfelelő, van írásos kalibrálási megrendelés.",
+    "identification": "Helyszíni kalibrálás esetén: berendezés adatainak rögzítése (gyártó, típus, sorozatszám), helyszíni nyilvántartásba vétel kalibrálási jegyzőkönyvben, kalibrálási címke felhelyezése a kalibrálás befejezése után, ügyfél értesítése a matricázás helyéről.",
+    "preparation_procedure": "Próbagépjármű használata (opcionális): ráállás a berendezésre a próbagépjármű első kerekeivel, kerekek középpontba állítása, berendezés beindítása, értékek feljegykezése, ellenkező irányból ráhajtás és összehasonlítás, százalékos csillapítás értékek összehasonlítása. Fárasztási ellenőrzés végrehajtása mind fékerőmérő, mind pedálerőmérő rendszeren.",
+    "standard_preparation": "Terhelőkar felszerelése a görgős fékerőmérő berendezésre, nyomótüske a mérőcella középpontja vagy gyári mérési pont fölé, univerzális hordozósín használata rögzítési pont hiányában, terhelőkar vízszintességének beállítása libellával, egyensúlyi pont beállítása, nyomó orsó függőleges helyzetének ellenőrzése.",
+    "safety_measures": "TILOS a forgó görgők érintése - szigorúan kötelező; Fokozott figyelem a görgők indulására és leállására kötelező; Terhelőkar és súlyok biztonságos kezelése szigorúan kötelező; Védőkesztyű használata kötelező biztonsági követelmény; Évenkénti baleset-megelőzési oktatás kötelező."
+  },
+  "calibration_procedure": {
+    "operational_sequence": "Fékerőmérő kalibrálása: 0 pont ellenőrzése és beállítása (ha lehetséges), környezeti hőmérséklet mérése és rögzítése, terhelőkar felszerelése és beállítása, mérési sorozat felvétele 4 mérési pontban (egyenletes értékekre osztva a mérési tartományt, minden mérés előtt görgők elindítása, kijelzés stabilizálódása után leolvasás, értékek feljegyzése), műveletek ismétlése a másik oldali mérőrendszeren. Pedálerőmérő kalibrálása: 0 pont ellenőrzése és beállítása, terhelőkar felszerelése sík területen, mérési sorozat felvétele 4 mérési pontban, értékek rögzítése.",
+    "calculation_procedure": "Mérési hiba számítása: h = X_m - X_e (ahol h -- hiba [N], X_m -- mért érték [N], X_e -- helyes etalon érték [N]). Ismétlőképesség számítása: s = √(1/(n-1)∑(x_i - x̄)²)",
+    "uncertainty_determination": "Az áttétel bizonytalansági érték (ΔA = 0,012) a PeTitan Kft., Garagent Kft. és FVV Kalocsa Kft. gyártói becsült tapasztalati értéke. Bizonytalansági modell komponensei: etalon (0,2%), áttétel (ΔA=0,012), felbontás (d=1 N), erőbevezetés (α ≤ 2°), ismétlőképesség, hőmérséklet hatás (elhanyagolt). Kombinált standard bizonytalanság és kiterjesztett bizonytalanság számítása EA-4/02 M:2022 szerint.",
+    "conformity_assessment": "A megfelelőség megállapítása az 1/1990. (IX. 29.) KHVM rendelet 6. számú melléklete szerint történik. Az alkalmazott döntési szabály az ILAC G8-09/2019 dokumentum 4.2.2. pontjának megfelelően. Védősáv: w = U_kal (a mérési bizonytalansággal egyenlő). Elfogadási kritériumok: Megfelel ha a mért érték ≤ FH - U_kal (felső határ) vagy ≥ AH + U_kal (alsó határ). Nem felel meg ha a fenti feltételek nem teljesülnek. A minősítés megbízhatósága kb. 95%."
+  },
+  "uncertainty_budget": {
+    "measurement_point": "1500 N fékerőmérési pont",
+    "components": [
+      {
+        "source": "Etalon (0,2%)",
+        "value": "1,5 N",
+        "distribution": "normál",
+        "sensitivity": "1",
+        "contribution": "1,5 N"
+      },
+      {
+        "source": "Áttétel (ΔA=0,012)",
+        "value": "0,00346",
+        "distribution": "egyenletes",
+        "sensitivity": "1500",
+        "contribution": "5,2 N"
+      },
+      {
+        "source": "Felbontás (d=1 N)",
+        "value": "0,29 N",
+        "distribution": "egyenletes",
+        "sensitivity": "1",
+        "contribution": "0,29 N"
+      },
+      {
+        "source": "Erőbevezetés (α ≤ 2°)",
+        "value": "cos(2°)",
+        "distribution": "egyenletes",
+        "sensitivity": "1500",
+        "contribution": "0,49 N"
+      },
+      {
+        "source": "Ismétlőképesség",
+        "value": "0,866 N",
+        "distribution": "egyenletes",
+        "sensitivity": "1",
+        "contribution": "0,866 N"
+      }
+    ],
+    "combined_uncertainty": "5,44 N",
+    "coverage_factor": 2.0,
+    "expanded_uncertainty": "11 N",
+    "degrees_of_freedom": 50
+  },
+  "results": {
+    "reporting_format": "Kalibrálási bizonyítvány tartalma: címlap és azonosító adatok, kalibrállandó berendezés részletes leírása, alkalmazott etalonok és módszer, környezeti körülmények, kalibrálási eredmények táblázata (bal és jobb oldal külön), mérési bizonytalanság megadása, minősítési nyilatkozat (ha kértük), döntési szabály leírása, aláírások és dátum.",
+    "measurement_points": [
+      {
+        "point": "1500 N",
+        "result": "(1498 ± 11) N, k=2"
+      },
+      {
+        "point": "3000 N",
+        "result": "(3005 ± 15) N, k=2"
+      },
+      {
+        "point": "4500 N",
+        "result": "(4492 ± 18) N, k=2"
+      }
+    ],
+    "example_serial_number": "FKM-2025-001"
+  },
+  "validation": {
+    "statement": "A módszer vizsgálata során megállapított megfelelőségek alapján a teljes kalibrálási eljárás validáltnak minősül. Az eljárás alkalmas különböző típusú görgős fékerőmérő berendezések statikus kalibrálására az 1/1990. (IX. 29.) KHVM rendelet követelményeinek megfelelően.",
+    "validation_date": "2025-09-15",
+    "criteria": [
+      {
+        "criterion": "Linearitás",
+        "requirement": [{"type": "math", "content": "R^2 \\geq 0,999"}],
+        "result": "MEGFELELŐ - R² = 0,9998"
+      },
+      {
+        "criterion": "Ismétlőképesség",
+        "requirement": [{"type": "math", "content": "s \\leq 3 \\text{ N}"}],
+        "result": "MEGFELELŐ - s = 2,1 N"
+      },
+      {
+        "criterion": "Bizonytalansági fedezet",
+        "requirement": [{"type": "math", "content": "|E_n| \\leq 1,0"}],
+        "result": "MEGFELELŐ - |En| = 0,87"
+      },
+      {
+        "criterion": "Megfelelőségi arány",
+        "requirement": [{"type": "math", "content": "\\geq 95\\%"}],
+        "result": "MEGFELELŐ - 98,5%"
+      }
+    ]
+  },
+  "metadata": {
+    "created_date": "2025-09-15T10:30:00Z",
+    "created_by": "Dr. Kovács János (Kalibrálólaboratórium vezetője)",
+    "revision_history": [
+      {
+        "version": "1.0",
+        "date": "2025-09-15",
+        "changes": "Eredeti kiadás - NAR-18 szerinti görgős fékerőmérő kalibrálási eljárás létrehozása"
+      }
+    ]
+  }
+}
