@@ -1,0 +1,254 @@
+{
+  "$comment": "Example input data for pressure gauge calibration procedure",
+  "procedure_code": "PET-KAL-M-01",
+  "procedure_title": "Analóg nyomásmérők kalibrálása",
+  "procedure_title_short": "Nyomásmérő kalibrálás",
+  "measurement_range": "0 - 10 bar",
+  "accuracy_requirement": "±0.5% teljes skála",
+  "version": "2.1",
+  "effective_date": "2025-01-15",
+  "references": [
+    "ISO/IEC 17025:2018",
+    "MSZ EN 837-1:2003",
+    "EA-4/02 Measurement Uncertainty"
+  ],
+  "approved_by": "Dr. Kovács János (Minőségügyi vezető)",
+
+  "scope": {
+    "equipment_description": "Jelen eljárás analóg nyomásmérő műszerek kalibrálására vonatkozik, amelyek mechanikus mutatóval rendelkeznek és 0-10 bar mérési tartományban működnek.",
+    "measurement_ranges": [
+      "0 - 1 bar (finommechanikai alkalmazások)",
+      "0 - 6 bar (hidraulikus rendszerek)",
+      "0 - 10 bar (pneumatikus rendszerek)"
+    ],
+    "procedure_type": "Összehasonlító mérés referencia nyomásstandard alkalmazásával",
+    "applicable_to": [
+      "Bourdon csöves nyomásmérők",
+      "Membránkapszulás nyomásmérők",
+      "Ipari pontossági osztályú műszerek (1.0, 1.6, 2.5 osztály)"
+    ],
+    "not_applicable_to": [
+      "Digitális nyomásmérők (lásd: PET-KAL-M-02)",
+      "Precíziós referencia műszerek (lásd: PET-KAL-M-03)"
+    ],
+    "working_principle": "A kalibrálás során a kalibrálandó műszert és a referencia nyomásstandard-ot azonos nyomású közegre csatlakoztatjuk. A két műszer által mutatott értékek különbsége adja a kalibrálandó műszer hibáját."
+  },
+
+  "calibration_method": {
+    "method_description": "A kalibrálást összehasonlító módszerrel végezzük precíziós nyomáskalibrátorral. A műszert a skála 0%, 20%, 40%, 60%, 80% és 100% pontjain kalibráljuk, növekvő és csökkenő irányban is.",
+    "measurement_equation": "\\Delta p = p_{\\text{mért}} - p_{\\text{ref}}",
+    "equation_variables": [
+      {
+        "symbol": "\\Delta p",
+        "description": "a műszer hibája",
+        "unit": "bar"
+      },
+      {
+        "symbol": "p_{\\text{mért}}",
+        "description": "a kalibrálandó műszer leolvasása",
+        "unit": "bar"
+      },
+      {
+        "symbol": "p_{\\text{ref}}",
+        "description": "a referencia standard értéke",
+        "unit": "bar"
+      }
+    ],
+    "influence_quantities": {
+      "temperature": "±0.01 bar/°C",
+      "pressure": "elhanyagolható hatás relatív nyomásmérés esetén",
+      "humidity": "nincs közvetlen hatás"
+    }
+  },
+
+  "metrological_characteristics": "Mérési hiba minden mérési ponton, hiszterézis, ismételhetőség, lineáris regresszió paraméterei.",
+
+  "notations": [
+    {
+      "name": "Referencia nyomás",
+      "symbol": "$p_{\\text{ref}}$",
+      "unit": "bar"
+    },
+    {
+      "name": "Mért nyomás",
+      "symbol": "$p_{\\text{mért}}$",
+      "unit": "bar"
+    },
+    {
+      "name": "Mérési hiba",
+      "symbol": "$\\Delta p$",
+      "unit": "bar"
+    },
+    {
+      "name": "Bővített mérési bizonytalanság",
+      "symbol": "$U$",
+      "unit": "bar"
+    },
+    {
+      "name": "Hisztérézis",
+      "symbol": "$H$",
+      "unit": "bar"
+    }
+  ],
+
+  "equipment": {
+    "reference_standards": [
+      {
+        "name": "Fluke 719Pro precíziós nyomáskalibrátor",
+        "serial_number": "12345678",
+        "accuracy": "±0.025% FS",
+        "calibration_valid_until": "2024-12-15"
+      }
+    ],
+    "measuring_instruments": [
+      "Digitális hőmérő (±0.1°C)",
+      "Digitális barométer (±0.5 hPa)"
+    ],
+    "auxiliary_equipment": [
+      "T-elágazó csatlakozó (M20×1.5)",
+      "PTFE tömítőszalag"
+    ]
+  },
+
+  "environmental_conditions": {
+    "temperature": {
+      "min": 20,
+      "max": 24,
+      "notes": "Folyamatos monitoring szükséges"
+    },
+    "humidity": {
+      "min": 30,
+      "max": 70,
+      "notes": "Kondenzációmentes"
+    },
+    "stabilization_time": "A műszereket minimum 2 órán át a laboratóriumi környezetben kell hagyni a hőmérsékleti egyensúly elérése érdekében."
+  },
+
+  "preparation": {
+    "acceptance_conditions": "Ellenőrizni kell a műszer épségét, az üveg sértetlenségét, a csatlakozó menetek állapotát.",
+    "identification": "A műszert egyedi azonosítóval látjuk el a LIMS rendszerben.",
+    "preparation_procedure": "Vizuális ellenőrzés, nulla pont ellenőrzése, mechanikus sérülések kizárása.",
+    "standard_preparation": "A Fluke 719Pro kalibrátort 30 perccel a mérés előtt be kell kapcsolni a belső referencia stabilizálódása érdekében.",
+    "safety_measures": "A pneumatikus rendszer nyomását fokozatosan kell növelni és csökkenteni. 10 bar feletti nyomás esetén védőpajzs használata kötelező."
+  },
+
+  "calibration_procedure": {
+    "operational_sequence": "1. Műszerek csatlakoztatása, 2. Nulla pont ellenőrzése, 3. Növekvő ciklus (0-100%), 4. Csökkenő ciklus (100-0%), 5. Adatok rögzítése.",
+    "calculation_procedure": "A mérési hibát minden ponton kiszámítjuk a referencia és mért értékek különbségeként. A hisztérézist a növekvő és csökkenő ciklus közötti maximális eltérés adja.",
+    "uncertainty_determination": "A bizonytalanságot az EA-4/02 útmutató szerint számítjuk, figyelembe véve a referencia bizonytalanságát, a leolvasás bizonytalanságát, a hiszterézist és a hőmérsékleti hatást.",
+    "conformity_assessment": "A műszer megfelelő, ha a mérési hiba minden ponton kisebb, mint a specifikált pontossági osztály szerint megengedett hiba."
+  },
+
+  "uncertainty_budget": {
+    "measurement_point": "10 bar mérési pont",
+    "components": [
+      {
+        "source": "Referencia standard",
+        "value": "0.0025 bar",
+        "distribution": "normál",
+        "sensitivity": "1.0",
+        "contribution": "0.0025 bar"
+      },
+      {
+        "source": "Leolvasási felbontás",
+        "value": "0.0029 bar",
+        "distribution": "egyenletes",
+        "sensitivity": "1.0",
+        "contribution": "0.0029 bar"
+      },
+      {
+        "source": "Hisztérézis",
+        "value": "0.0100 bar",
+        "distribution": "egyenletes",
+        "sensitivity": "0.58",
+        "contribution": "0.0058 bar"
+      },
+      {
+        "source": "Hőmérséklet hatás",
+        "value": "0.0200 bar",
+        "distribution": "egyenletes",
+        "sensitivity": "0.5",
+        "contribution": "0.0100 bar"
+      }
+    ],
+    "combined_uncertainty": "0.012 bar",
+    "coverage_factor": 2.0,
+    "expanded_uncertainty": "0.024 bar",
+    "degrees_of_freedom": 50
+  },
+
+  "results": {
+    "reporting_format": "Az eredményeket a PET-KAL-J-01 kalibrálási jegyzőkönyv formátumban adjuk ki, amely tartalmazza a mérési hibákat, a bizonytalanságot és a megfelelőségi nyilatkozatot.",
+    "measurement_points": [
+      {
+        "point": "0.0 bar (0%)",
+        "result": "$\\Delta p = 0.00 \\pm 0.02$ bar"
+      },
+      {
+        "point": "2.0 bar (20%)",
+        "result": "$\\Delta p = -0.03 \\pm 0.02$ bar"
+      },
+      {
+        "point": "4.0 bar (40%)",
+        "result": "$\\Delta p = -0.05 \\pm 0.02$ bar"
+      },
+      {
+        "point": "6.0 bar (60%)",
+        "result": "$\\Delta p = -0.04 \\pm 0.02$ bar"
+      },
+      {
+        "point": "8.0 bar (80%)",
+        "result": "$\\Delta p = -0.02 \\pm 0.02$ bar"
+      },
+      {
+        "point": "10.0 bar (100%)",
+        "result": "$\\Delta p = 0.00 \\pm 0.02$ bar"
+      }
+    ],
+    "example_serial_number": "2024-001"
+  },
+
+  "validation": {
+    "statement": "Jelen eljárást 2024. december 10-én validáltuk egy ismert hibájú referencia műszerrel. A mért hiba 0.032 bar volt, a várt hiba 0.030 bar, az eltérés a mérési bizonytalanságon belül van.",
+    "validation_date": "2024-12-10",
+    "criteria": [
+      {
+        "criterion": "Mérési bizonytalanság",
+        "requirement": "$U < 0.05$ bar",
+        "result": "✓ MEGFELEL ($U = 0.024$ bar)"
+      },
+      {
+        "criterion": "Ismételhetőség",
+        "requirement": "$s < 0.01$ bar",
+        "result": "✓ MEGFELEL ($s = 0.005$ bar)"
+      },
+      {
+        "criterion": "Referencia érvényesség",
+        "requirement": "Érvényes kalibrálás",
+        "result": "✓ MEGFELEL (2024-12-15)"
+      }
+    ]
+  },
+
+  "metadata": {
+    "created_date": "2024-11-15T14:30:00Z",
+    "created_by": "Nagy Péter (Kalibráló mérnök)",
+    "revision_history": [
+      {
+        "version": "1.0",
+        "date": "2023-06-01",
+        "changes": "Első kiadás"
+      },
+      {
+        "version": "2.0",
+        "date": "2024-08-15",
+        "changes": "Bizonytalanság számítás frissítése EA-4/02 szerint"
+      },
+      {
+        "version": "2.1",
+        "date": "2025-01-15",
+        "changes": "Környezeti feltételek pontosítása"
+      }
+    ]
+  }
+}

@@ -1,0 +1,495 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://petitan.hu/schemas/calibration-input-v1.json",
+  "title": "Calibration Procedure Input Data Schema",
+  "description": "JSON Schema for calibration procedure input data (unformatted) that will be converted to docjll format",
+  "type": "object",
+  "required": [
+    "procedure_code",
+    "procedure_title",
+    "measurement_range",
+    "accuracy_requirement"
+  ],
+  "properties": {
+    "procedure_code": {
+      "type": "string",
+      "description": "Unique procedure code (e.g., PET-KAL-M-01)",
+      "pattern": "^[A-Z]{3}-[A-Z]{3}-[A-Z]-[0-9]{2}$",
+      "examples": ["PET-KAL-M-01", "PET-KAL-E-02"]
+    },
+    "procedure_title": {
+      "type": "string",
+      "description": "Full title of the calibration procedure",
+      "minLength": 10,
+      "maxLength": 200,
+      "examples": ["Analóg nyomásmérők kalibrálása"]
+    },
+    "procedure_title_short": {
+      "type": "string",
+      "description": "Short title for header (optional)",
+      "maxLength": 50,
+      "examples": ["Nyomásmérő kalibrálás"]
+    },
+    "measurement_range": {
+      "type": "string",
+      "description": "Measurement range with units",
+      "examples": ["0 - 10 bar", "0 - 100 °C", "0 - 1000 N"]
+    },
+    "accuracy_requirement": {
+      "type": "string",
+      "description": "Required accuracy specification",
+      "examples": ["±0.5% teljes skála", "±0.1 °C", "±2% leolvasás"]
+    },
+    "version": {
+      "type": "string",
+      "description": "Procedure version number",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "default": "1.0",
+      "examples": ["1.0", "2.1", "3.5"]
+    },
+    "effective_date": {
+      "type": "string",
+      "description": "Date when procedure becomes effective (ISO 8601)",
+      "format": "date",
+      "examples": ["2025-01-15"]
+    },
+    "references": {
+      "type": "array",
+      "description": "List of reference standards and documents",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "examples": [["ISO/IEC 17025:2018", "MSZ EN 837-1:2003"]]
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Name and title of approver",
+      "examples": ["Dr. Kovács János (Minőségügyi vezető)"]
+    },
+    "scope": {
+      "type": "object",
+      "description": "Scope of the calibration procedure",
+      "properties": {
+        "equipment_description": {
+          "type": "string",
+          "description": "Description of equipment to be calibrated"
+        },
+        "measurement_ranges": {
+          "type": "array",
+          "description": "Applicable measurement ranges",
+          "items": {
+            "type": "string"
+          },
+          "examples": [["0 - 1 bar (finommechanikai)", "0 - 6 bar (hidraulikus)"]]
+        },
+        "procedure_type": {
+          "type": "string",
+          "description": "Type of calibration procedure",
+          "examples": ["Összehasonlító mérés", "Direkt mérés", "Helyettesítő mérés"]
+        },
+        "applicable_to": {
+          "type": "array",
+          "description": "Equipment types where procedure is applicable",
+          "items": {
+            "type": "string"
+          }
+        },
+        "not_applicable_to": {
+          "type": "array",
+          "description": "Equipment types where procedure is NOT applicable",
+          "items": {
+            "type": "string"
+          }
+        },
+        "working_principle": {
+          "type": "string",
+          "description": "Working principle of calibration"
+        }
+      }
+    },
+    "calibration_method": {
+      "type": "object",
+      "description": "Calibration and measurement principles",
+      "properties": {
+        "method_description": {
+          "type": "string",
+          "description": "Description of calibration method"
+        },
+        "measurement_equation": {
+          "type": "string",
+          "description": "LaTeX formatted measurement equation",
+          "examples": ["\\Delta p = p_{\\text{mért}} - p_{\\text{ref}}"]
+        },
+        "equation_variables": {
+          "type": "array",
+          "description": "Variables used in the equation",
+          "items": {
+            "type": "object",
+            "required": ["symbol", "description", "unit"],
+            "properties": {
+              "symbol": {
+                "type": "string",
+                "description": "LaTeX symbol",
+                "examples": ["\\Delta p", "p_{\\text{ref}}"]
+              },
+              "description": {
+                "type": "string",
+                "description": "Variable description"
+              },
+              "unit": {
+                "type": "string",
+                "description": "Unit of measurement",
+                "examples": ["bar", "°C", "N"]
+              }
+            }
+          }
+        },
+        "influence_quantities": {
+          "type": "object",
+          "description": "Influence quantities and their effects",
+          "properties": {
+            "temperature": {
+              "type": "string",
+              "description": "Temperature effect"
+            },
+            "pressure": {
+              "type": "string",
+              "description": "Atmospheric pressure effect"
+            },
+            "humidity": {
+              "type": "string",
+              "description": "Humidity effect"
+            }
+          }
+        }
+      }
+    },
+    "metrological_characteristics": {
+      "type": "string",
+      "description": "Metrological characteristics to be determined",
+      "examples": ["Mérési hiba, hiszterézis, ismételhetőség, linearitás"]
+    },
+    "notations": {
+      "type": "array",
+      "description": "Notations, symbols, and units",
+      "items": {
+        "type": "object",
+        "required": ["name", "symbol", "unit"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of quantity"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "Mathematical symbol (LaTeX format)"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement"
+          }
+        }
+      }
+    },
+    "equipment": {
+      "type": "object",
+      "description": "Equipment and standards used",
+      "properties": {
+        "reference_standards": {
+          "type": "array",
+          "description": "Reference standards and their specifications",
+          "items": {
+            "type": "object",
+            "required": ["name", "accuracy"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Equipment name and model"
+              },
+              "serial_number": {
+                "type": "string",
+                "description": "Serial number"
+              },
+              "accuracy": {
+                "type": "string",
+                "description": "Accuracy specification"
+              },
+              "calibration_valid_until": {
+                "type": "string",
+                "format": "date",
+                "description": "Calibration validity date"
+              }
+            }
+          }
+        },
+        "measuring_instruments": {
+          "type": "array",
+          "description": "Additional measuring instruments",
+          "items": {
+            "type": "string"
+          }
+        },
+        "auxiliary_equipment": {
+          "type": "array",
+          "description": "Auxiliary equipment and accessories",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "environmental_conditions": {
+      "type": "object",
+      "description": "Environmental requirements",
+      "properties": {
+        "temperature": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "description": "Minimum temperature in °C"
+            },
+            "max": {
+              "type": "number",
+              "description": "Maximum temperature in °C"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "humidity": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "description": "Minimum relative humidity in %"
+            },
+            "max": {
+              "type": "number",
+              "description": "Maximum relative humidity in %"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "stabilization_time": {
+          "type": "string",
+          "description": "Required stabilization time"
+        }
+      }
+    },
+    "preparation": {
+      "type": "object",
+      "description": "Preparation and acceptance procedures",
+      "properties": {
+        "acceptance_conditions": {
+          "type": "string",
+          "description": "Acceptance conditions for incoming equipment"
+        },
+        "identification": {
+          "type": "string",
+          "description": "Identification and registration procedure"
+        },
+        "preparation_procedure": {
+          "type": "string",
+          "description": "Equipment preparation procedure"
+        },
+        "standard_preparation": {
+          "type": "string",
+          "description": "Reference standard preparation"
+        },
+        "safety_measures": {
+          "type": "string",
+          "description": "Safety measures and precautions"
+        }
+      }
+    },
+    "calibration_procedure": {
+      "type": "object",
+      "description": "Calibration measurement procedure",
+      "properties": {
+        "operational_sequence": {
+          "type": "string",
+          "description": "Step-by-step operational sequence"
+        },
+        "calculation_procedure": {
+          "type": "string",
+          "description": "Calculation of metrological characteristics"
+        },
+        "uncertainty_determination": {
+          "type": "string",
+          "description": "Measurement uncertainty determination procedure"
+        },
+        "conformity_assessment": {
+          "type": "string",
+          "description": "Conformity assessment rules"
+        }
+      }
+    },
+    "uncertainty_budget": {
+      "type": "object",
+      "description": "Uncertainty budget information",
+      "properties": {
+        "measurement_point": {
+          "type": "string",
+          "description": "Measurement point for uncertainty budget",
+          "examples": ["10 bar mérési pont", "100 °C mérési pont"]
+        },
+        "components": {
+          "type": "array",
+          "description": "Uncertainty components",
+          "items": {
+            "type": "object",
+            "required": ["source", "value", "distribution", "sensitivity", "contribution"],
+            "properties": {
+              "source": {
+                "type": "string",
+                "description": "Source of uncertainty"
+              },
+              "value": {
+                "type": "string",
+                "description": "Standard uncertainty u(x)"
+              },
+              "distribution": {
+                "type": "string",
+                "enum": ["normál", "egyenletes", "háromszög", "téglalap"],
+                "description": "Probability distribution"
+              },
+              "sensitivity": {
+                "type": "string",
+                "description": "Sensitivity coefficient"
+              },
+              "contribution": {
+                "type": "string",
+                "description": "Uncertainty contribution c·u(x)"
+              }
+            }
+          }
+        },
+        "combined_uncertainty": {
+          "type": "string",
+          "description": "Combined standard uncertainty"
+        },
+        "coverage_factor": {
+          "type": "number",
+          "description": "Coverage factor (typically 2 for 95% confidence)",
+          "default": 2.0
+        },
+        "expanded_uncertainty": {
+          "type": "string",
+          "description": "Expanded uncertainty U"
+        },
+        "degrees_of_freedom": {
+          "type": "integer",
+          "description": "Effective degrees of freedom"
+        }
+      }
+    },
+    "results": {
+      "type": "object",
+      "description": "Calibration results",
+      "properties": {
+        "reporting_format": {
+          "type": "string",
+          "description": "Description of result reporting format"
+        },
+        "measurement_points": {
+          "type": "array",
+          "description": "Measurement points and results",
+          "items": {
+            "type": "object",
+            "required": ["point", "result"],
+            "properties": {
+              "point": {
+                "type": "string",
+                "description": "Measurement point designation"
+              },
+              "result": {
+                "type": "string",
+                "description": "Result with uncertainty (LaTeX format)"
+              }
+            }
+          }
+        },
+        "example_serial_number": {
+          "type": "string",
+          "description": "Example serial number for results table",
+          "examples": ["2024-001", "CAL-2025-0042"]
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "description": "Procedure validation information",
+      "properties": {
+        "statement": {
+          "type": "string",
+          "description": "Validation statement"
+        },
+        "validation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of validation"
+        },
+        "criteria": {
+          "type": "array",
+          "description": "Validation acceptance criteria",
+          "items": {
+            "type": "object",
+            "required": ["criterion", "requirement", "result"],
+            "properties": {
+              "criterion": {
+                "type": "string",
+                "description": "Validation criterion"
+              },
+              "requirement": {
+                "type": "string",
+                "description": "Requirement specification (LaTeX format)"
+              },
+              "result": {
+                "type": "string",
+                "description": "Pass/fail result with details"
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        },
+        "created_by": {
+          "type": "string",
+          "description": "Creator name"
+        },
+        "revision_history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "changes": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
