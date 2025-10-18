@@ -1,0 +1,423 @@
+{
+  "docjll": [
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "{{MELLEKLET_ID}} - {{ELJARAS_CIM}}"
+    },
+    {
+      "type": "table",
+      "headers": ["Mező", "Érték"],
+      "rows": [
+        ["Eljárás kódja:", "{{ELJARAS_KOD}}"],
+        ["Eljárás címe:", "{{ELJARAS_CIM_TELJES}}"],
+        ["Mérési tartomány:", "{{MERESI_TARTOMANY}}"],
+        ["Pontossági követelmény:", "{{PONTOSSAGI_KOVETELMENY}}"],
+        ["Verzió:", "{{VERZIO}}"],
+        ["Hatályba lépés:", "{{HATALYBALEPES_DATUM}}"],
+        ["Hivatkozások:", "{{HIVATKOZASOK}}"],
+        ["Jóváhagyta:", "{{JOVAHAGYTA}}"]
+      ],
+      "caption": "Eljárás alapadatok"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "1. A kalibrálási eljárás hatálya"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "1.1 Kalibrálandó mérőberendezés"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{BERENDEZES_LEIRAS}}"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {"type": "bold", "content": "Mérési tartományok:"}
+      ]
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        "{{TARTOMANY_1}}",
+        "{{TARTOMANY_2}}",
+        "{{TARTOMANY_3}}"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "1.2 Eljárás típusa és alkalmazhatóság"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {"type": "bold", "content": "Eljárás típusa: "},
+        {"type": "text", "content": "{{ELJARAS_TIPUS}}"}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {"type": "bold", "content": "Alkalmazható:"}
+      ]
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        "{{ALKALMAZHATO_1}}",
+        "{{ALKALMAZHATO_2}}",
+        "{{ALKALMAZHATO_3}}"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {"type": "bold", "content": "Nem alkalmazható:"}
+      ]
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        "{{NEM_ALKALMAZHATO_1}}",
+        "{{NEM_ALKALMAZHATO_2}}"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "1.3 Működési elv"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MUKODESI_ELV}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "2. A kalibrálási/mérési elv"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "2.1 Kalibrálási módszer"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{KALIBRALASI_MODSZER}}"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {"type": "bold", "content": "Mérés egyenlete:"}
+      ]
+    },
+    {
+      "type": "equation",
+      "content": "{{MERES_EGYENLET}}",
+      "label": "eq:meres"
+    },
+    {
+      "type": "paragraph",
+      "content": "ahol:"
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        [
+          {"type": "math", "content": "{{VALTOZO_1}}"},
+          {"type": "text", "content": " -- {{VALTOZO_1_LEIRAS}} [{{VALTOZO_1_EGYSEG}}]"}
+        ],
+        [
+          {"type": "math", "content": "{{VALTOZO_2}}"},
+          {"type": "text", "content": " -- {{VALTOZO_2_LEIRAS}} [{{VALTOZO_2_EGYSEG}}]"}
+        ],
+        [
+          {"type": "math", "content": "{{VALTOZO_3}}"},
+          {"type": "text", "content": " -- {{VALTOZO_3_LEIRAS}} [{{VALTOZO_3_EGYSEG}}]"}
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "2.2 Befolyásoló mennyiségek"
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        [
+          {"type": "bold", "content": "Hőmérséklet: "},
+          {"type": "text", "content": "{{HOMERSEKLET_HATASA}}"}
+        ],
+        [
+          {"type": "bold", "content": "Légnyomás: "},
+          {"type": "text", "content": "{{LEGNYOMAS_HATASA}}"}
+        ],
+        [
+          {"type": "bold", "content": "Páratartalom: "},
+          {"type": "text", "content": "{{PARATARTALOM_HATASA}}"}
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "3. A kalibrálással meghatározandó metrológiai jellemzők"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{METROLOGIAI_JELLEMZOK}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "4. Jelölések, mértékegységek és meghatározások"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "4.1 Jelölések és mértékegységek"
+    },
+    {
+      "type": "table",
+      "headers": ["Megnevezés", "Jelölés", "Mértékegység"],
+      "rows": [
+        ["{{JELOLES_1_NEV}}", "{{JELOLES_1_SZIMBOLUM}}", "{{JELOLES_1_EGYSEG}}"],
+        ["{{JELOLES_2_NEV}}", "{{JELOLES_2_SZIMBOLUM}}", "{{JELOLES_2_EGYSEG}}"],
+        ["{{JELOLES_3_NEV}}", "{{JELOLES_3_SZIMBOLUM}}", "{{JELOLES_3_EGYSEG}}"]
+      ],
+      "caption": "Jelölések és mértékegységek",
+      "note": "ISMÉTELHETŐ: További sorok szükség szerint"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "5. Berendezések"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "5.1 Etalonok és anyagminták"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ETALONOK_LEIRAS}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "5.2 Egyéb mérőeszközök"
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        "{{MEROESZKOZ_1}}",
+        "{{MEROESZKOZ_2}}"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "5.3 Segédeszközök"
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        "{{SEGEDESZKOZ_1}}",
+        "{{SEGEDESZKOZ_2}}"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "6. Környezeti körülmények és stabilizálódási idő"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "6.1 Környezeti követelmények"
+    },
+    {
+      "type": "table",
+      "headers": ["Paraméter", "Tartomány", "Megjegyzés"],
+      "rows": [
+        ["Hőmérséklet", "{{HOMERSEKLET_MIN}} -- {{HOMERSEKLET_MAX}}°C", "{{HOMERSEKLET_MEGJEGYZES}}"],
+        ["Relatív páratartalom", "{{PARATARTALOM_MIN}} -- {{PARATARTALOM_MAX}}%", "{{PARATARTALOM_MEGJEGYZES}}"]
+      ],
+      "caption": "Környezeti paraméterek"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "6.2 Stabilizálódási idő"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{STABILIZALODASI_IDO}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "7. Átvétel és előkészítés"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "7.1 Átvételi feltételek"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ATVETEL_LEIRAS}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "7.2 Jelölés és nyilvántartásba vétel"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{JELOLES_LEIRAS}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "7.3 Előkészítés és működőképesség ellenőrzése"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ELOKESZITES_LEIRAS}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "7.4 Etalonok előkészítése"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ETALON_ELOKESZITES}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "7.5 Biztonsági intézkedések"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{BIZTONSAG}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "8. Kalibrálás/mérés"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "8.1 Műveleti sorrend"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MUVELETI_SORREND}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "8.2 Metrológiai jellemzők kiszámítása"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{SZAMITAS_LEIRAS}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "8.3 Mérési bizonytalanság meghatározása"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{BIZONYTALANSAG_LEIRAS}}"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Bizonytalansági forrás",
+        "Érték u(x)",
+        "Eloszlás",
+        "Érzékenység c",
+        "Járulék c·u(x)"
+      ],
+      "rows": [
+        ["{{FORRAS_1}}", "{{ERTEK_1}}", "{{ELOSZLAS_1}}", "{{ERZEKENY_1}}", "{{JARULÉK_1}}"],
+        ["{{FORRAS_2}}", "{{ERTEK_2}}", "{{ELOSZLAS_2}}", "{{ERZEKENY_2}}", "{{JARULÉK_2}}"],
+        ["{{FORRAS_3}}", "{{ERTEK_3}}", "{{ELOSZLAS_3}}", "{{ERZEKENY_3}}", "{{JARULÉK_3}}"]
+      ],
+      "caption": "Bizonytalansági komponensek - {{KOMPONENS_NEV}}",
+      "note": "ISMÉTELHETŐ: Táblázat ismétlődik minden mért komponensre"
+    },
+    {
+      "type": "table",
+      "headers": ["Paraméter", "Érték"],
+      "rows": [
+        ["{{KMK_PARAMETER_1}}", "{{KMK_ERTEK_1}}"],
+        ["{{KMK_PARAMETER_2}}", "{{KMK_ERTEK_2}}"]
+      ],
+      "caption": "KMK meghatározás"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "8.4 Minősítés (megfelelőségértékelés)"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MINOSITES_SZABALY}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "9. Az eredmények közlése"
+    },
+    {
+      "type": "paragraph",
+      "content": "{{EREDMENY_KOZLES}}"
+    },
+    {
+      "type": "table",
+      "headers": ["Mérési pont", "Eredmény"],
+      "rows": [
+        ["{{MERESI_PONT_1}}", "{{EREDMENY_1}}"],
+        ["{{MERESI_PONT_2}}", "{{EREDMENY_2}}"]
+      ],
+      "caption": "Kalibrálási eredmények -- {{MUSZAKI_NEV}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "10. A kalibrálási eljárás validálása"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {"type": "bold", "content": "Validálási nyilatkozat"}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "{{VALIDALAS_NYILATKOZAT}}"
+    },
+    {
+      "type": "table",
+      "headers": ["Kritérium", "Követelmény", "Teljesítés"],
+      "rows": [
+        ["{{KRITERIUM_1}}", "{{KOVETELMENY_1}}", "{{TELJESITES_1}}"],
+        ["{{KRITERIUM_2}}", "{{KOVETELMENY_2}}", "{{TELJESITES_2}}"]
+      ],
+      "caption": "Validálási elfogadási kritériumok"
+    }
+  ]
+}
