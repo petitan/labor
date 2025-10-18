@@ -1,6 +1,7 @@
 """Integration tests for docjl conversion and PDF generation."""
 
 import json
+import os
 import subprocess
 import tempfile
 from pathlib import Path
@@ -9,6 +10,7 @@ import pytest
 
 # Test data paths
 TEMPLATE_PATH = Path(__file__).parent.parent / "src" / "labor" / "calibration_template.json"
+LATEX_DIR = Path(__file__).parent.parent / "latex"
 
 
 @pytest.fixture
@@ -173,7 +175,7 @@ class TestPDFGeneration:
         if result.returncode != 0:
             pytest.skip("pdflatex not installed - required for PDF generation tests")
 
-    def test_generate_pdf_from_template(self, template_json):
+    def test_generate_pdf_from_template(self, template_json: str) -> None:
         """Test that PDF can be generated from template LaTeX."""
         try:
             from docjl import MarkdownJsonToDocjl
@@ -181,12 +183,12 @@ class TestPDFGeneration:
             pytest.skip("docjl not installed - run: pip install docjl")
 
         # Check pdflatex availability
-        result = subprocess.run(
+        check_result = subprocess.run(
             ["which", "pdflatex"],
             capture_output=True,
             text=True,
         )
-        if result.returncode != 0:
+        if check_result.returncode != 0:
             pytest.skip("pdflatex not installed")
 
         converter = MarkdownJsonToDocjl()
@@ -201,24 +203,30 @@ class TestPDFGeneration:
             # Write LaTeX to file
             tex_file.write_text(latex_output, encoding="utf-8")
 
+            # Set up environment to include custom LaTeX classes
+            env = os.environ.copy()
+            if LATEX_DIR.exists():
+                env["TEXINPUTS"] = f"{LATEX_DIR}:{env.get('TEXINPUTS', '')}"
+
             # Compile to PDF
             result = subprocess.run(
                 ["pdflatex", "-interaction=nonstopmode", tex_file.name],
                 cwd=tmpdir,
                 capture_output=True,
-                text=True,
                 timeout=30,
+                env=env,
             )
 
             # Check if compilation failed due to missing custom document class
-            if "petitanmk.cls" in result.stdout or "petitanmk.cls" in result.stderr:
+            stdout_str = result.stdout.decode("utf-8", errors="ignore")
+            if "petitanmk.cls" in stdout_str and "not found" in stdout_str:
                 pytest.skip("Custom document class petitanmk.cls not available in test environment")
 
             # Check PDF was created
-            assert pdf_file.exists(), f"PDF was not generated. LaTeX errors: {result.stdout}"
+            assert pdf_file.exists(), f"PDF was not generated. LaTeX errors: {stdout_str}"
             assert pdf_file.stat().st_size > 0, "Generated PDF is empty"
 
-    def test_pdf_has_multiple_pages(self, template_json):
+    def test_pdf_has_multiple_pages(self, template_json: str) -> None:
         """Test that generated PDF has expected number of pages."""
         try:
             from docjl import MarkdownJsonToDocjl
@@ -241,24 +249,30 @@ class TestPDFGeneration:
 
             tex_file.write_text(latex_output, encoding="utf-8")
 
+            # Set up environment to include custom LaTeX classes
+            env = os.environ.copy()
+            if LATEX_DIR.exists():
+                env["TEXINPUTS"] = f"{LATEX_DIR}:{env.get('TEXINPUTS', '')}"
+
             # Compile PDF
-            result = subprocess.run(
+            compile_result = subprocess.run(
                 ["pdflatex", "-interaction=nonstopmode", tex_file.name],
                 cwd=tmpdir,
                 capture_output=True,
-                text=True,
                 timeout=30,
+                env=env,
             )
 
             # Skip if custom document class is missing
-            if "petitanmk.cls" in result.stdout or "petitanmk.cls" in result.stderr:
+            stdout_str = compile_result.stdout.decode("utf-8", errors="ignore")
+            if "petitanmk.cls" in stdout_str and "not found" in stdout_str:
                 pytest.skip("Custom document class petitanmk.cls not available in test environment")
 
             if not pdf_file.exists():
                 pytest.skip("PDF generation failed")
 
             # Check page count
-            result = subprocess.run(
+            info_result = subprocess.run(
                 ["pdfinfo", pdf_file.name],
                 cwd=tmpdir,
                 capture_output=True,
@@ -266,7 +280,7 @@ class TestPDFGeneration:
             )
 
             # Extract page count
-            for line in result.stdout.splitlines():
+            for line in info_result.stdout.splitlines():
                 if "Pages:" in line:
                     pages = int(line.split(":")[1].strip())
                     assert pages >= 3, f"Expected at least 3 pages, got {pages}"
