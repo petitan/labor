@@ -1,0 +1,246 @@
+{
+  "docjll": [
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "SZAKKIFEJEZÉSEK ÉS MEGHATÁROZÁSUK",
+      "label": "chap:szakkifejezesek",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "3"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{INTRO_TEXT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{REFERENCED_STANDARDS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "[INFO] Fontosabb definíciók",
+        "iso_mandatory": false
+      },
+      "content": [
+        {"type": "bold", "content": "Kalibrálás:"},
+        {"type": "text", "content": " {{DEF_CALIBRATION}}\n\n"},
+        {"type": "bold", "content": "Mérési bizonytalanság:"},
+        {"type": "text", "content": " {{DEF_UNCERTAINTY}}\n\n"},
+        {"type": "bold", "content": "Visszavezethetőség:"},
+        {"type": "text", "content": " {{DEF_TRACEABILITY}}\n\n"},
+        {"type": "bold", "content": "Akkreditálás:"},
+        {"type": "text", "content": " {{DEF_ACCREDITATION}}"}
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Rövidítések jegyzéke",
+      "label": "sec:rovidites_jegyzek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ABBREVIATIONS_DESCRIPTION}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{ABBREVIATIONS_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nemzetközi szabványügyi és akkreditálási szervezetek",
+      "label": "sec:nemzetkozi_szervezetek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{ORGANIZATIONS_INTL_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Magyar nemzeti szervezetek és hatóságok",
+      "label": "sec:nemzeti_szervezetek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{ORGANIZATIONS_NAT_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Szabványok és dokumentumok jelölései",
+      "label": "sec:szabvanyok_dokumentumok",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{STANDARDS_DOCUMENTS_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mérési bizonytalanság jelölései",
+      "label": "sec:meresi_bizonytalansag_jelolesei",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{UNCERTAINTY_SYMBOLS_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Gázanalízis specifikus jelölések",
+      "label": "sec:gazanalizis_jelolések",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{GAS_ANALYSIS_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Mechanikai mérések jelölései",
+      "label": "sec:mechanikai_meresek_jelolesek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{MECHANICAL_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Környezeti paraméterek jelölései",
+      "label": "sec:kornyezeti_parametererek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{ENVIRONMENT_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Minőségirányítási és akkreditálási rövidítések",
+      "label": "sec:minosegeugyi_roviditesek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{QUALITY_MGMT_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Általános metrológiai rövidítések",
+      "label": "sec:altalnos_metrologiai_roviditesek",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{METROLOGY_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Belső dokumentum kódolási rendszer",
+      "label": "sec:belso_dokumentum_kodolas",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{DOCUMENT_CODES_TABLE}}",
+      "metadata": {
+        "longtable": true,
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "page_break",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    }
+  ]
+}

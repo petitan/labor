@@ -1,0 +1,183 @@
+{
+  "company": {
+    "name": "PeTitan Informatika Kft.",
+    "short_name": "PeTitan Kft.",
+    "tax_number": "24696371-2-06",
+    "reg_number": "Cg.06 09 020508",
+    "address": "6727 Szeged, Algyői u. 19/A",
+    "established": 2020
+  },
+  "laboratory": {
+    "name": "Kalibrálólaboratórium",
+    "full_name": "PeTitan Kft. Kalibrálólaboratórium",
+    "nah_accreditation": "NAH-2-XXXX/20XX",
+    "technical_area": "autóipari mérőeszközök és diagnosztikai berendezések"
+  },
+  "personnel": {
+    "managing_director": {
+      "name": "Kálmán Péter",
+      "role": "Ügyvezető / Laboratóriumvezető"
+    },
+    "quality_manager": {
+      "name": "Szekeres Károly",
+      "role": "Minőségirányítási vezető"
+    },
+    "calibration_staff": [
+      {
+        "name": "Példány Péter",
+        "role": "Kalibrálást végző munkatárs"
+      },
+      {
+        "name": "Minta Mária",
+        "role": "Kalibrálást végző munkatárs"
+      },
+      {
+        "name": "Teszt Tamás",
+        "role": "Kalibrálást végző munkatárs"
+      }
+    ]
+  },
+  "standards": {
+    "iso_17025": "MSZ EN ISO/IEC 17025:2018",
+    "iso_9001": "MSZ EN ISO 9001:2015"
+  },
+  "documents": {
+    "international_standards": [
+      {
+        "id": "MSZ EN ISO/IEC 17025:2018",
+        "name_hu": "Vizsgáló- és kalibrálólaboratóriumok felkészültségének általános követelményei"
+      },
+      {
+        "id": "MSZ EN ISO 9001:2015",
+        "name_hu": "Minőségirányítási rendszerek. Követelmények"
+      }
+    ],
+    "ilac_documents": [
+      {
+        "id": "ILAC-P8:11/2023",
+        "name_hu": "Az ILAC kölcsönös elismerési megállapodása (Megállapodás): Kiegészítő követelmények az akkreditációs szimbólumok használatára és az akkreditált megfelelőségértékelő szervek általi akkreditációs státuszra vonatkozó igényekre"
+      },
+      {
+        "id": "ILAC-P9:01/2024",
+        "name_hu": "Politika jártassági vizsgálatra és/vagy a jártassági vizsgálaton kívüli laboratóriumok közötti összehasonlításokra vonatkozó követelményekről"
+      },
+      {
+        "id": "ILAC-P10:07/2020",
+        "name_hu": "Politika a mérési eredmények visszavezethetőségéről"
+      },
+      {
+        "id": "ILAC P14:09/2020",
+        "name_hu": "ILAC Politika - mérési bizonytalanság a kalibrálásban"
+      },
+      {
+        "id": "ILAC-G8:09/2019(v2)",
+        "name_hu": "Útmutató a döntési szabályokhoz és a megfelelőségi nyilatkozatokhoz"
+      },
+      {
+        "id": "ILAC-G18:01/2024",
+        "name_hu": "ILAC Útmutató laboratóriumok akkreditálási területeinek megadásához"
+      },
+      {
+        "id": "ILAC-G24:2022",
+        "name_hu": "Útmutató mérőberendezések újra-kalibrálási időközének meghatározásához"
+      }
+    ],
+    "ea_documents": [
+      {
+        "id": "EA-4/02 M:2022",
+        "name_hu": "Mérési bizonytalanság meghatározása kalibrálásnál"
+      },
+      {
+        "id": "EA-4/18 G:2021",
+        "name_hu": "Útmutató a jártassági vizsgálatok szintjéhez és gyakoriságához"
+      },
+      {
+        "id": "EA-4/21INF:2018",
+        "name_hu": "Útmutató a kevés résztvevővel történő laboratóriumi összehasonlítások megfelelőségének értékelésére a laboratóriumi akkreditálás során"
+      }
+    ],
+    "nar_documents": [
+      {
+        "id": "NAR-01",
+        "name_hu": "Az akkreditálási, akkreditálási státusz megújítási, bővítési, rendkívüli felügyeleti és felügyeleti vizsgálati eljárás értékelési szakaszának szabályzata"
+      },
+      {
+        "id": "NAR-02",
+        "name_hu": "Szabvány- és jogszabály változások kezelése"
+      },
+      {
+        "id": "NAR-03",
+        "name_hu": "Szabályzat a jártassági vizsgálat és a laboratóriumok közötti összehasonlítás alkalmazásához az akkreditálási és a felügyeleti vizsgálati eljárásokban"
+      },
+      {
+        "id": "NAR-04",
+        "name_hu": "A távértékelés szabályzata"
+      },
+      {
+        "id": "NAR-06",
+        "name_hu": "A NAH akkreditálási és felügyeleti vizsgálati eljárásaiba bevont személyek kompetenciakövetelményei és képzése"
+      },
+      {
+        "id": "NAR-08",
+        "name_hu": "Az akkreditálási jel és az együttes akkreditálási jel használata, a NAH logó használata, valamint az akkreditált státuszra való hivatkozás szabályai"
+      },
+      {
+        "id": "NAR-18",
+        "name_hu": "Kalibrálási eljárások felépítése és tartalma"
+      },
+      {
+        "id": "NAR-25",
+        "name_hu": "Akkreditálási ellenőrzési ciklusprogramok készítésének szabályzata"
+      },
+      {
+        "id": "NAR-31",
+        "name_hu": "Rugalmas terület akkreditálási szabályzata"
+      },
+      {
+        "id": "NAR-35",
+        "name_hu": "Új akkreditálási tevékenységek, megfelelőségértékelési alrendszerek és szabványáttérések szabályzata"
+      },
+      {
+        "id": "NAR-36",
+        "name_hu": "Metrológiai visszavezethetőség"
+      },
+      {
+        "id": "NAR-37",
+        "name_hu": "Az adat- és információ kezelés felügyelete"
+      },
+      {
+        "id": "NAR-38",
+        "name_hu": "Adatok feltöltése és karbantartása az IAF adatbázis szabályzata"
+      },
+      {
+        "id": "NAR-54",
+        "name_hu": "Panaszok és jogorvoslati eljárással kapcsolatos beadványok kezelése"
+      },
+      {
+        "id": "NAR-85",
+        "name_hu": "Döntéshozatali szakasz szabályzata"
+      },
+      {
+        "id": "NAR-86",
+        "name_hu": "Szakmai Tanácsadó Testületek ügyrendje"
+      },
+      {
+        "id": "NAR-87",
+        "name_hu": "Pártatlansági Tanácsadó Testület ügyrendje"
+      }
+    ],
+    "regulations": [
+      {
+        "id": "1/1990 (IX.29) KHVM",
+        "name_hu": "a gépjárműfenntartó tevékenység személyi és dologi feltételeiről"
+      }
+    ]
+  },
+  "metadata": {
+    "qms_version": "3.1",
+    "revision_date": "2025-01-15",
+    "approved_by": "Kálmán Péter",
+    "nah_last_audit": "2024-12-01",
+    "next_review": "2026-01-15"
+  }
+}

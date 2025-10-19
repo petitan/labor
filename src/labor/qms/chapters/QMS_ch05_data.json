@@ -1,0 +1,114 @@
+{
+  "chapter": "05",
+  "title": "STRUKTURÁLIS KÖVETELMÉNYEK",
+  "sections": {
+    "organizational_structure": {
+      "title": "Szervezeti felépítés (5.1)",
+      "subsections": {
+        "legal_entity": {
+          "title": "Jogi személyiség (5.1.a)",
+          "content": "A Petitán Méréstechnikai Kft. jogi személyiségű gazdasági társaság, amely Magyarország területén bejegyzett korlátolt felelősségű társaság. A laboratórium a társaság szervezeti egységeként működik."
+        },
+        "laboratory_activities": {
+          "title": "Laboratóriumi tevékenységek meghatározása (5.1.b)",
+          "intro": "A laboratórium tevékenységei pontosan meghatározottak és dokumentáltak. A laboratórium tevékenysége:",
+          "items": [
+            "Mérőeszközök kalibrálása akkreditált eljárások szerint",
+            "Méréstechnikai tanácsadás",
+            "Minőségbiztosítási rendszerek támogatása méréstechnikában"
+          ]
+        },
+        "organizational_chart": {
+          "title": "Szervezeti felépítés (5.1.c)",
+          "content": "A laboratórium szervezeti felépítése világosan definiált, dokumentált és minden érintett számára hozzáférhető.",
+          "table": {
+            "title": "Szervezeti egységek és felelősségi körök",
+            "columns": ["position", "person", "responsibilities"],
+            "column_names": ["Pozíció", "Személy", "Felelősségi kör"],
+            "data": [
+              {
+                "position": "Ügyvezető igazgató",
+                "person": "Petri Tamás",
+                "responsibilities": "Társaság általános irányítása, stratégiai döntések"
+              },
+              {
+                "position": "Laboratóriumvezető",
+                "person": "Petri Tamás",
+                "responsibilities": "Laboratórium szakmai irányítása, akkreditáció fenntartása"
+              },
+              {
+                "position": "Minőségirányítási vezető",
+                "person": "Kijelölt független személy",
+                "responsibilities": "QMS működtetése, belső auditok, felülvizsgálatok"
+              },
+              {
+                "position": "Kalibráló szakember",
+                "person": "Engedélyezett személyzet",
+                "responsibilities": "Kalibrálások végrehajtása, bizonyítványok kiállítása"
+              },
+              {
+                "position": "Technikus",
+                "person": "Engedélyezett személyzet",
+                "responsibilities": "Mérőeszköz-karbantartás, technikai támogatás"
+              }
+            ]
+          }
+        },
+        "responsibilities": {
+          "title": "Felelősségek és jogkörök meghatározása (5.1.d)",
+          "intro": "Minden munkatárs írásos munkaköri leírással rendelkezik, amely tartalmazza:",
+          "items": [
+            "A pozíció fő feladatait és felelősségeit",
+            "A beszámolási viszonyokat",
+            "A helyettesítési rendet",
+            "A döntési jogköröket",
+            "A dokumentációs kötelezettségeket"
+          ]
+        },
+        "management_system": {
+          "title": "Irányítási rendszer dokumentálása (5.1.e)",
+          "content": "A laboratórium minőségirányítási rendszere dokumentált eljárásokban, utasításokban és nyilvántartásokban kerül rögzítésre. Ezek a dokumentumok biztosítják a tevékenységek megfelelő irányítását és felügyeletét."
+        },
+        "personnel_supervision": {
+          "title": "Személyzet felügyelete (5.1.f)",
+          "intro": "A laboratórium biztosítja a személyzet megfelelő felügyeletét:",
+          "items": [
+            "Minden kalibráló munkatárs képesített vezető felügyelete alatt dolgozik",
+            "A gyakorlati képzés alatt álló személyzet közvetlen felügyelet alatt áll",
+            "Az önálló munkavégzés csak képesítési vizsga után engedélyezett",
+            "Rendszeres teljesítményértékelés és kompetencia-ellenőrzés"
+          ],
+          "info_box": {
+            "type": "nahinfo",
+            "title": "[INFO] Kompetencia-ellenőrzés gyakorlata",
+            "intro": "A laboratóriumvezető évente ellenőrzi minden munkatárs kompetenciáját:",
+            "items": [
+              "Technikai kompetencia: mérési gyakorlatok értékelése",
+              "Elméleti tudás: írásbeli teszt vagy szakmai beszélgetés",
+              "Szabványismeret: aktuális eljárások ismeretének ellenőrzése",
+              "Dokumentációs készség: bizonyítványok és jegyzőkönyvek ellenőrzése"
+            ],
+            "closing": "Az értékelés eredménye alapján szükség esetén továbbképzés kerül szervezésre."
+          }
+        }
+      }
+    },
+    "management_responsibility": {
+      "title": "Vezetői felelősség (5.2)",
+      "content": "A laboratóriumvezető felelős a laboratórium működéséért, a minőségpolitika megvalósításáért és a pártatlanság biztosításáért.",
+      "alert_box": {
+        "type": "nahalert",
+        "title": "[FIGY] Laboratóriumvezető és ügyvezető személyének azonossága",
+        "intro": "Kis laboratóriumokban gyakori, hogy a laboratóriumvezető egyben az ügyvezető is. Ebben az esetben különös figyelmet kell fordítani:",
+        "items": [
+          "A pártatlanság biztosítására (lásd 4.1.5)",
+          "Az üzleti és szakmai döntések szétválasztására",
+          "A minőségirányítási vezető függetlenségének fenntartására",
+          "A belső auditok objektív végrehajtására",
+          "A kompetencia-értékelések tárgyilagosságára"
+        ],
+        "closing": "NAH audit során ezt fokozottan ellenőrzik!"
+      }
+    }
+  }
+}

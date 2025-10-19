@@ -1,0 +1,927 @@
+{
+  "chapter": "03",
+  "title": "Szakkifejezések és meghatározásuk",
+  "intro": {
+    "text": "A Minőségirányítási Kézikönyvre és a minőségirányítási rendszerben használt legfontosabb kifejezésekre az MSZ EN ISO/IEC 17025:2018 szabványban megadottakon túlmenően az alábbi szabványok és dokumentumok idevonatkozó szakkifejezései és meghatározásai érvényesek, mindig az aktuális kiadású (évszámú) változat szerint:",
+    "referenced_standards": [
+      {
+        "name_hu": "Megfelelőségértékelés. Szakszótár és általános elvek",
+        "id": "MSZ EN ISO/IEC 17000"
+      },
+      {
+        "name_hu": "Minőségirányítási rendszerek. Alapok és szótár",
+        "id": "ISO 9000"
+      },
+      {
+        "url": "https://aszek.hu/images/dokok/VIM_3_HU.pdf",
+        "name_hu": "Nemzetközi metrológiai értelmező szótár magyar fordítása",
+        "id": "VIM3"
+      },
+      {
+        "name_hu": "Mérési bizonytalanság meghatározása kalibrálásnál / B függelék",
+        "id": "EA-4/02 M:2022_HUN"
+      }
+    ]
+  },
+  "key_definitions": {
+    "calibration": "Olyan műveletek összessége, amelyek meghatározott feltételek mellett összefüggést teremtenek a mérőeszköz vagy mérőrendszer által mutatott értékek, illetve a mérési etalonokkal megvalósított megfelelő értékek között.",
+    "measurement_uncertainty": "A mérési eredményhez társított paraméter, amely a mérendő mennyiség értékének tulajdonítható értékek szórását jellemzi.",
+    "traceability": "A mérési eredmény olyan tulajdonsága, amelynek révén az eredmény megszakítás nélküli mérési kalibrálási láncon keresztül kapcsolható valamely etalonhoz.",
+    "accreditation": "Harmadik fél általi tanúsítás arról, hogy egy megfelelőségértékelő szerv megfelel az adott szabványban rögzített követelményeknek."
+  },
+  "tables": {
+    "abbreviations": {
+      "title": "Rövidítések jegyzéke",
+      "description": "A Minőségirányítási Kézikönyvben és a laboratórium dokumentumaiban használt rövidítések magyarázata az alábbi táblázatban található. A rövidítések első említéskor teljes kiírással szerepelnek, ezt követően a rövidített forma használatos.",
+      "columns": [
+        "id",
+        "name_hu",
+        "name_en"
+      ],
+      "column_names": [
+        "Rövidítés",
+        "Magyar jelentés",
+        "Angol jelentés"
+      ],
+      "data": [
+        {
+          "id": "CAPA",
+          "name_hu": "Helyesbítő és megelőző tevékenység",
+          "name_en": "Corrective and Preventive Action"
+        },
+        {
+          "id": "CMC",
+          "name_hu": "Kalibrálási és mérési képesség",
+          "name_en": "Calibration and Measurement Capability"
+        },
+        {
+          "id": "COI",
+          "name_hu": "Összeférhetetlenség",
+          "name_en": "Conflict of Interest"
+        },
+        {
+          "id": "ILC",
+          "name_hu": "Laboratóriumok közötti összehasonlítás",
+          "name_en": "Inter-Laboratory Comparison"
+        },
+        {
+          "id": "LOD",
+          "name_hu": "Kimutatási határ",
+          "name_en": "Limit of Detection"
+        },
+        {
+          "id": "LOQ",
+          "name_hu": "Meghatározási határ",
+          "name_en": "Limit of Quantification"
+        },
+        {
+          "id": "MU",
+          "name_hu": "Mérési bizonytalanság",
+          "name_en": "Measurement Uncertainty"
+        },
+        {
+          "id": "NCR",
+          "name_hu": "Nem-megfelelőségi jelentés",
+          "name_en": "Non-Conformity Report"
+        },
+        {
+          "id": "PT",
+          "name_hu": "Jártassági vizsgálat",
+          "name_en": "Proficiency Testing"
+        },
+        {
+          "id": "QC",
+          "name_hu": "Minőség-ellenőrzés",
+          "name_en": "Quality Control"
+        },
+        {
+          "id": "QMS",
+          "name_hu": "Minőségirányítási rendszer",
+          "name_en": "Quality Management System"
+        },
+        {
+          "id": "EA",
+          "name_hu": "Európai Akkreditálási Együttműködés",
+          "name_en": "European co-operation for Accreditation"
+        },
+        {
+          "id": "ILAC",
+          "name_hu": "Nemzetközi Laboratórium Akkreditálási Együttműködés",
+          "name_en": "International Laboratory Accreditation Cooperation"
+        },
+        {
+          "id": "ISO",
+          "name_hu": "Nemzetközi Szabványügyi Szervezet",
+          "name_en": "International Organization for Standardization"
+        },
+        {
+          "id": "IEC",
+          "name_hu": "Nemzetközi Elektrotechnikai Bizottság",
+          "name_en": "International Electrotechnical Commission"
+        },
+        {
+          "id": "MSZ",
+          "name_hu": "Magyar Szabvány",
+          "name_en": "Hungarian Standard"
+        },
+        {
+          "id": "NAH",
+          "name_hu": "Nemzeti Akkreditáló Hatóság",
+          "name_en": "National Accreditation Authority (of Hungary)"
+        },
+        {
+          "id": "NAR",
+          "name_hu": "NAH Akkreditálási Rendszer dokumentum",
+          "name_en": "NAH Accreditation System Document"
+        },
+        {
+          "id": "SI",
+          "name_hu": "Nemzetközi Mértékegységrendszer",
+          "name_en": "International System of Units"
+        },
+        {
+          "id": "VIM",
+          "name_hu": "Nemzetközi Metrológiai Szótár",
+          "name_en": "International Vocabulary of Metrology"
+        },
+        {
+          "id": "GUM",
+          "name_hu": "Mérési bizonytalanság kifejezésének útmutatója",
+          "name_en": "Guide to the Expression of Uncertainty in Measurement"
+        },
+        {
+          "id": "DKD",
+          "name_hu": "Német Kalibrálási Szolgálat",
+          "name_en": "Deutscher Kalibrierdienst"
+        },
+        {
+          "id": "EAL",
+          "name_hu": "Európai Akkreditálási Laboratórium (korábbi)",
+          "name_en": "European cooperation for Accreditation of Laboratories"
+        },
+        {
+          "id": "OMH",
+          "name_hu": "Országos Mérésügyi Hivatal (korábbi)",
+          "name_en": "National Office of Measures (former)"
+        },
+        {
+          "id": "PDF",
+          "name_hu": "Hordozható dokumentum formátum",
+          "name_en": "Portable Document Format"
+        },
+        {
+          "id": "QA",
+          "name_hu": "Minőségbiztosítás",
+          "name_en": "Quality Assurance"
+        },
+        {
+          "id": "SOP",
+          "name_hu": "Standard működési eljárás",
+          "name_en": "Standard Operating Procedure"
+        },
+        {
+          "id": "KPI",
+          "name_hu": "Kulcs teljesítménymutató",
+          "name_en": "Key Performance Indicator"
+        },
+        {
+          "id": "CRM",
+          "name_hu": "Tanúsított referenciaanyag",
+          "name_en": "Certified Reference Material"
+        },
+        {
+          "id": "RM",
+          "name_hu": "Referenciaanyag",
+          "name_en": "Reference Material"
+        }
+      ]
+    },
+    "organizations_intl": {
+      "title": "Nemzetközi szabványügyi és akkreditálási szervezetek",
+      "columns": [
+        "id",
+        "name_full"
+      ],
+      "column_names": [
+        "Rövidítés",
+        "Teljes megnevezés"
+      ],
+      "data": [
+        {
+          "id": "ISO",
+          "name_full": "International Organization for Standardization"
+        },
+        {
+          "id": "IEC",
+          "name_full": "International Electrotechnical Commission"
+        },
+        {
+          "id": "CEN",
+          "name_full": "Comité Européen de Normalisation"
+        },
+        {
+          "id": "CENELEC",
+          "name_full": "Comité Européen de Normalisation Électrotechnique"
+        },
+        {
+          "id": "EA",
+          "name_full": "European co-operation for Accreditation"
+        },
+        {
+          "id": "ILAC",
+          "name_full": "International Laboratory Accreditation Cooperation"
+        },
+        {
+          "id": "IAF",
+          "name_full": "International Accreditation Forum"
+        },
+        {
+          "id": "BIPM",
+          "name_full": "Bureau International des Poids et Mesures"
+        },
+        {
+          "id": "EUROMET",
+          "name_full": "European Collaboration in Measurement Standards"
+        },
+        {
+          "id": "OIML",
+          "name_full": "Organisation Internationale de Métrologie Légale"
+        },
+        {
+          "id": "WELMEC",
+          "name_full": "Western European Legal Metrology Cooperation"
+        }
+      ]
+    },
+    "organizations_national": {
+      "title": "Magyar nemzeti szervezetek és hatóságok",
+      "columns": [
+        "id",
+        "name_full"
+      ],
+      "column_names": [
+        "Rövidítés",
+        "Teljes megnevezés"
+      ],
+      "data": [
+        {
+          "id": "NAH",
+          "name_full": "Nemzeti Akkreditáló Hatóság"
+        },
+        {
+          "id": "NAT",
+          "name_full": "Nemzeti Akkreditáló Testület (2016-ig)"
+        },
+        {
+          "id": "MSZT",
+          "name_full": "Magyar Szabványügyi Testület"
+        },
+        {
+          "id": "MKEH",
+          "name_full": "Magyar Kereskedelmi Engedélyezési Hivatal"
+        },
+        {
+          "id": "BFKH",
+          "name_full": "Budapest Főváros Kormányhivatala"
+        },
+        {
+          "id": "ITM",
+          "name_full": "Innovációs és Technológiai Minisztérium"
+        }
+      ]
+    },
+    "standards_documents": {
+      "title": "Szabványok és dokumentumok jelölései",
+      "columns": [
+        "id",
+        "name_hu"
+      ],
+      "column_names": [
+        "Jelölés",
+        "Megnevezés"
+      ],
+      "data": [
+        {
+          "id": "MSZ",
+          "name_hu": "Magyar Szabvány"
+        },
+        {
+          "id": "EN",
+          "name_hu": "Európai Szabvány"
+        },
+        {
+          "id": "ISO/IEC 17025:2018",
+          "name_hu": "Vizsgáló- és kalibrálólaboratóriumok felkészültségének általános követelményei"
+        },
+        {
+          "id": "NAR",
+          "name_hu": "Nemzeti Akkreditálási Rendszer"
+        },
+        {
+          "id": "NAD",
+          "name_hu": "Nemzeti Akkreditálási Dokumentum"
+        },
+        {
+          "id": "NAR-18",
+          "name_hu": "Útmutató kalibrálási eljárások tartalmára és felépítésére"
+        },
+        {
+          "id": "EA-4/02",
+          "name_hu": "EA dokumentum a kalibrálás mérési bizonytalanságáról"
+        },
+        {
+          "id": "EA-4/07",
+          "name_hu": "Mérő- és vizsgálóeszközök visszavezethetősége"
+        },
+        {
+          "id": "ILAC-G8",
+          "name_hu": "Döntési szabályok és megfelelőségi nyilatkozatok"
+        },
+        {
+          "id": "ILAC-G24",
+          "name_hu": "Mérési bizonytalanság meghatározása kalibrálásban"
+        }
+      ]
+    },
+    "uncertainty_symbols": {
+      "title": "Mérési bizonytalanság jelölései",
+      "columns": [
+        "symbol",
+        "name_hu",
+        "unit"
+      ],
+      "column_names": [
+        "Jelölés",
+        "Megnevezés",
+        "Mértékegység/Megjegyzés"
+      ],
+      "data": [
+        {
+          "symbol": "$u$",
+          "unit": "A mért mennyiség egysége",
+          "name_hu": "Standard bizonytalanság"
+        },
+        {
+          "symbol": "$u_c$",
+          "unit": "A mért mennyiség egysége",
+          "name_hu": "Kombinált standard bizonytalanság"
+        },
+        {
+          "symbol": "$U$",
+          "unit": "A mért mennyiség egysége",
+          "name_hu": "Kiterjesztett bizonytalanság"
+        },
+        {
+          "symbol": "$k$",
+          "unit": "Dimenzió nélküli (általában k=2)",
+          "name_hu": "Kiterjesztési tényező"
+        },
+        {
+          "symbol": "$u_r$",
+          "unit": "% vagy dimenzió nélküli",
+          "name_hu": "Relatív standard bizonytalanság"
+        },
+        {
+          "symbol": "$\\nu$",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Szabadságfok"
+        },
+        {
+          "symbol": "$\\nu_{eff}$",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Effektív szabadságfok"
+        },
+        {
+          "symbol": "$c_i$",
+          "unit": "Megfelelő dimenzió",
+          "name_hu": "Érzékenységi együttható"
+        },
+        {
+          "symbol": "$r$",
+          "unit": "Dimenzió nélküli (-1 és +1 között)",
+          "name_hu": "Korrelációs együttható"
+        },
+        {
+          "symbol": "$s$",
+          "unit": "A mért mennyiség egysége",
+          "name_hu": "Tapasztalati szórás"
+        },
+        {
+          "symbol": "$\\bar{x}$",
+          "unit": "A mért mennyiség egysége",
+          "name_hu": "Számtani átlag"
+        },
+        {
+          "symbol": "$R$",
+          "unit": "A mért mennyiség egysége",
+          "name_hu": "Terjedelem"
+        },
+        {
+          "symbol": "$n$",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Mérések száma"
+        }
+      ]
+    },
+    "gas_analysis": {
+      "title": "Gázanalízis specifikus jelölések",
+      "columns": [
+        "symbol",
+        "name_hu",
+        "unit"
+      ],
+      "column_names": [
+        "Jelölés",
+        "Megnevezés",
+        "Mértékegység"
+      ],
+      "data": [
+        {
+          "symbol": "CO",
+          "unit": "%, ppm",
+          "name_hu": "Szén-monoxid"
+        },
+        {
+          "symbol": "CO$_2$",
+          "unit": "%, ppm",
+          "name_hu": "Szén-dioxid"
+        },
+        {
+          "symbol": "HC",
+          "unit": "ppm",
+          "name_hu": "Szénhidrogén"
+        },
+        {
+          "symbol": "NO$_x$",
+          "unit": "ppm",
+          "name_hu": "Nitrogén-oxidok"
+        },
+        {
+          "symbol": "O$_2$",
+          "unit": "%",
+          "name_hu": "Oxigén"
+        },
+        {
+          "symbol": "$\\lambda$",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Légfelesleg tényező"
+        },
+        {
+          "symbol": "NDIR",
+          "unit": "--",
+          "name_hu": "Nem diszperzív infravörös"
+        },
+        {
+          "symbol": "PEF",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Propán Ekvivalens Faktor"
+        },
+        {
+          "symbol": "C$_3$H$_8$",
+          "unit": "ppm",
+          "name_hu": "Propán"
+        },
+        {
+          "symbol": "C$_6$H$_{14}$",
+          "unit": "ppm",
+          "name_hu": "Hexán"
+        },
+        {
+          "symbol": "ppm",
+          "unit": "$10^{-6}$",
+          "name_hu": "Parts per million"
+        },
+        {
+          "symbol": "ppb",
+          "unit": "$10^{-9}$",
+          "name_hu": "Parts per billion"
+        },
+        {
+          "symbol": "n/n",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "mol/mol koncentráció"
+        },
+        {
+          "symbol": "v/v",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Térfogat/térfogat arány"
+        }
+      ]
+    },
+    "mechanical": {
+      "title": "Mechanikai mérések jelölései",
+      "columns": [
+        "symbol",
+        "name_hu",
+        "unit"
+      ],
+      "column_names": [
+        "Jelölés",
+        "Megnevezés",
+        "Mértékegység"
+      ],
+      "data": [
+        {
+          "symbol": "$F$",
+          "unit": "N (Newton)",
+          "name_hu": "Erő"
+        },
+        {
+          "symbol": "$M$",
+          "unit": "Nm (Newton-méter)",
+          "name_hu": "Nyomaték"
+        },
+        {
+          "symbol": "$p$",
+          "unit": "Pa, bar, mbar, kPa",
+          "name_hu": "Nyomás"
+        },
+        {
+          "symbol": "$a$",
+          "unit": "m/s$^2$, g",
+          "name_hu": "Gyorsulás"
+        },
+        {
+          "symbol": "$v$",
+          "unit": "m/s, km/h",
+          "name_hu": "Sebesség"
+        },
+        {
+          "symbol": "$\\omega$",
+          "unit": "rad/s, rpm",
+          "name_hu": "Szögsebesség"
+        },
+        {
+          "symbol": "$f$",
+          "unit": "Hz",
+          "name_hu": "Frekvencia"
+        },
+        {
+          "symbol": "$T$",
+          "unit": "s",
+          "name_hu": "Periódusidő"
+        },
+        {
+          "symbol": "$m$",
+          "unit": "kg, g",
+          "name_hu": "Tömeg"
+        },
+        {
+          "symbol": "$\\rho$",
+          "unit": "kg/m$^3$",
+          "name_hu": "Sűrűség"
+        },
+        {
+          "symbol": "$\\mu$",
+          "unit": "Dimenzió nélküli",
+          "name_hu": "Súrlódási együttható"
+        },
+        {
+          "symbol": "$E$",
+          "unit": "GPa",
+          "name_hu": "Young-modulus"
+        },
+        {
+          "symbol": "$\\sigma$",
+          "unit": "MPa",
+          "name_hu": "Mechanikai feszültség"
+        },
+        {
+          "symbol": "$\\varepsilon$",
+          "unit": "%, dimenzió nélküli",
+          "name_hu": "Relatív nyúlás"
+        }
+      ]
+    },
+    "environment": {
+      "title": "Környezeti paraméterek jelölései",
+      "columns": [
+        "symbol",
+        "name_hu",
+        "unit"
+      ],
+      "column_names": [
+        "Jelölés",
+        "Megnevezés",
+        "Mértékegység"
+      ],
+      "data": [
+        {
+          "symbol": "$t$",
+          "unit": "°C",
+          "name_hu": "Hőmérséklet"
+        },
+        {
+          "symbol": "$T$",
+          "unit": "K (Kelvin)",
+          "name_hu": "Abszolút hőmérséklet"
+        },
+        {
+          "symbol": "RH",
+          "unit": "%",
+          "name_hu": "Relatív páratartalom"
+        },
+        {
+          "symbol": "$p_{atm}$",
+          "unit": "hPa, mbar",
+          "name_hu": "Légköri nyomás"
+        },
+        {
+          "symbol": "$E$",
+          "unit": "lux",
+          "name_hu": "Megvilágítás"
+        },
+        {
+          "symbol": "$L$",
+          "unit": "dB, dB(A)",
+          "name_hu": "Zajszint"
+        },
+        {
+          "symbol": "$v_{air}$",
+          "unit": "m/s",
+          "name_hu": "Légáramlási sebesség"
+        },
+        {
+          "symbol": "$\\phi$",
+          "unit": "g/m$^3$",
+          "name_hu": "Abszolút páratartalom"
+        }
+      ]
+    },
+    "quality_mgmt": {
+      "title": "Minőségirányítási és akkreditálási rövidítések",
+      "columns": [
+        "id",
+        "name_full"
+      ],
+      "column_names": [
+        "Rövidítés",
+        "Teljes megnevezés"
+      ],
+      "data": [
+        {
+          "id": "MIR",
+          "name_full": "Minőségirányítási Rendszer"
+        },
+        {
+          "id": "QMS",
+          "name_full": "Quality Management System"
+        },
+        {
+          "id": "PDCA",
+          "name_full": "Plan-Do-Check-Act ciklus"
+        },
+        {
+          "id": "PT",
+          "name_full": "Proficiency Testing (Jártassági vizsgálat)"
+        },
+        {
+          "id": "ILC",
+          "name_full": "Inter-Laboratory Comparison (Laboratóriumközi összehasonlítás)"
+        },
+        {
+          "id": "CRM",
+          "name_full": "Certified Reference Material (Tanúsított referencia anyag)"
+        },
+        {
+          "id": "RM",
+          "name_full": "Reference Material (Referencia anyag)"
+        },
+        {
+          "id": "SOP",
+          "name_full": "Standard Operating Procedure (Standard működési eljárás)"
+        },
+        {
+          "id": "NCR",
+          "name_full": "Non-Conformity Report (Nem-megfelelőségi jelentés)"
+        },
+        {
+          "id": "CAR",
+          "name_full": "Corrective Action Request (Helyesbítő intézkedési kérelem)"
+        },
+        {
+          "id": "CMC",
+          "name_full": "Calibration and Measurement Capability"
+        },
+        {
+          "id": "KMK",
+          "name_full": "Kalibrálási és Mérési Képesség"
+        },
+        {
+          "id": "CAPA",
+          "name_full": "Corrective and Preventive Action"
+        },
+        {
+          "id": "COI",
+          "name_full": "Conflict of Interest (Összeférhetetlenség)"
+        },
+        {
+          "id": "LOD",
+          "name_full": "Limit of Detection (Kimutatási határ)"
+        },
+        {
+          "id": "LOQ",
+          "name_full": "Limit of Quantification (Meghatározási határ)"
+        },
+        {
+          "id": "MU",
+          "name_full": "Measurement Uncertainty (Mérési bizonytalanság)"
+        },
+        {
+          "id": "QC",
+          "name_full": "Quality Control (Minőség-ellenőrzés)"
+        }
+      ]
+    },
+    "metrology": {
+      "title": "Általános metrológiai rövidítések",
+      "columns": [
+        "id",
+        "name_full"
+      ],
+      "column_names": [
+        "Rövidítés",
+        "Teljes megnevezés"
+      ],
+      "data": [
+        {
+          "id": "SI",
+          "name_full": "Système International d'unités (Nemzetközi Mértékegységrendszer)"
+        },
+        {
+          "id": "GUM",
+          "name_full": "Guide to the Expression of Uncertainty in Measurement"
+        },
+        {
+          "id": "VIM",
+          "name_full": "International Vocabulary of Metrology"
+        },
+        {
+          "id": "MLA",
+          "name_full": "Multilateral Agreement (Kölcsönös Elismerési Megállapodás)"
+        },
+        {
+          "id": "MRA",
+          "name_full": "Mutual Recognition Arrangement"
+        },
+        {
+          "id": "DKD",
+          "name_full": "Deutscher Kalibrierdienst"
+        },
+        {
+          "id": "EAL",
+          "name_full": "European cooperation for Accreditation of Laboratories (korábbi)"
+        },
+        {
+          "id": "OMH",
+          "name_full": "Országos Mérésügyi Hivatal (korábbi)"
+        },
+        {
+          "id": "NIST",
+          "name_full": "National Institute of Standards and Technology (USA)"
+        },
+        {
+          "id": "NPL",
+          "name_full": "National Physical Laboratory (UK)"
+        },
+        {
+          "id": "PTB",
+          "name_full": "Physikalisch-Technische Bundesanstalt (Németország)"
+        },
+        {
+          "id": "LNE",
+          "name_full": "Laboratoire National de Métrologie et d'Essais (Franciaország)"
+        },
+        {
+          "id": "FH",
+          "name_full": "Felső Hibahatár"
+        },
+        {
+          "id": "AH",
+          "name_full": "Alsó Hibahatár"
+        },
+        {
+          "id": "MPE",
+          "name_full": "Maximum Permissible Error (Megengedett legnagyobb hiba)"
+        },
+        {
+          "id": "TUR",
+          "name_full": "Test Uncertainty Ratio"
+        },
+        {
+          "id": "TAR",
+          "name_full": "Test Accuracy Ratio"
+        },
+        {
+          "id": "DUT",
+          "name_full": "Device Under Test (Vizsgált eszköz)"
+        },
+        {
+          "id": "UUT",
+          "name_full": "Unit Under Test (Vizsgált egység)"
+        },
+        {
+          "id": "cal",
+          "name_full": "Kalibrált érték"
+        },
+        {
+          "id": "ref",
+          "name_full": "Referencia érték"
+        },
+        {
+          "id": "nom",
+          "name_full": "Névleges érték"
+        }
+      ]
+    },
+    "document_codes": {
+      "title": "Belső dokumentum kódolási rendszer",
+      "columns": [
+        "id",
+        "name_hu"
+      ],
+      "column_names": [
+        "Kód",
+        "Dokumentum típus"
+      ],
+      "data": [
+        {
+          "id": "MK",
+          "name_hu": "Minőségirányítási Kézikönyv"
+        },
+        {
+          "id": "KE",
+          "name_hu": "Kalibrálási Eljárás"
+        },
+        {
+          "id": "ME",
+          "name_hu": "Mérési Eljárás"
+        },
+        {
+          "id": "EL",
+          "name_hu": "Előírás"
+        },
+        {
+          "id": "UT",
+          "name_hu": "Utasítás"
+        },
+        {
+          "id": "NY",
+          "name_hu": "Nyomtatvány"
+        },
+        {
+          "id": "JK",
+          "name_hu": "Jegyzőkönyv"
+        },
+        {
+          "id": "BIZ",
+          "name_hu": "Bizonyítvány"
+        },
+        {
+          "id": "GE",
+          "name_hu": "Gázelemző"
+        },
+        {
+          "id": "EM",
+          "name_hu": "Emissziómérő"
+        },
+        {
+          "id": "FD",
+          "name_hu": "Füstölésmérő (dízel)"
+        },
+        {
+          "id": "NK",
+          "name_hu": "Nyomatékkulcs"
+        },
+        {
+          "id": "LM",
+          "name_hu": "Lassulásmérő"
+        },
+        {
+          "id": "PM",
+          "name_hu": "Nyomásmérő"
+        },
+        {
+          "id": "FM",
+          "name_hu": "Fékerőmérő"
+        },
+        {
+          "id": "FS",
+          "name_hu": "Fényszóró"
+        },
+        {
+          "id": "EU",
+          "name_hu": "Egyensúlyozó"
+        },
+        {
+          "id": "LC",
+          "name_hu": "Lengéscsillapító"
+        },
+        {
+          "id": "MB",
+          "name_hu": "Mérési Bizonytalanság"
+        }
+      ]
+    }
+  }
+}

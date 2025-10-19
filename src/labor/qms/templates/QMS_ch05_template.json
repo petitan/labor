@@ -1,0 +1,184 @@
+{
+  "docjll": [
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "{{CHAPTER_TITLE}}",
+      "label": "chap:strukturalis_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "5"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{ORGANIZATIONAL_STRUCTURE_TITLE}}",
+      "label": "sec:szervezeti_felepites",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{LEGAL_ENTITY_TITLE}}",
+      "label": "subsec:jogi_szemelyiseg",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{LEGAL_ENTITY_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{LABORATORY_ACTIVITIES_TITLE}}",
+      "label": "subsec:laboratorium_tevekenysegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{LABORATORY_ACTIVITIES_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{LABORATORY_ACTIVITIES_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{ORGANIZATIONAL_CHART_TITLE}}",
+      "label": "subsec:szervezeti_felepites_diagram",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ORGANIZATIONAL_CHART_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{ORGANIZATIONAL_CHART_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RESPONSIBILITIES_TITLE}}",
+      "label": "subsec:felelossegek_jogkorok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RESPONSIBILITIES_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{RESPONSIBILITIES_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{MANAGEMENT_SYSTEM_TITLE}}",
+      "label": "subsec:iranyitasi_rendszer_dok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MANAGEMENT_SYSTEM_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{PERSONNEL_SUPERVISION_TITLE}}",
+      "label": "subsec:szemelyzet_felugyelete",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{PERSONNEL_SUPERVISION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{PERSONNEL_SUPERVISION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "{{INFO_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{INFO_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{MANAGEMENT_RESPONSIBILITY_TITLE}}",
+      "label": "sec:vezetoi_felelosseg",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MANAGEMENT_RESPONSIBILITY_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahalert",
+        "box_title": "{{ALERT_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{ALERT_BOX_CONTENT}}"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 4 - Általános követelmények Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 4",
+  "version": "1.0.0",
+  "mappings": {
+    "{{CHAPTER_TITLE}}": {
+      "source": "chapters.ch04.title"
+    },
+    "{{IMPARTIALITY_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.title"
+    },
+    "{{IMPARTIAL_OPERATION_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.impartial_operation.title"
+    },
+    "{{IMPARTIAL_OPERATION_CONTENT}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.impartial_operation.content"
+    },
+    "{{MANAGEMENT_COMMITMENT_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.management_commitment.title"
+    },
+    "{{MANAGEMENT_COMMITMENT_INTRO}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.management_commitment.intro"
+    },
+    "{{MANAGEMENT_COMMITMENT_ITEMS}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.management_commitment.items"
+    },
+    "{{THREATENING_ACTIVITIES_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.threatening_activities.title"
+    },
+    "{{THREATENING_ACTIVITIES_INTRO}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.threatening_activities.intro"
+    },
+    "{{THREATENING_ACTIVITIES_ITEMS}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.threatening_activities.items"
+    },
+    "{{THREATENING_ACTIVITIES_NOTE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.threatening_activities.note"
+    },
+    "{{ALERT_BOX_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.threatening_activities.alert_box.title"
+    },
+    "{{ALERT_BOX_CONTENT}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.threatening_activities.alert_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{RISK_MANAGEMENT_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.title"
+    },
+    "{{RISK_IDENTIFICATION_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.risk_identification.title"
+    },
+    "{{RISK_IDENTIFICATION_INTRO}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.risk_identification.intro"
+    },
+    "{{RISK_IDENTIFICATION_ITEMS}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.risk_identification.items"
+    },
+    "{{RISK_ASSESSMENT_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.risk_assessment.title"
+    },
+    "{{RISK_ASSESSMENT_CONTENT}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.risk_assessment.content"
+    },
+    "{{RECORD_KEEPING_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.record_keeping.title"
+    },
+    "{{RECORD_KEEPING_INTRO}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.record_keeping.intro"
+    },
+    "{{RECORD_KEEPING_ITEMS}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.risk_management.subsubsections.record_keeping.items"
+    },
+    "{{CONFLICT_OF_INTEREST_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.conflict_of_interest.title"
+    },
+    "{{CONFLICT_OF_INTEREST_CONTENT}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.conflict_of_interest.content"
+    },
+    "{{INFO_BOX_TITLE}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.conflict_of_interest.info_box.title"
+    },
+    "{{INFO_BOX_CONTENT}}": {
+      "source": "chapters.ch04.sections.impartiality.subsections.conflict_of_interest.info_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{CONFIDENTIALITY_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.title"
+    },
+    "{{CONFIDENTIAL_INFORMATION_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidential_information.title"
+    },
+    "{{CONFIDENTIAL_INFORMATION_INTRO}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidential_information.intro"
+    },
+    "{{CONFIDENTIAL_INFORMATION_ITEMS}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidential_information.items"
+    },
+    "{{CONFIDENTIAL_INFORMATION_NOTE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidential_information.note"
+    },
+    "{{LEGAL_OBLIGATION_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.legal_obligation.title"
+    },
+    "{{LEGAL_OBLIGATION_INTRO}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.legal_obligation.intro"
+    },
+    "{{LEGAL_OBLIGATION_ITEMS}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.legal_obligation.items"
+    },
+    "{{EXTERNAL_SOURCES_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.external_sources.title"
+    },
+    "{{EXTERNAL_SOURCES_CONTENT}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.external_sources.content"
+    },
+    "{{CONFIDENTIALITY_OBLIGATION_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.title"
+    },
+    "{{STAFF_OBLIGATIONS_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.subsubsections.staff_obligations.title"
+    },
+    "{{STAFF_OBLIGATIONS_CONTENT}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.subsubsections.staff_obligations.content"
+    },
+    "{{PHYSICAL_SECURITY_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.subsubsections.physical_security.title"
+    },
+    "{{PHYSICAL_SECURITY_INTRO}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.subsubsections.physical_security.intro"
+    },
+    "{{PHYSICAL_SECURITY_ITEMS}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.subsubsections.physical_security.items"
+    },
+    "{{STORAGE_REQUIREMENTS_TABLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{REQ_BOX_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.req_box.title"
+    },
+    "{{REQ_BOX_CONTENT}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.req_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{SEC_BOX_TITLE}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.sec_box.title"
+    },
+    "{{SEC_BOX_CONTENT}}": {
+      "source": "chapters.ch04.sections.confidentiality.subsections.confidentiality_obligation.sec_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    }
+  }
+}

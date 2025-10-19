@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 8 - Irányítási rendszer követelmények Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 8",
+  "version": "1.0.0",
+  "mappings": {
+    "{{CHAPTER_TITLE}}": {
+      "source": "chapters.ch08.title"
+    },
+    "{{OPTIONS_TITLE}}": {
+      "source": "chapters.ch08.sections.options.title"
+    },
+    "{{GENERAL_TITLE}}": {
+      "source": "chapters.ch08.sections.options.subsections.general.title"
+    },
+    "{{GENERAL_CONTENT}}": {
+      "source": "chapters.ch08.sections.options.subsections.general.content"
+    },
+    "{{OPTION_A_TITLE}}": {
+      "source": "chapters.ch08.sections.options.subsections.option_a.title"
+    },
+    "{{OPTION_A_CONTENT}}": {
+      "source": "chapters.ch08.sections.options.subsections.option_a.content"
+    },
+    "{{DOCUMENTATION_TITLE}}": {
+      "source": "chapters.ch08.sections.documentation.title"
+    },
+    "{{MANAGEMENT_SYSTEM_DOCUMENTATION_TITLE}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.management_system_documentation.title"
+    },
+    "{{MANAGEMENT_SYSTEM_DOCUMENTATION_INTRO}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.management_system_documentation.intro"
+    },
+    "{{MANAGEMENT_SYSTEM_DOCUMENTATION_ITEMS}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.management_system_documentation.items"
+    },
+    "{{DOCUMENT_CONTROL_TITLE}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.document_control.title"
+    },
+    "{{DOCUMENT_CONTROL_INTRO}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.document_control.intro"
+    },
+    "{{DOCUMENT_CONTROL_ITEMS}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.document_control.items"
+    },
+    "{{DOCUMENT_CONTROL_TABLE}}": {
+      "source": "chapters.ch08.sections.documentation.subsections.document_control.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{RECORD_CONTROL_TITLE}}": {
+      "source": "chapters.ch08.sections.record_control.title"
+    },
+    "{{RECORD_REQUIREMENTS_TITLE}}": {
+      "source": "chapters.ch08.sections.record_control.subsections.record_requirements.title"
+    },
+    "{{RECORD_REQUIREMENTS_INTRO}}": {
+      "source": "chapters.ch08.sections.record_control.subsections.record_requirements.intro"
+    },
+    "{{RECORD_REQUIREMENTS_ITEMS}}": {
+      "source": "chapters.ch08.sections.record_control.subsections.record_requirements.items"
+    },
+    "{{TECHNICAL_RECORDS_TITLE}}": {
+      "source": "chapters.ch08.sections.record_control.subsections.technical_records.title"
+    },
+    "{{TECHNICAL_RECORDS_CONTENT}}": {
+      "source": "chapters.ch08.sections.record_control.subsections.technical_records.content"
+    },
+    "{{ACTIONS_TO_ADDRESS_RISKS_TITLE}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.title"
+    },
+    "{{RISK_IDENTIFICATION_TITLE}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_identification.title"
+    },
+    "{{RISK_IDENTIFICATION_INTRO}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_identification.intro"
+    },
+    "{{RISK_IDENTIFICATION_ITEMS}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_identification.items"
+    },
+    "{{RISK_TREATMENT_TITLE}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_treatment.title"
+    },
+    "{{RISK_TREATMENT_CONTENT}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_treatment.content"
+    },
+    "{{RISK_TREATMENT_INFO_BOX_TITLE}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_treatment.info_box.title"
+    },
+    "{{RISK_TREATMENT_INFO_BOX_CONTENT}}": {
+      "source": "chapters.ch08.sections.actions_to_address_risks.subsections.risk_treatment.info_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{IMPROVEMENT_TITLE}}": {
+      "source": "chapters.ch08.sections.improvement.title"
+    },
+    "{{GENERAL_IMPROVEMENT_TITLE}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.general_improvement.title"
+    },
+    "{{GENERAL_IMPROVEMENT_INTRO}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.general_improvement.intro"
+    },
+    "{{GENERAL_IMPROVEMENT_ITEMS}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.general_improvement.items"
+    },
+    "{{CORRECTIVE_ACTIONS_TITLE}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.corrective_actions.title"
+    },
+    "{{CORRECTIVE_ACTIONS_INTRO}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.corrective_actions.intro"
+    },
+    "{{CORRECTIVE_ACTIONS_ITEMS}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.corrective_actions.items"
+    },
+    "{{CORRECTIVE_ACTIONS_REQ_BOX_TITLE}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.corrective_actions.req_box.title"
+    },
+    "{{CORRECTIVE_ACTIONS_REQ_BOX_CONTENT}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.corrective_actions.req_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{PREVENTIVE_ACTIONS_TITLE}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.preventive_actions.title"
+    },
+    "{{PREVENTIVE_ACTIONS_CONTENT}}": {
+      "source": "chapters.ch08.sections.improvement.subsections.preventive_actions.content"
+    },
+    "{{INTERNAL_AUDITS_TITLE}}": {
+      "source": "chapters.ch08.sections.internal_audits.title"
+    },
+    "{{AUDIT_PROGRAM_TITLE}}": {
+      "source": "chapters.ch08.sections.internal_audits.subsections.audit_program.title"
+    },
+    "{{AUDIT_PROGRAM_INTRO}}": {
+      "source": "chapters.ch08.sections.internal_audits.subsections.audit_program.intro"
+    },
+    "{{AUDIT_PROGRAM_ITEMS}}": {
+      "source": "chapters.ch08.sections.internal_audits.subsections.audit_program.items"
+    },
+    "{{AUDIT_PROGRAM_TABLE}}": {
+      "source": "chapters.ch08.sections.internal_audits.subsections.audit_program.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{AUDIT_EXECUTION_TITLE}}": {
+      "source": "chapters.ch08.sections.internal_audits.subsections.audit_execution.title"
+    },
+    "{{AUDIT_EXECUTION_CONTENT}}": {
+      "source": "chapters.ch08.sections.internal_audits.subsections.audit_execution.content"
+    },
+    "{{MANAGEMENT_REVIEWS_TITLE}}": {
+      "source": "chapters.ch08.sections.management_reviews.title"
+    },
+    "{{REVIEW_FREQUENCY_TITLE}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_frequency.title"
+    },
+    "{{REVIEW_FREQUENCY_CONTENT}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_frequency.content"
+    },
+    "{{REVIEW_INPUTS_TITLE}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_inputs.title"
+    },
+    "{{REVIEW_INPUTS_INTRO}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_inputs.intro"
+    },
+    "{{REVIEW_INPUTS_ITEMS}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_inputs.items"
+    },
+    "{{REVIEW_OUTPUTS_TITLE}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_outputs.title"
+    },
+    "{{REVIEW_OUTPUTS_INTRO}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_outputs.intro"
+    },
+    "{{REVIEW_OUTPUTS_ITEMS}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_outputs.items"
+    },
+    "{{REVIEW_OUTPUTS_ALERT_BOX_TITLE}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_outputs.alert_box.title"
+    },
+    "{{REVIEW_OUTPUTS_ALERT_BOX_CONTENT}}": {
+      "source": "chapters.ch08.sections.management_reviews.subsections.review_outputs.alert_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    }
+  }
+}

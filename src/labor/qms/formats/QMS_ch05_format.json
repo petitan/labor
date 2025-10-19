@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 5 - Strukturális követelmények Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 5",
+  "version": "1.0.0",
+  "mappings": {
+    "{{CHAPTER_TITLE}}": {
+      "source": "chapters.ch05.title"
+    },
+    "{{ORGANIZATIONAL_STRUCTURE_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.title"
+    },
+    "{{LEGAL_ENTITY_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.legal_entity.title"
+    },
+    "{{LEGAL_ENTITY_CONTENT}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.legal_entity.content"
+    },
+    "{{LABORATORY_ACTIVITIES_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.laboratory_activities.title"
+    },
+    "{{LABORATORY_ACTIVITIES_INTRO}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.laboratory_activities.intro"
+    },
+    "{{LABORATORY_ACTIVITIES_ITEMS}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.laboratory_activities.items"
+    },
+    "{{ORGANIZATIONAL_CHART_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.organizational_chart.title"
+    },
+    "{{ORGANIZATIONAL_CHART_CONTENT}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.organizational_chart.content"
+    },
+    "{{ORGANIZATIONAL_CHART_TABLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.organizational_chart.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{RESPONSIBILITIES_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.responsibilities.title"
+    },
+    "{{RESPONSIBILITIES_INTRO}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.responsibilities.intro"
+    },
+    "{{RESPONSIBILITIES_ITEMS}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.responsibilities.items"
+    },
+    "{{MANAGEMENT_SYSTEM_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.management_system.title"
+    },
+    "{{MANAGEMENT_SYSTEM_CONTENT}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.management_system.content"
+    },
+    "{{PERSONNEL_SUPERVISION_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.personnel_supervision.title"
+    },
+    "{{PERSONNEL_SUPERVISION_INTRO}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.personnel_supervision.intro"
+    },
+    "{{PERSONNEL_SUPERVISION_ITEMS}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.personnel_supervision.items"
+    },
+    "{{INFO_BOX_TITLE}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.personnel_supervision.info_box.title"
+    },
+    "{{INFO_BOX_CONTENT}}": {
+      "source": "chapters.ch05.sections.organizational_structure.subsections.personnel_supervision.info_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{MANAGEMENT_RESPONSIBILITY_TITLE}}": {
+      "source": "chapters.ch05.sections.management_responsibility.title"
+    },
+    "{{MANAGEMENT_RESPONSIBILITY_CONTENT}}": {
+      "source": "chapters.ch05.sections.management_responsibility.content"
+    },
+    "{{ALERT_BOX_TITLE}}": {
+      "source": "chapters.ch05.sections.management_responsibility.alert_box.title"
+    },
+    "{{ALERT_BOX_CONTENT}}": {
+      "source": "chapters.ch05.sections.management_responsibility.alert_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    }
+  }
+}

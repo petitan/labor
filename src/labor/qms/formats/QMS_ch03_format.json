@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 3 - Szakkifejezések és meghatározásuk Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 3",
+  "version": "1.0.0",
+  "mappings": {
+    "{{INTRO_TEXT}}": {
+      "source": "chapters.ch03.intro.text"
+    },
+    "{{REFERENCED_STANDARDS}}": {
+      "source": "chapters.ch03.intro.referenced_standards",
+      "pipeline": [
+        {"transform": "format_standard_list"}
+      ]
+    },
+    "{{DEF_CALIBRATION}}": {
+      "source": "chapters.ch03.key_definitions.calibration"
+    },
+    "{{DEF_UNCERTAINTY}}": {
+      "source": "chapters.ch03.key_definitions.measurement_uncertainty"
+    },
+    "{{DEF_TRACEABILITY}}": {
+      "source": "chapters.ch03.key_definitions.traceability"
+    },
+    "{{DEF_ACCREDITATION}}": {
+      "source": "chapters.ch03.key_definitions.accreditation"
+    },
+    "{{ABBREVIATIONS_DESCRIPTION}}": {
+      "source": "chapters.ch03.tables.abbreviations.description"
+    },
+    "{{ABBREVIATIONS_TABLE}}": {
+      "source": "chapters.ch03.tables.abbreviations",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{ORGANIZATIONS_INTL_TABLE}}": {
+      "source": "chapters.ch03.tables.organizations_intl",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{ORGANIZATIONS_NAT_TABLE}}": {
+      "source": "chapters.ch03.tables.organizations_national",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{STANDARDS_DOCUMENTS_TABLE}}": {
+      "source": "chapters.ch03.tables.standards_documents",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{UNCERTAINTY_SYMBOLS_TABLE}}": {
+      "source": "chapters.ch03.tables.uncertainty_symbols",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{GAS_ANALYSIS_TABLE}}": {
+      "source": "chapters.ch03.tables.gas_analysis",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{MECHANICAL_TABLE}}": {
+      "source": "chapters.ch03.tables.mechanical",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{ENVIRONMENT_TABLE}}": {
+      "source": "chapters.ch03.tables.environment",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{QUALITY_MGMT_TABLE}}": {
+      "source": "chapters.ch03.tables.quality_mgmt",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{METROLOGY_TABLE}}": {
+      "source": "chapters.ch03.tables.metrology",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{DOCUMENT_CODES_TABLE}}": {
+      "source": "chapters.ch03.tables.document_codes",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    }
+  }
+}

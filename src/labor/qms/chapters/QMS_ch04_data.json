@@ -1,0 +1,196 @@
+{
+  "chapter": "04",
+  "title": "ÁLTALÁNOS KÖVETELMÉNYEK",
+  "sections": {
+    "impartiality": {
+      "title": "Pártatlanság",
+      "subsections": {
+        "impartial_operation": {
+          "title": "Pártatlan működés (4.1.1)",
+          "content": "A laboratórium tevékenységét pártatlanul kell végezni. A laboratórium és személyzete nem tehet különbséget a vevők között származás, vallás, politikai hovatartozás vagy gazdasági helyzet alapján."
+        },
+        "management_commitment": {
+          "title": "Vezetőségi elkötelezettség a pártatlanság iránt (4.1.2)",
+          "intro": "A laboratórium vezetése elkötelezett a pártatlan működés iránt. Ez az elkötelezettség:",
+          "items": [
+            "a minőségpolitikában kerül deklarálásra",
+            "a vezető személyes felelősségét jelenti a pártatlanság biztosításáért",
+            "magában foglalja a szükséges erőforrások biztosítását"
+          ]
+        },
+        "threatening_activities": {
+          "title": "Pártatlanságot veszélyeztető tevékenységek (4.1.3)",
+          "intro": "A laboratórium nem végezhet olyan tevékenységet, amely veszélyeztetné pártatlanságát. A személyzet javadalmazása nem függhet:",
+          "items": [
+            "az elvégzett kalibrálások számától",
+            "a kalibrálási eredményektől",
+            "konkrét vevőktől származó bevételektől"
+          ],
+          "note": "A személyzetnek mentesnek kell lennie minden olyan nyomástól, amely befolyásolhatná technikai ítéletalkotását.",
+          "alert_box": {
+            "type": "nahalert",
+            "title": "[FIGY] Pártatlanság veszélyeztető gyakori helyzetek",
+            "intro": "NAH audit tapasztalatok alapján a következő helyzetek jelentenek kockázatot:",
+            "items": [
+              "Vevő kifejezett elvárása \"megfelelő\" kalibrálási eredményre",
+              "Gazdasági nyomás: \"veszélyben a nagy megrendelés\"",
+              "Személyes kapcsolat a vevő képviselőjével",
+              "Üzleti partnerség a vevővel más területen",
+              "Versenyhelyzet más kalibrálólaboratóriumokkal"
+            ],
+            "closing": "Azonnal jelenteni kell a laboratóriumvezetőnek!"
+          }
+        },
+        "risk_management": {
+          "title": "Kockázatok és lehetőségek kezelése (4.1.4)",
+          "subsubsections": {
+            "risk_identification": {
+              "title": "Kockázatok azonosítása",
+              "intro": "A laboratórium köteles azonosítani a pártatlanságot veszélyeztető kockázatokat, ideértve:",
+              "items": [
+                "üzleti kapcsolatokból eredő kockázatokat",
+                "személyes kapcsolatokból fakadó befolyást",
+                "pénzügyi függőségből származó nyomást",
+                "versenytársaktól érkező befolyásolási kísérleteket"
+              ]
+            },
+            "risk_assessment": {
+              "title": "Kockázatértékelés és nyomon követés",
+              "content": "A kockázatértékelést írásban kell dokumentálni és évente felül kell vizsgálni. A laboratóriumvezető felelős a pártatlanság folyamatos nyomon követéséért."
+            },
+            "record_keeping": {
+              "title": "Nyilvántartási kötelezettség",
+              "intro": "A pártatlanságot veszélyeztető eseményeket írásban kell rögzíteni egy külön nyilvántartó füzetben, amely tartalmazza:",
+              "items": [
+                "az esemény dátumát és leírását",
+                "a megtett intézkedéseket",
+                "a felelős személy nevét és aláírását"
+              ]
+            }
+          }
+        },
+        "conflict_of_interest": {
+          "title": "Összeférhetetlenség kezelése (4.1.5)",
+          "content": "Ha a laboratórium kapcsolatban áll olyan szervezettel, amely a kalibrálási eredményeket felhasználja, ezt a kapcsolatot nyilvánosságra kell hozni. Az összeférhetetlenségi helyzetek kezelési eljárását írásban kell dokumentálni.",
+          "info_box": {
+            "type": "nahinfo",
+            "title": "[INFO] Pártatlanság biztosítása kettős szerepkör esetén",
+            "intro": "Az ügyvezető és laboratóriumvezető személyi azonossága esetén a pártatlanság biztosítására szolgáló kompenzáló intézkedések:",
+            "items": [
+              "A minőségirányítási vezető független pozíciójának fenntartása",
+              "Minden kalibrálási bizonyítvány kötelező kétfokú aláírása (kalibráló + jóváhagyó)",
+              "NAH felügyeleti auditok rendszeres külső kontrollfunkciója",
+              "Belső audit keretében a vezetői döntések pártatlanságának vizsgálata",
+              "Panaszkezelési eljárásban harmadik fél bevonásának lehetősége"
+            ]
+          }
+        }
+      }
+    },
+    "confidentiality": {
+      "title": "Bizalmasság",
+      "subsections": {
+        "confidential_information": {
+          "title": "Bizalmas információk kezelése (4.2.1)",
+          "intro": "A laboratórium bizalmasan kezeli:",
+          "items": [
+            "a vevők által szolgáltatott információkat",
+            "a laboratóriumi tevékenység során szerzett adatokat",
+            "a vevők tulajdonában lévő információkat"
+          ],
+          "note": "Ezen információk harmadik félnek történő átadása csak a vevő írásos hozzájárulásával engedélyezett."
+        },
+        "legal_obligation": {
+          "title": "Törvényi kötelezettség esetén történő információátadás (4.2.2)",
+          "intro": "Ha jogszabály vagy bírósági határozat kötelezi a laboratóriumot információ átadására:",
+          "items": [
+            "a vevőt haladéktalanul írásban tájékoztatni kell",
+            "kivéve, ha a jogszabály ezt kifejezetten megtiltja",
+            "az átadott információk körét pontosan dokumentálni kell"
+          ]
+        },
+        "external_sources": {
+          "title": "Külső forrásból származó információk (4.2.3)",
+          "content": "A laboratórium bizalmasan kezeli a vevőről más forrásból származó információkat is. A forrás kilétét nem szabad felfedni, kivéve, ha a forrás ehhez írásban hozzájárult."
+        },
+        "confidentiality_obligation": {
+          "title": "Titoktartási kötelezettség (4.2.4)",
+          "subsubsections": {
+            "staff_obligations": {
+              "title": "Munkatársak kötelezettségei",
+              "content": "Minden munkatárs köteles írásos titoktartási nyilatkozatot aláírni a munkaviszony kezdetekor. Ez a kötelezettség a munkaviszony megszűnése után is hatályban marad."
+            },
+            "physical_security": {
+              "title": "Fizikai információbiztonság",
+              "intro": "A papír alapú dokumentumok védelme érdekében:",
+              "items": [
+                "a bizalmas dokumentumokat zárható szekrényekben kell tárolni",
+                "a hozzáférést írásos nyilvántartásban kell rögzíteni",
+                "munkaidő végén minden bizalmas anyagot el kell zárni",
+                "a kulcsok kezelése kijelölt személyek felelőssége"
+              ]
+            }
+          },
+          "table": {
+            "title": "Információbiztonsági tárolási követelmények",
+            "columns": ["category", "storage_method", "retention_period"],
+            "column_names": ["Dokumentum kategória", "Tárolási mód", "Megőrzési idő"],
+            "data": [
+              {
+                "category": "Vevői személyes adatok",
+                "storage_method": "Zárható szekrény",
+                "retention_period": "min. 6 év vagy akkreditálási ciklus + 2 év"
+              },
+              {
+                "category": "Kalibrálási műszaki adatok",
+                "storage_method": "Dosszié mappa",
+                "retention_period": "min. 6 év vagy akkreditálási ciklus + 2 év"
+              },
+              {
+                "category": "Szerződések és megállapodások",
+                "storage_method": "Zárható szekrény",
+                "retention_period": "8 év"
+              },
+              {
+                "category": "Technikai dokumentáció",
+                "storage_method": "Műszaki irattár",
+                "retention_period": "Hatályos ideig"
+              },
+              {
+                "category": "Panaszkezelési dokumentumok",
+                "storage_method": "Külön mappa",
+                "retention_period": "min. 6 év vagy akkreditálási ciklus + 2 év"
+              }
+            ]
+          },
+          "req_box": {
+            "type": "nahreq",
+            "title": "[KÖV] Bizalmassági kötelező intézkedések",
+            "intro": "A laboratórium köteles biztosítani:",
+            "items": [
+              "Minden munkatárstól írásos titoktartási nyilatkozat bekérését",
+              "A bizalmas dokumentumok kezelési eljárásának írott dokumentálását",
+              "Dokumentum-hozzáférési jogosultságok nyilvántartását",
+              "A zárható tárolóeszközök kulcsainak felelős kezelését",
+              "Vevői betekintési kérelmek 5 munkanapon belüli teljesítését",
+              "Feleslegessé vált dokumentumok biztonságos megsemmisítését"
+            ]
+          },
+          "sec_box": {
+            "type": "nahsec",
+            "title": "[BIZ] Papír alapú fizikai biztonság ellenőrzése",
+            "intro": "Audit során ellenőrizendő fizikai biztonsági intézkedések:",
+            "items": [
+              "Zárható szekrények fűzérei és kulcskezelés",
+              "Hozzáférési napló vezesése és kiértékelése",
+              "Bizalmas dokumentumok megsemmísítési eljárása (irátvágó)",
+              "Tiszta asztal politika betartása",
+              "Munkahelyi beszélgetések bizalmassága"
+            ],
+            "closing": "Kritikus kérdés: \"Hogyan biztosítja, hogy éjszaka senki ne férjen hozzá a vevői adatokhoz?\""
+          }
+        }
+      }
+    }
+  }
+}

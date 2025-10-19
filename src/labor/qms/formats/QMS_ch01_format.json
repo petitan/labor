@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 1 - Alkalmazási terület Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 1",
+  "version": "1.0.0",
+  "simple_mappings": {
+    "{{COMPANY_NAME}}": "global.company.short_name",
+    "{{LAB_NAME}}": "global.laboratory.name",
+    "{{ISO_STANDARD}}": "global.standards.iso_17025",
+    "{{TECHNICAL_AREA}}": "chapters.ch01.scope.technical_area",
+    "{{OBJECTIVE_1}}": "chapters.ch01.scope.objectives[0]",
+    "{{OBJECTIVE_2}}": "chapters.ch01.scope.objectives[1]",
+    "{{OBJECTIVE_3}}": "chapters.ch01.scope.objectives[2]",
+    "{{OBJECTIVE_4}}": "chapters.ch01.scope.objectives[3]",
+    "{{INFO_BOX_TITLE}}": "chapters.ch01.info_box.title",
+    "{{INFO_BOX_BASE_STANDARD}}": "chapters.ch01.info_box.base_standard",
+    "{{INFO_BOX_TARGET}}": "chapters.ch01.info_box.target",
+    "{{INFO_BOX_SCOPE_SUMMARY}}": "chapters.ch01.info_box.scope_summary"
+  },
+  "complex_mappings": {
+    "{{ACTIVITY_LOCATIONS}}": {
+      "source": "chapters.ch01.scope.activity_locations",
+      "transform": "join_with_separator",
+      "separator": " + ",
+      "description": "Join array elements with ' + ' separator",
+      "example": "['laboratórium', 'külső helyszín'] → 'laboratórium + külső helyszín'"
+    }
+  },
+  "default_values": {
+    "info_box.title": "[INFO] Alkalmazási terület kulcsadatai",
+    "info_box.base_standard": "MSZ EN ISO/IEC 17025:2018",
+    "info_box.target": "Akkreditálási követelmények teljesítése",
+    "info_box.scope_summary": "Teljes kalibrálási tevékenység"
+  },
+  "validation_rules": {
+    "scope_data.objectives": {
+      "min_items": 1,
+      "max_items": 10,
+      "warning_if_less_than": 3
+    }
+  }
+}

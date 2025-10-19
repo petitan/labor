@@ -1,0 +1,346 @@
+{
+  "docjll": [
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "{{CHAPTER_TITLE}}",
+      "label": "chap:altalanos_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "4"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{IMPARTIALITY_TITLE}}",
+      "label": "sec:partatlanasag",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{IMPARTIAL_OPERATION_TITLE}}",
+      "label": "subsec:partatlan_mukodes",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{IMPARTIAL_OPERATION_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{MANAGEMENT_COMMITMENT_TITLE}}",
+      "label": "subsec:vezetoi_elkotelezettseg_partatlanasag",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MANAGEMENT_COMMITMENT_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_ordered",
+      "items": "{{MANAGEMENT_COMMITMENT_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{THREATENING_ACTIVITIES_TITLE}}",
+      "label": "subsec:partatlanasag_veszelyezteto",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{THREATENING_ACTIVITIES_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{THREATENING_ACTIVITIES_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{THREATENING_ACTIVITIES_NOTE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahalert",
+        "box_title": "{{ALERT_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{ALERT_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RISK_MANAGEMENT_TITLE}}",
+      "label": "subsec:kockazatok_lehetosegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "{{RISK_IDENTIFICATION_TITLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RISK_IDENTIFICATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{RISK_IDENTIFICATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "{{RISK_ASSESSMENT_TITLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RISK_ASSESSMENT_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "{{RECORD_KEEPING_TITLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RECORD_KEEPING_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{RECORD_KEEPING_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{CONFLICT_OF_INTEREST_TITLE}}",
+      "label": "subsec:osszeferhetetlenseg",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{CONFLICT_OF_INTEREST_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "{{INFO_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{INFO_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{CONFIDENTIALITY_TITLE}}",
+      "label": "sec:bizalmassag",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{CONFIDENTIAL_INFORMATION_TITLE}}",
+      "label": "subsec:bizalmas_informaciok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{CONFIDENTIAL_INFORMATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_ordered",
+      "items": "{{CONFIDENTIAL_INFORMATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{CONFIDENTIAL_INFORMATION_NOTE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{LEGAL_OBLIGATION_TITLE}}",
+      "label": "subsec:torvenyi_kotelezettseg",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{LEGAL_OBLIGATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{LEGAL_OBLIGATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{EXTERNAL_SOURCES_TITLE}}",
+      "label": "subsec:kulso_forrasbol_szarmazo",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{EXTERNAL_SOURCES_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{CONFIDENTIALITY_OBLIGATION_TITLE}}",
+      "label": "subsec:titoktartasi_kotelezettseg",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "{{STAFF_OBLIGATIONS_TITLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{STAFF_OBLIGATIONS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "content": "{{PHYSICAL_SECURITY_TITLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{PHYSICAL_SECURITY_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{PHYSICAL_SECURITY_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{STORAGE_REQUIREMENTS_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahreq",
+        "box_title": "{{REQ_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{REQ_BOX_CONTENT}}"
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahsec",
+        "box_title": "{{SEC_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{SEC_BOX_CONTENT}}"
+    }
+  ]
+}

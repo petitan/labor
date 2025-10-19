@@ -1,0 +1,483 @@
+{
+  "docjll": [
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "{{CHAPTER_TITLE}}",
+      "label": "chap:folyamat_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "7"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{REQUEST_REVIEW_TITLE}}",
+      "label": "sec:megrendelesek_attekintese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{REVIEW_PROCESS_TITLE}}",
+      "label": "subsec:attekintesi_folyamat",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{REVIEW_PROCESS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{REVIEW_PROCESS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{DEVIATIONS_TITLE}}",
+      "label": "subsec:elteresek_kezelese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{DEVIATIONS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "{{DEVIATIONS_INFO_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{DEVIATIONS_INFO_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RECORDS_TITLE}}",
+      "label": "subsec:attekintesi_nyilvantartasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RECORDS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{METHOD_SELECTION_TITLE}}",
+      "label": "sec:modszerek_kivalasztasa_validalasa",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{METHOD_SELECTION_SUBSEC_TITLE}}",
+      "label": "subsec:modszer_kivalasztas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{METHOD_SELECTION_SUBSEC_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{METHOD_SELECTION_SUBSEC_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{LABORATORY_DEVELOPED_METHODS_TITLE}}",
+      "label": "subsec:laboratorium_fejlesztett_modszerek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{LABORATORY_DEVELOPED_METHODS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahalert",
+        "box_title": "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{METHOD_VERIFICATION_TITLE}}",
+      "label": "subsec:modszer_verifikacio",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{METHOD_VERIFICATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{METHOD_VERIFICATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{SAMPLING_TITLE}}",
+      "label": "sec:mintavetel",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{SAMPLING_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{HANDLING_ITEMS_TITLE}}",
+      "label": "sec:tetelek_kezelese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{TRANSPORT_AND_STORAGE_TITLE}}",
+      "label": "subsec:szallitas_atvetel_tarolas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{TRANSPORT_AND_STORAGE_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{TRANSPORT_AND_STORAGE_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{IDENTIFICATION_TITLE}}",
+      "label": "subsec:egyedi_azonositas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{IDENTIFICATION_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{IDENTIFICATION_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{TECHNICAL_RECORDS_TITLE}}",
+      "label": "sec:technikai_nyilvantartasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RECORD_REQUIREMENTS_TITLE}}",
+      "label": "subsec:nyilvantartasi_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RECORD_REQUIREMENTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{RECORD_REQUIREMENTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RECORD_RETENTION_TITLE}}",
+      "label": "subsec:nyilvantartasok_megorzese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RECORD_RETENTION_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahreq",
+        "box_title": "{{RECORD_RETENTION_REQ_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{RECORD_RETENTION_REQ_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{MEASUREMENT_UNCERTAINTY_TITLE}}",
+      "label": "sec:meresi_bizonytalansag",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{UNCERTAINTY_EVALUATION_TITLE}}",
+      "label": "subsec:bizonytalansag_ertekelese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{UNCERTAINTY_EVALUATION_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{UNCERTAINTY_BUDGET_TITLE}}",
+      "label": "subsec:bizonytalansagi_koltsegvetes",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{UNCERTAINTY_BUDGET_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{UNCERTAINTY_BUDGET_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahalert",
+        "box_title": "{{UNCERTAINTY_BUDGET_ALERT_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{UNCERTAINTY_BUDGET_ALERT_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{VALIDITY_OF_RESULTS_TITLE}}",
+      "label": "sec:eredmenyek_ervenyessegenek_biztositasa",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{QUALITY_CONTROL_TITLE}}",
+      "label": "subsec:minoseg_ellenorzesi_eljarasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{QUALITY_CONTROL_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{QUALITY_CONTROL_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{MONITORING_TITLE}}",
+      "label": "subsec:teljesitmeny_monitorozasa",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MONITORING_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{MONITORING_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{INTERLABORATORY_COMPARISONS_TITLE}}",
+      "label": "subsec:interlaboratoriumi_osszehasonlitasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{INTERLABORATORY_COMPARISONS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{REPORTING_RESULTS_TITLE}}",
+      "label": "sec:eredmenyek_kozlese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{CERTIFICATE_REQUIREMENTS_TITLE}}",
+      "label": "subsec:kalibralas_bizonylat_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{CERTIFICATE_REQUIREMENTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{CERTIFICATE_REQUIREMENTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{ACCREDITATION_MARKING_TITLE}}",
+      "label": "subsec:akkreditacios_jeloles",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ACCREDITATION_MARKING_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahreq",
+        "box_title": "{{ACCREDITATION_MARKING_REQ_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{ACCREDITATION_MARKING_REQ_BOX_CONTENT}}"
+    }
+  ]
+}

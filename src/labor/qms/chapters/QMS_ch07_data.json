@@ -1,0 +1,305 @@
+{
+  "chapter": "07",
+  "title": "FOLYAMAT KÖVETELMÉNYEK",
+  "sections": {
+    "request_review": {
+      "title": "Megrendelések áttekintése (7.1)",
+      "subsections": {
+        "review_process": {
+          "title": "Áttekintési folyamat (7.1.1-7.1.3)",
+          "intro": "A laboratórium minden megrendelést áttekint, mielőtt elfogadná. Az áttekintés magában foglalja:",
+          "items": [
+            "A követelmények egyértelmű és dokumentált megfogalmazását",
+            "A laboratórium kompetenciájának és képességeinek ellenőrzését",
+            "A szükséges módszerek és erőforrások rendelkezésre állását",
+            "A határidők betarthatóságát",
+            "A mérési bizonytalanság megfelelőségét a vevő igényeihez képest"
+          ]
+        },
+        "deviations": {
+          "title": "Eltérések kezelése (7.1.4)",
+          "content": "Ha a vevő kérése eltér az ajánlattól vagy korábbi megállapodástól, az eltéréseket dokumentálni kell és a vevő jóváhagyását be kell szerezni. Minden módosítást írásban kell rögzíteni.",
+          "info_box": {
+            "type": "nahinfo",
+            "title": "[INFO] Megrendelés áttekintési checklist",
+            "intro": "Minden megrendelés elfogadása előtt ellenőrizendő:",
+            "items": [
+              "✓ Mérési tartomány az akkreditált körbe esik-e",
+              "✓ Etalon rendelkezésre áll és érvényes kalibrációval",
+              "✓ Határidő betartható-e (figyelembe véve a munkaterhelést)",
+              "✓ Mérési bizonytalanság megfelel-e a vevői igénynek",
+              "✓ Különleges követelmények (pl. helyszíni kalibráció) teljesíthetők-e"
+            ]
+          }
+        },
+        "records": {
+          "title": "Áttekintési nyilvántartások (7.1.5-7.1.7)",
+          "content": "Az áttekintési folyamat eredményét dokumentálni kell. A nyilvántartásnak tartalmaznia kell a vevői követelményeket, az áttekintés eredményét, az eltéréseket és a jóváhagyás dátumát."
+        }
+      }
+    },
+    "method_selection": {
+      "title": "Módszerek kiválasztása és validálása (7.2)",
+      "subsections": {
+        "method_selection": {
+          "title": "Módszer kiválasztás (7.2.1)",
+          "intro": "A laboratórium csak megfelelő módszereket használ, amelyek:",
+          "items": [
+            "Megfelelnek a vevő követelményeinek",
+            "Alkalmasak a tervezett célra",
+            "Legfrissebb kiadásúak (kivéve, ha a vevő másként kéri)",
+            "A laboratórium személyzete számára hozzáférhetők és értelmezhetők"
+          ]
+        },
+        "laboratory_developed_methods": {
+          "title": "Laboratórium által fejlesztett módszerek (7.2.2)",
+          "content": "Ha a laboratórium saját módszert fejleszt, ezt tervezni, validálni és dokumentálni kell. A fejlesztést képzett személy végzi, aki rendelkezik a szükséges erőforrásokkal.",
+          "alert_box": {
+            "type": "nahalert",
+            "title": "[FIGY] Módszer validálás követelményei",
+            "intro": "Minden nem szabványos módszert validálni kell! Az NAH audit során ellenőrzik:",
+            "items": [
+              "Validálási terv létezik-e (hatókör, módszer, elfogadási kritériumok)",
+              "Validálási jelentés dokumentálja-e az eredményeket",
+              "Linearitás, ismétlőképesség, összehasonlíthatóság értékelve van-e",
+              "Mérési bizonytalanság meg van-e határozva",
+              "Módszer az akkreditált körbe tartozik-e vagy sem van-e jelölve"
+            ],
+            "closing": "Validálás nélküli nem-szabványos módszer = súlyos hiányosság!"
+          }
+        },
+        "method_verification": {
+          "title": "Módszer verifikáció (7.2.1.5)",
+          "intro": "Szabványos módszerek esetén is szükséges a verifikáció, amely igazolja, hogy a laboratórium képes megfelelően alkalmazni a módszert:",
+          "items": [
+            "Ismétlőképesség ellenőrzése (minimum 10 ismételt mérés)",
+            "Referenciaanyag mérése (ha elérhető)",
+            "Összehasonlítás más laboratóriummal (interlaboratory comparison)",
+            "Mérési bizonytalanság meghatározása",
+            "Kritikus paraméterek azonosítása"
+          ]
+        }
+      }
+    },
+    "sampling": {
+      "title": "Mintavétel (7.3)",
+      "content": "A laboratórium jellemzően nem végez mintavételt (a kalibrálás során a vevő hozza be a mérőeszközt). Ha mégis szükséges lenne mintavétel (pl. helyszíni kalibráció), azt dokumentált eljárás szerint kell végezni, amely tartalmazza a mintavételi tervet, módszert és nyilvántartást."
+    },
+    "handling_items": {
+      "title": "Tételek kezelése (7.4)",
+      "subsections": {
+        "transport_and_storage": {
+          "title": "Szállítás, átvétel és tárolás (7.4.1-7.4.2)",
+          "intro": "A kalibrálásra beérkező mérőeszközök kezelése:",
+          "items": [
+            "Átvételkor ellenőrzés az állapotról és azonosításról",
+            "Eltérések dokumentálása (sérülés, hiányosság)",
+            "Biztonságos tárolás az eljárás megkezdéséig",
+            "Védelmi intézkedések a sérülés, veszteség vagy rongálódás ellen",
+            "Visszaadáskor állapot ellenőrzése"
+          ]
+        },
+        "identification": {
+          "title": "Egyedi azonosítás (7.4.3)",
+          "content": "Minden beérkező mérőeszköz egyedi azonosítót kap (pl. KAL-2025-001), amely lehetővé teszi a nyomon követést a kalibrálási folyamat során. Az azonosító a kalibrálási bizonyítványon is szerepel.",
+          "table": {
+            "title": "Beérkező tételek nyilvántartása (példa)",
+            "columns": ["item_id", "customer", "description", "received_date", "condition", "status"],
+            "column_names": ["Tétel ID", "Vevő", "Megnevezés", "Beérkezés", "Állapot átvételkor", "Státusz"],
+            "data": [
+              {
+                "item_id": "KAL-2025-001",
+                "customer": "ABC Gyár Kft.",
+                "description": "Digitális tolómérő 150mm",
+                "received_date": "2025.01.10",
+                "condition": "Megfelelő",
+                "status": "Folyamatban"
+              },
+              {
+                "item_id": "KAL-2025-002",
+                "customer": "XYZ Labor Bt.",
+                "description": "Analitikai mérleg 220g",
+                "received_date": "2025.01.12",
+                "condition": "Sérült tok",
+                "status": "Folyamatban"
+              },
+              {
+                "item_id": "KAL-2025-003",
+                "customer": "DEF Mérnökiroda",
+                "description": "Multimeter digitális",
+                "received_date": "2025.01.15",
+                "condition": "Megfelelő",
+                "status": "Kész"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "technical_records": {
+      "title": "Technikai nyilvántartások (7.5)",
+      "subsections": {
+        "record_requirements": {
+          "title": "Nyilvántartási követelmények (7.5.1)",
+          "intro": "A laboratórium technikai nyilvántartásokat vezet minden tevékenységről, amely tartalmazza:",
+          "items": [
+            "A tevékenység dátumát és időpontját",
+            "A felelős személy azonosítását",
+            "A használt berendezések azonosítását",
+            "A környezeti feltételeket (hőmérséklet, páratartalom)",
+            "Az eredményeket és a mérési bizonytalanságot",
+            "Az észrevételeket és eltéréseket"
+          ]
+        },
+        "record_retention": {
+          "title": "Nyilvántartások megőrzése (7.5.2)",
+          "content": "A technikai nyilvántartásokat úgy kell megőrizni, hogy azok hozzáférhetők maradjanak és védettek legyenek. A megőrzési idő minimum 6 év vagy 1 akkreditációs ciklus + 2 év (amelyik hosszabb).",
+          "req_box": {
+            "type": "nahreq",
+            "title": "[KÖV] Kalibrálási dosszié kötelező tartalma",
+            "intro": "Minden kalibrálásról külön dosszié készül, amely tartalmazza:",
+            "items": [
+              "Megrendelés másolata és áttekintési dokumentáció",
+              "Kalibrálási jegyzőkönyv (nyers adatok, számítások)",
+              "Környezeti feltételek rögzítése (hőmérséklet-, páratartalom-napló)",
+              "Használt etalon(ok) kalibrálási bizonyítványának másolata",
+              "Mérési bizonytalanság számítása",
+              "Kalibrálási bizonyítvány másolata",
+              "Minőség-ellenőrzési eredmények (ha van)"
+            ],
+            "closing": "Minden oldalt dátummal és aláírással kell ellátni!"
+          }
+        }
+      }
+    },
+    "measurement_uncertainty": {
+      "title": "Mérési bizonytalanság (7.6)",
+      "subsections": {
+        "uncertainty_evaluation": {
+          "title": "Bizonytalanság értékelése (7.6.1-7.6.2)",
+          "content": "A laboratórium minden kalibrálási eredményhez meghatározza a mérési bizonytalanságot. A bizonytalanság értékelése a GUM (Guide to the expression of Uncertainty in Measurement) szerint történik, figyelembe véve minden releváns bizonytalansági forrást."
+        },
+        "uncertainty_budget": {
+          "title": "Bizonytalansági költségvetés (7.6.3)",
+          "intro": "Minden mérési eljáráshoz bizonytalansági költségvetés készül, amely azonosítja:",
+          "items": [
+            "Az etalon bizonytalanságát",
+            "Az ismétlőképességi bizonytalanságot",
+            "A felbontás bizonytalanságát",
+            "A környezeti hatások bizonytalanságát (hőmérséklet, nyomás stb.)",
+            "Az eljárás egyéb bizonytalansági forrásait"
+          ],
+          "alert_box": {
+            "type": "nahalert",
+            "title": "[FIGY] Gyakori bizonytalanság hibák NAH auditon",
+            "intro": "Az alábbi hibák a leggyakoribbak:",
+            "items": [
+              "A bizonytalansági költségvetés hiányzik vagy nem naprakész",
+              "Az etalon bizonytalanságát nem veszik figyelembe",
+              "A kibővítési tényező (k=2) nincs megadva",
+              "A bizonytalanság kisebb, mint az etalon bizonytalansága (lehetetlen!)",
+              "Környezeti hatások (hőmérséklet) nincsenek figyelembe véve"
+            ],
+            "closing": "Bizonytalanság nélküli kalibrálási bizonyítvány = érvénytelen!"
+          }
+        }
+      }
+    },
+    "validity_of_results": {
+      "title": "Eredmények érvényességének biztosítása (7.7)",
+      "subsections": {
+        "quality_control": {
+          "title": "Minőség-ellenőrzési eljárások (7.7.1)",
+          "intro": "A laboratórium rendszeres minőség-ellenőrzési eljárásokat alkalmaz az eredmények érvényességének biztosítására:",
+          "items": [
+            "Kontroll-kalibrálások (check standards) rendszeres mérése",
+            "Ismételt mérések elvégzése",
+            "Adatok újra-értékelése",
+            "Interlaboratóriumi összehasonlítások részvétele",
+            "Korrelációs vizsgálatok"
+          ]
+        },
+        "monitoring": {
+          "title": "Teljesítmény monitorozása (7.7.2)",
+          "content": "A minőség-ellenőrzési adatokat elemezni kell trendek, eltérések és mintázatok azonosítása érdekében. Ha az eredmények az elfogadási kritériumokon kívül esnek, korrekciós intézkedéseket kell tenni.",
+          "table": {
+            "title": "Minőség-ellenőrzési program",
+            "columns": ["method", "qc_measure", "frequency", "acceptance_criteria", "responsible"],
+            "column_names": ["Mérési típus", "Minőség-ellenőrzési intézkedés", "Gyakoriság", "Elfogadási kritérium", "Felelős"],
+            "data": [
+              {
+                "method": "Hosszmérés",
+                "qc_measure": "Kontroll blokk mérése",
+                "frequency": "Hetente",
+                "acceptance_criteria": "± 2 μm",
+                "responsible": "Laboratóriumvezető"
+              },
+              {
+                "method": "Tömegmérés",
+                "qc_measure": "Kontroll súly mérése",
+                "frequency": "Minden kalibrálás előtt",
+                "acceptance_criteria": "± 0.1 mg",
+                "responsible": "Kalibráló szakember"
+              },
+              {
+                "method": "Elektromos mérés",
+                "qc_measure": "Референс feszültség mérése",
+                "frequency": "Hetente",
+                "acceptance_criteria": "± 0.01%",
+                "responsible": "Laboratóriumvezető"
+              },
+              {
+                "method": "Hőmérséklet",
+                "qc_measure": "Jégpont ellenőrzés",
+                "frequency": "Havonta",
+                "acceptance_criteria": "0.00°C ± 0.02°C",
+                "responsible": "Kalibráló szakember"
+              }
+            ]
+          }
+        },
+        "interlaboratory_comparisons": {
+          "title": "Interlaboratóriumi összehasonlítások (7.7.3)",
+          "content": "A laboratórium legalább évente egyszer részt vesz interlaboratóriumi összehasonlítási programban (proficiency testing), amely független ellenőrzést biztosít a laboratórium kompetenciájáról és a mérési eredmények megbízhatóságáról."
+        }
+      }
+    },
+    "reporting_results": {
+      "title": "Eredmények közlése (7.8)",
+      "subsections": {
+        "certificate_requirements": {
+          "title": "Kalibrálási bizonyítvány követelményei (7.8.1-7.8.4)",
+          "intro": "Minden kalibrálási bizonyítványnak tartalmaznia kell:",
+          "items": [
+            "A laboratórium nevét, címét és akkreditációs státuszát",
+            "Az egyedi azonosítót és az oldal számozást",
+            "A vevő nevét és címét",
+            "A kalibrált tárgy azonosítását",
+            "A kalibrálás dátumát és helyét",
+            "A használt módszert és eljárást",
+            "A kalibrálási eredményeket és mérési bizonytalanságot",
+            "A környezeti feltételeket",
+            "A kalibrálást végző és jóváhagyó személy aláírását"
+          ]
+        },
+        "accreditation_marking": {
+          "title": "Akkreditációs jelölés (7.8.5)",
+          "content": "Az akkreditált körbe tartozó kalibrálási bizonyítványokon fel kell tüntetni az akkreditációs jelzést (NAH logó és nyilvántartási szám). Csak az akkreditált tevékenységekre vonatkozóan használható az akkreditációs jelzés.",
+          "req_box": {
+            "type": "nahreq",
+            "title": "[KÖV] Akkreditált bizonyítvány kötelező elemei",
+            "intro": "Az akkreditált kalibrálási bizonyítvány kötelező tartalma:",
+            "items": [
+              "NAH logó és \"Ez a dokumentum csak teljes terjedelmében érvényes\" szöveg",
+              "Akkreditált laboratórium nyilvántartási száma (pl. NAH-1-1234/2023)",
+              "\"A kalibrálás az MSZ EN ISO/IEC 17025:2018 szerint akkreditált\" utalás",
+              "CMC érték feltüntetése (Calibration and Measurement Capability)",
+              "Metrológiai visszavezethetőség megjelölése (SI egységekhez)",
+              "\"A bizonyítvány hitelesítés nélkül nem sokszorosítható\" szöveg"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

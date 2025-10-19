@@ -1,0 +1,372 @@
+{
+  "docjll": [
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "{{CHAPTER_TITLE}}",
+      "label": "chap:eroforras_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "6"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{GENERAL_TITLE}}",
+      "label": "sec:altalanos_rendelkezesek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{GENERAL_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{PERSONNEL_TITLE}}",
+      "label": "sec:szemelyzet",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{COMPETENCE_REQUIREMENTS_TITLE}}",
+      "label": "subsec:kompetencia_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{COMPETENCE_REQUIREMENTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{COMPETENCE_REQUIREMENTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{COMPETENCE_REQUIREMENTS_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{TRAINING_TITLE}}",
+      "label": "subsec:kepzes_tovabbkepzes",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{TRAINING_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{TRAINING_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "{{TRAINING_INFO_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{TRAINING_INFO_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{AUTHORIZATION_TITLE}}",
+      "label": "subsec:felhatalmazas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{AUTHORIZATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{AUTHORIZATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{AUTHORIZATION_NOTE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{FACILITIES_TITLE}}",
+      "label": "sec:letesitmenyek_kornyezeti_feltetelekek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{FACILITY_REQUIREMENTS_TITLE}}",
+      "label": "subsec:letesitmeny_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{FACILITY_REQUIREMENTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{FACILITY_REQUIREMENTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{ENVIRONMENTAL_MONITORING_TITLE}}",
+      "label": "subsec:kornyezeti_feltetelek_monitorozasa",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{ENVIRONMENTAL_MONITORING_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{ENVIRONMENTAL_MONITORING_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{HOUSEKEEPING_TITLE}}",
+      "label": "subsec:tisztasag_rend",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{HOUSEKEEPING_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{HOUSEKEEPING_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{EQUIPMENT_TITLE}}",
+      "label": "sec:berendezes",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{EQUIPMENT_REQUIREMENTS_TITLE}}",
+      "label": "subsec:berendezes_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{EQUIPMENT_REQUIREMENTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{EQUIPMENT_REQUIREMENTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{CALIBRATION_PROGRAM_TITLE}}",
+      "label": "subsec:kalibralas_program",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{CALIBRATION_PROGRAM_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahreq",
+        "box_title": "{{CALIBRATION_PROGRAM_REQ_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{CALIBRATION_PROGRAM_REQ_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{EQUIPMENT_RECORDS_TITLE}}",
+      "label": "subsec:berendezes_nyilvantartas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{EQUIPMENT_RECORDS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{EQUIPMENT_RECORDS_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{METROLOGICAL_TRACEABILITY_TITLE}}",
+      "label": "sec:metrologiai_visszavezethetoseg",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{METROLOGICAL_TRACEABILITY_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahalert",
+        "box_title": "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{EXTERNALLY_PROVIDED_TITLE}}",
+      "label": "sec:kulso_szolgaltatasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{SUPPLIER_EVALUATION_TITLE}}",
+      "label": "subsec:beszallito_ertekeles",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{SUPPLIER_EVALUATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{SUPPLIER_EVALUATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{SUPPLIER_RECORDS_TITLE}}",
+      "label": "subsec:beszallito_nyilvantartas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{SUPPLIER_RECORDS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{SUPPLIER_RECORDS_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    }
+  ]
+}

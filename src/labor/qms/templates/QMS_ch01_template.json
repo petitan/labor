@@ -1,0 +1,87 @@
+{
+  "docjll": [
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "ALKALMAZÁSI TERÜLET",
+      "label": "chap:alkalmazasi_terulet",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "1"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "A {{COMPANY_NAME}} {{LAB_NAME}} kalibrálási tevékenységének szabályozására az {{ISO_STANDARD}} szabványt alkalmazza, amely minden olyan szervezet számára alkalmazható, amely kalibrálásokat végez és alapját szolgálja az akkreditálás feltételeinek.",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "A kalibrálási tevékenységet külső helyszínen (a vevő telephelyén) és a kalibrálólaboratóriumban ({{COMPANY_NAME}} kalibrálólaboratórium telephelye) végzi.",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "A szabvány és a kiegészítő dokumentumok a kalibrálások elvégzésére való felkészültség/alkalmasság általános követelményeit határozzák meg.",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "A laboratórium tevékenysége {{TECHNICAL_AREA}} kalibrálási területére irányul.",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "A {{COMPANY_NAME}} {{LAB_NAME}} az {{ISO_STANDARD}} szabvány alkalmazásával az alábbi célokat kívánja elérni:",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": [
+        "{{OBJECTIVE_1}}",
+        "{{OBJECTIVE_2}}",
+        "{{OBJECTIVE_3}}",
+        "{{OBJECTIVE_4}}"
+      ],
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "{{INFO_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": [
+        {"type": "bold", "content": "Alapszabvány:"},
+        {"type": "text", "content": " {{INFO_BOX_BASE_STANDARD}}\n\n"},
+        {"type": "bold", "content": "Tevékenység helyszíne:"},
+        {"type": "text", "content": " {{ACTIVITY_LOCATIONS}}\n\n"},
+        {"type": "bold", "content": "Cél:"},
+        {"type": "text", "content": " {{INFO_BOX_TARGET}}\n\n"},
+        {"type": "bold", "content": "Hatály:"},
+        {"type": "text", "content": " {{INFO_BOX_SCOPE_SUMMARY}}\n\n"},
+        {"type": "bold", "content": "Szakmai terület:"},
+        {"type": "text", "content": " {{TECHNICAL_AREA}}"}
+      ]
+    },
+    {
+      "type": "page_break",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    }
+  ]
+}

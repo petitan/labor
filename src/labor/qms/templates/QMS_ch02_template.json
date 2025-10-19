@@ -1,0 +1,103 @@
+{
+  "docjll": [
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "RENDELKEZŐ HIVATKOZÁSOK",
+      "label": "chap:rendelkezo_hivatkozasok",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "2"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Nemzetközi szabványok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{INTERNATIONAL_STANDARDS_LIST}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "ILAC dokumentumok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{ILAC_DOCUMENTS_LIST}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "EA dokumentumok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{EA_DOCUMENTS_LIST}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "NAR dokumentumok",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{NAR_DOCUMENTS_LIST}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Jogszabályok",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{REGULATIONS_LIST}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{FOOTNOTE}}",
+      "metadata": {
+        "iso_mandatory": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "type": "page_break",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    }
+  ]
+}

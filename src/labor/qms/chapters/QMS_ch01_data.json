@@ -1,0 +1,22 @@
+{
+  "scope": {
+    "technical_area": "autóipari mérőeszközök és diagnosztikai berendezések",
+    "activity_locations": [
+      "laboratórium",
+      "külső helyszín"
+    ],
+    "objectives": [
+      "megbízható és nyomonkövethető kalibrálási eredmények biztosítása",
+      "technikai kompetencia kifejlesztése és fenntartása",
+      "vevői bizalom kiérdemlése professzionális szolgáltatással",
+      "NAH akkreditálás elnyerese és fenntartása"
+    ]
+  },
+  "info_box": {
+    "title": "[INFO] Alkalmazási terület kulcsadatai",
+    "base_standard": "MSZ EN ISO/IEC 17025:2018",
+    "scope_summary": "Teljes kalibrálási tevékenység",
+    "target": "Akkreditálási követelmények teljesítése"
+  },
+  "chapter_footer": "01"
+}

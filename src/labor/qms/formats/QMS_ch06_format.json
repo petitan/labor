@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 6 - Erőforrás követelmények Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 6",
+  "version": "1.0.0",
+  "mappings": {
+    "{{CHAPTER_TITLE}}": {
+      "source": "chapters.ch06.title"
+    },
+    "{{GENERAL_TITLE}}": {
+      "source": "chapters.ch06.sections.general.title"
+    },
+    "{{GENERAL_CONTENT}}": {
+      "source": "chapters.ch06.sections.general.content"
+    },
+    "{{PERSONNEL_TITLE}}": {
+      "source": "chapters.ch06.sections.personnel.title"
+    },
+    "{{COMPETENCE_REQUIREMENTS_TITLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.competence_requirements.title"
+    },
+    "{{COMPETENCE_REQUIREMENTS_INTRO}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.competence_requirements.intro"
+    },
+    "{{COMPETENCE_REQUIREMENTS_ITEMS}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.competence_requirements.items"
+    },
+    "{{COMPETENCE_REQUIREMENTS_TABLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.competence_requirements.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{TRAINING_TITLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.training.title"
+    },
+    "{{TRAINING_INTRO}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.training.intro"
+    },
+    "{{TRAINING_ITEMS}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.training.items"
+    },
+    "{{TRAINING_INFO_BOX_TITLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.training.info_box.title"
+    },
+    "{{TRAINING_INFO_BOX_CONTENT}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.training.info_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{AUTHORIZATION_TITLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.authorization.title"
+    },
+    "{{AUTHORIZATION_INTRO}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.authorization.intro"
+    },
+    "{{AUTHORIZATION_ITEMS}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.authorization.items"
+    },
+    "{{AUTHORIZATION_NOTE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.authorization.note"
+    },
+    "{{FACILITIES_TITLE}}": {
+      "source": "chapters.ch06.sections.facilities.title"
+    },
+    "{{FACILITY_REQUIREMENTS_TITLE}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.facility_requirements.title"
+    },
+    "{{FACILITY_REQUIREMENTS_INTRO}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.facility_requirements.intro"
+    },
+    "{{FACILITY_REQUIREMENTS_ITEMS}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.facility_requirements.items"
+    },
+    "{{ENVIRONMENTAL_MONITORING_TITLE}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.environmental_monitoring.title"
+    },
+    "{{ENVIRONMENTAL_MONITORING_CONTENT}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.environmental_monitoring.content"
+    },
+    "{{ENVIRONMENTAL_MONITORING_TABLE}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.environmental_monitoring.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{HOUSEKEEPING_TITLE}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.housekeeping.title"
+    },
+    "{{HOUSEKEEPING_INTRO}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.housekeeping.intro"
+    },
+    "{{HOUSEKEEPING_ITEMS}}": {
+      "source": "chapters.ch06.sections.facilities.subsections.housekeeping.items"
+    },
+    "{{EQUIPMENT_TITLE}}": {
+      "source": "chapters.ch06.sections.equipment.title"
+    },
+    "{{EQUIPMENT_REQUIREMENTS_TITLE}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.equipment_requirements.title"
+    },
+    "{{EQUIPMENT_REQUIREMENTS_INTRO}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.equipment_requirements.intro"
+    },
+    "{{EQUIPMENT_REQUIREMENTS_ITEMS}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.equipment_requirements.items"
+    },
+    "{{CALIBRATION_PROGRAM_TITLE}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.calibration_program.title"
+    },
+    "{{CALIBRATION_PROGRAM_CONTENT}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.calibration_program.content"
+    },
+    "{{CALIBRATION_PROGRAM_REQ_BOX_TITLE}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.calibration_program.req_box.title"
+    },
+    "{{CALIBRATION_PROGRAM_REQ_BOX_CONTENT}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.calibration_program.req_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{EQUIPMENT_RECORDS_TITLE}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.equipment_records.title"
+    },
+    "{{EQUIPMENT_RECORDS_CONTENT}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.equipment_records.content"
+    },
+    "{{EQUIPMENT_RECORDS_TABLE}}": {
+      "source": "chapters.ch06.sections.equipment.subsections.equipment_records.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{METROLOGICAL_TRACEABILITY_TITLE}}": {
+      "source": "chapters.ch06.sections.metrological_traceability.title"
+    },
+    "{{METROLOGICAL_TRACEABILITY_CONTENT}}": {
+      "source": "chapters.ch06.sections.metrological_traceability.content"
+    },
+    "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_TITLE}}": {
+      "source": "chapters.ch06.sections.metrological_traceability.alert_box.title"
+    },
+    "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_CONTENT}}": {
+      "source": "chapters.ch06.sections.metrological_traceability.alert_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{EXTERNALLY_PROVIDED_TITLE}}": {
+      "source": "chapters.ch06.sections.externally_provided.title"
+    },
+    "{{SUPPLIER_EVALUATION_TITLE}}": {
+      "source": "chapters.ch06.sections.externally_provided.subsections.supplier_evaluation.title"
+    },
+    "{{SUPPLIER_EVALUATION_INTRO}}": {
+      "source": "chapters.ch06.sections.externally_provided.subsections.supplier_evaluation.intro"
+    },
+    "{{SUPPLIER_EVALUATION_ITEMS}}": {
+      "source": "chapters.ch06.sections.externally_provided.subsections.supplier_evaluation.items"
+    },
+    "{{SUPPLIER_RECORDS_TITLE}}": {
+      "source": "chapters.ch06.sections.externally_provided.subsections.supplier_records.title"
+    },
+    "{{SUPPLIER_RECORDS_CONTENT}}": {
+      "source": "chapters.ch06.sections.externally_provided.subsections.supplier_records.content"
+    },
+    "{{SUPPLIER_RECORDS_TABLE}}": {
+      "source": "chapters.ch06.sections.externally_provided.subsections.supplier_records.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    }
+  }
+}

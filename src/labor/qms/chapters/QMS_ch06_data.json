@@ -1,0 +1,317 @@
+{
+  "chapter": "06",
+  "title": "ERŐFORRÁS KÖVETELMÉNYEK",
+  "sections": {
+    "general": {
+      "title": "Általános rendelkezések (6.1)",
+      "content": "A laboratórium biztosítja a megfelelő személyzetet, létesítményeket, berendezéseket, rendszereket és támogató szolgáltatásokat, amelyek szükségesek a laboratóriumi tevékenységek irányításához és végrehajtásához."
+    },
+    "personnel": {
+      "title": "Személyzet (6.2)",
+      "subsections": {
+        "competence_requirements": {
+          "title": "Kompetencia követelmények (6.2.1-6.2.3)",
+          "intro": "A laboratórium minden munkatársa rendelkezik a feladatai elvégzéséhez szükséges kompetenciával. A kompetencia követelményei:",
+          "items": [
+            "Szakmai képzettség és gyakorlat az adott szakterületen",
+            "A kalibrálási eljárások és mérési módszerek ismerete",
+            "Méréstechnikai alapismeretek és mértékegység-rendszer",
+            "Adatfeldolgozási és dokumentációs készségek",
+            "Minőségirányítási rendszer követelményeinek ismerete"
+          ],
+          "table": {
+            "title": "Személyzet kompetencia mátrix",
+            "columns": ["competency", "lab_manager", "qms_manager", "calibration_tech", "technician"],
+            "column_names": ["Kompetencia terület", "Laboratórium-vezető", "Minőség-irányítási vezető", "Kalibráló szakember", "Technikus"],
+            "data": [
+              {
+                "competency": "ISO 17025 ismerete",
+                "lab_manager": "Kötelező",
+                "qms_manager": "Kötelező",
+                "calibration_tech": "Alapszintű",
+                "technician": "Nem szükséges"
+              },
+              {
+                "competency": "Kalibrálási eljárások",
+                "lab_manager": "Kötelező",
+                "qms_manager": "Alapszintű",
+                "calibration_tech": "Kötelező",
+                "technician": "Alapszintű"
+              },
+              {
+                "competency": "Mérési bizonytalanság",
+                "lab_manager": "Kötelező",
+                "qms_manager": "Alapszintű",
+                "calibration_tech": "Kötelező",
+                "technician": "Nem szükséges"
+              },
+              {
+                "competency": "Berendezés kezelése",
+                "lab_manager": "Alapszintű",
+                "qms_manager": "Nem szükséges",
+                "calibration_tech": "Kötelező",
+                "technician": "Kötelező"
+              },
+              {
+                "competency": "Belső audit",
+                "lab_manager": "Kötelező",
+                "qms_manager": "Kötelező",
+                "calibration_tech": "Nem szükséges",
+                "technician": "Nem szükséges"
+              },
+              {
+                "competency": "Dokumentumkezelés",
+                "lab_manager": "Kötelező",
+                "qms_manager": "Kötelező",
+                "calibration_tech": "Alapszintű",
+                "technician": "Alapszintű"
+              }
+            ]
+          }
+        },
+        "training": {
+          "title": "Képzés és továbbképzés (6.2.4)",
+          "intro": "A laboratórium biztosítja a személyzet folyamatos képzését és fejlesztését:",
+          "items": [
+            "Éves képzési terv készítése és végrehajtása",
+            "Új munkatársak betanítási programja (minimum 3 hónap)",
+            "Éves továbbképzések (külső vagy belső)",
+            "Kompetencia értékelése évente",
+            "Képzési nyilvántartások vezetése"
+          ],
+          "info_box": {
+            "type": "nahinfo",
+            "title": "[INFO] NAH által elvárt képzési dokumentáció",
+            "intro": "Az akkreditációs audit során a következő képzési dokumentumokat kérik be:",
+            "items": [
+              "Éves képzési terv és végrehajtási jelentés",
+              "Munkatársankénti kompetencia mátrix",
+              "Képzési jelenléti ívek és tanúsítványok",
+              "Betanítási naplók új munkatársaknál",
+              "Éves kompetencia értékelési lapok"
+            ],
+            "closing": "Minimum 5 éves képzési előzmények megőrzése kötelező!"
+          }
+        },
+        "authorization": {
+          "title": "Felhatalmazás (6.2.5)",
+          "intro": "A laboratóriumvezető írásban hatalmazza fel a munkatársakat a következő tevékenységekre:",
+          "items": [
+            "Kalibrálások elvégzése meghatározott szakterületen",
+            "Kalibrálási bizonyítványok kiállítása",
+            "Véleménynyilvánítás és eredmények értelmezése",
+            "Berendezések üzembe helyezése és karbantartása",
+            "Adatfeldolgozás és számítások ellenőrzése"
+          ],
+          "note": "A felhatalmazások személyre szólóak, időben korlátozott érvényűek, és a kompetencia értékelés alapján kerülnek megadásra vagy visszavonásra."
+        }
+      }
+    },
+    "facilities": {
+      "title": "Létesítmények és környezeti feltételek (6.3)",
+      "subsections": {
+        "facility_requirements": {
+          "title": "Létesítmény követelmények (6.3.1-6.3.3)",
+          "intro": "A laboratórium létesítményei megfelelnek a kalibrálási tevékenységek követelményeinek:",
+          "items": [
+            "Megfelelő méretű és elrendezésű munkahelyek",
+            "Kontrollált hőmérséklet és páratartalom (23°C ± 2°C, 50% ± 20% RH)",
+            "Megfelelő világítás (minimum 500 lux munkafelületen)",
+            "Rezgésmentesség érzékeny mérésekhez",
+            "Elektromágneses kompatibilitás biztosítása",
+            "Tisztaság és pormentesség fenntartása"
+          ]
+        },
+        "environmental_monitoring": {
+          "title": "Környezeti feltételek monitorozása (6.3.4)",
+          "content": "A laboratórium folyamatosan monitorozza és dokumentálja a környezeti feltételeket. A hőmérsékletet és páratartalmat naplózó műszerek használata kötelező. Az adatokat a kalibrálási jegyzőkönyvekben rögzíteni kell.",
+          "table": {
+            "title": "Környezeti feltételek követelményei mérési típusonként",
+            "columns": ["measurement_type", "temperature", "humidity", "vibration", "other"],
+            "column_names": ["Mérés típusa", "Hőmérséklet", "Páratartalom", "Rezgés", "Egyéb követelmény"],
+            "data": [
+              {
+                "measurement_type": "Hosszmérés (μm szint)",
+                "temperature": "20°C ± 0.5°C",
+                "humidity": "50% ± 10%",
+                "vibration": "< 2 μm/s",
+                "other": "Termikus stabilitás 4h"
+              },
+              {
+                "measurement_type": "Tömegmérés (mg szint)",
+                "temperature": "23°C ± 2°C",
+                "humidity": "50% ± 20%",
+                "vibration": "< 5 μm/s",
+                "other": "Levegő sűrűség korrekció"
+              },
+              {
+                "measurement_type": "Elektromos mennyiségek",
+                "temperature": "23°C ± 5°C",
+                "humidity": "< 80%",
+                "vibration": "Nem kritikus",
+                "other": "EMC védelem kötelező"
+              },
+              {
+                "measurement_type": "Hőmérséklet kalibráció",
+                "temperature": "Stabil ± 0.1°C",
+                "humidity": "Nem kritikus",
+                "vibration": "Nem kritikus",
+                "other": "Hőmérséklet gradiens < 0.5°C/m"
+              }
+            ]
+          }
+        },
+        "housekeeping": {
+          "title": "Tisztaság és rend (6.3.5)",
+          "intro": "A laboratórium tisztasági és rendjének fenntartása:",
+          "items": [
+            "Napi takarítás és hetente alapos tisztítás",
+            "Munkaasztalok rendben tartása (\"tiszta asztal\" politika)",
+            "Mérőeszközök megfelelő tárolása (szekrényekben vagy tokokban)",
+            "Hulladék és használt eszközök elkülönített tárolása",
+            "Veszélyes anyagok (ha vannak) külön tároló helyen"
+          ]
+        }
+      }
+    },
+    "equipment": {
+      "title": "Berendezések (6.4)",
+      "subsections": {
+        "equipment_requirements": {
+          "title": "Berendezés követelmények (6.4.1-6.4.5)",
+          "intro": "A laboratórium minden berendezése:",
+          "items": [
+            "Megfelelő pontosságú és specifikációjú a tervezett használatra",
+            "Rendszeres kalibrálás alatt áll (éves vagy félévenkénti ciklusban)",
+            "Egyedi azonosítóval rendelkezik",
+            "Karbantartási naplóval dokumentált",
+            "Védelmi intézkedések alatt áll (jogosulatlan hozzáférés és módosítás ellen)"
+          ]
+        },
+        "calibration_program": {
+          "title": "Kalibrálási program (6.4.6-6.4.7)",
+          "content": "Minden mérőeszköz kalibrálási programban szerepel. A kalibrálásokat akkreditált laboratóriumok végzik, és a kalibrálási bizonyítványokat megőrzi a laboratórium. A kalibrálási időszakok a használat intenzitásától és a mérési követelményektől függnek.",
+          "req_box": {
+            "type": "nahreq",
+            "title": "[KÖV] Kalibrálási program kötelező elemei",
+            "intro": "Az ISO 17025 szerint minden laboratórium köteles:",
+            "items": [
+              "Kalibrálási terv készítése minden eszközre (eszköz azonosító, ciklus, felelős)",
+              "Kalibrálási címkék elhelyezése az eszközökön (utolsó és következő kalibráció dátuma)",
+              "Kalibrálási bizonyítványok megőrzése minimum 1 akkreditációs ciklus + 2 év",
+              "Lejárt kalibrálású eszközök azonnali kivonása a forgalomból",
+              "Évente legalább egyszer a kalibrálási program felülvizsgálata"
+            ]
+          }
+        },
+        "equipment_records": {
+          "title": "Berendezés nyilvántartás (6.4.13)",
+          "content": "A laboratórium minden berendezésről nyilvántartást vezet, amely tartalmazza az eszköz azonosítóját, gyártóját, típusát, sorozatszámát, beszerzési dátumát, kalibrálási előzményeit és karbantartási történetét.",
+          "table": {
+            "title": "Berendezés nyilvántartás (részlet)",
+            "columns": ["equipment_id", "name", "manufacturer", "last_calibration", "next_calibration", "status"],
+            "column_names": ["Eszköz ID", "Megnevezés", "Gyártó", "Utolsó kalibráció", "Következő kalibráció", "Státusz"],
+            "data": [
+              {
+                "equipment_id": "ME-001",
+                "name": "Digitális tolómérő 0-150mm",
+                "manufacturer": "Mitutoyo",
+                "last_calibration": "2024.06.15",
+                "next_calibration": "2025.06.15",
+                "status": "Használható"
+              },
+              {
+                "equipment_id": "ME-002",
+                "name": "Mikrométer 0-25mm",
+                "manufacturer": "Mitutoyo",
+                "last_calibration": "2024.08.10",
+                "next_calibration": "2025.08.10",
+                "status": "Használható"
+              },
+              {
+                "equipment_id": "ME-003",
+                "name": "Analitikai mérleg 220g",
+                "manufacturer": "Sartorius",
+                "last_calibration": "2024.09.01",
+                "next_calibration": "2025.03.01",
+                "status": "Használható"
+              },
+              {
+                "equipment_id": "ME-004",
+                "name": "Multimeter 6.5 digit",
+                "manufacturer": "Keysight",
+                "last_calibration": "2023.12.20",
+                "next_calibration": "2024.12.20",
+                "status": "LEJÁRT - NEM HASZNÁLHATÓ"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "metrological_traceability": {
+      "title": "Metrológiai visszavezethetőség (6.5)",
+      "content": "A laboratórium biztosítja, hogy minden mérési eredmény az SI mértékegységekhez visszavezethető. A kalibrálásokat akkreditált laboratóriumok végzik, amelyek国际 mérési szabványokhoz kapcsolódnak.",
+      "alert_box": {
+        "type": "nahalert",
+        "title": "[FIGY] Metrológiai lánc megszakadása",
+        "intro": "Az egyik leggyakoribb NAH audit hiányosság a metrológiai lánc megszakadása:",
+        "items": [
+          "Lejárt kalibrálású etalonnal végzett kalibrálás",
+          "Nem akkreditált laboratóriumtól származó kalibrálási bizonyítvány",
+          "Hiányzó vagy nem megfelelő CMC (Calibration and Measurement Capability) érték",
+          "Kalibrálási bizonyítvány nem tartalmaz mérési bizonytalanságot",
+          "Használt etalon nem szerepel a kalibrálási programban"
+        ],
+        "closing": "Minden kalibrálás előtt ellenőrizni kell az etalon érvényességét!"
+      }
+    },
+    "externally_provided": {
+      "title": "Külső szolgáltatások (6.6)",
+      "subsections": {
+        "supplier_evaluation": {
+          "title": "Beszállító értékelés (6.6.1-6.6.2)",
+          "intro": "A laboratórium értékeli és kiválasztja a külső szolgáltatókat:",
+          "items": [
+            "Kalibrálólaboratóriumok: akkreditáció megléte kötelező",
+            "Szervizszolgáltatók: megfelelő kompetencia és tapasztalat",
+            "Tanácsadók: szakmai referenciák ellenőrzése",
+            "Szállítók: minőségbiztosítási rendszer megléte előnyt jelent"
+          ]
+        },
+        "supplier_records": {
+          "title": "Beszállító nyilvántartás (6.6.3)",
+          "content": "A laboratórium nyilvántartást vezet a jóváhagyott beszállítókról, amely tartalmazza az értékelés eredményeit és az éves felülvizsgálat dátumát.",
+          "table": {
+            "title": "Jóváhagyott beszállítók jegyzéke",
+            "columns": ["supplier_name", "service_type", "accreditation", "evaluation_date", "next_review"],
+            "column_names": ["Beszállító neve", "Szolgáltatás típusa", "Akkreditáció", "Értékelés dátuma", "Következő felülvizsgálat"],
+            "data": [
+              {
+                "supplier_name": "Országos Mérésügyi Hivatal (OMH)",
+                "service_type": "Etalon kalibrálás",
+                "accreditation": "NAH-1-1234/2023",
+                "evaluation_date": "2024.01.15",
+                "next_review": "2025.01.15"
+              },
+              {
+                "supplier_name": "ABC Kalibrálólabor Kft.",
+                "service_type": "Elektromos kalibrálás",
+                "accreditation": "NAH-1-5678/2022",
+                "evaluation_date": "2024.03.10",
+                "next_review": "2025.03.10"
+              },
+              {
+                "supplier_name": "XYZ Szerviz Bt.",
+                "service_type": "Berendezés karbantartás",
+                "accreditation": "Nincs (nem szükséges)",
+                "evaluation_date": "2024.05.20",
+                "next_review": "2025.05.20"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

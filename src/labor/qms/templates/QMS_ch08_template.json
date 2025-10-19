@@ -1,0 +1,440 @@
+{
+  "docjll": [
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "{{CHAPTER_TITLE}}",
+      "label": "chap:iranyitasi_rendszer_kovetelmenyek",
+      "metadata": {
+        "iso_mandatory": true,
+        "section_reference": "8"
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{OPTIONS_TITLE}}",
+      "label": "sec:valasztasi_lehetosegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{GENERAL_TITLE}}",
+      "label": "subsec:altalanos_iranyitasi_rendszer",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{GENERAL_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{OPTION_A_TITLE}}",
+      "label": "subsec:valasztott_opcio_a",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{OPTION_A_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{DOCUMENTATION_TITLE}}",
+      "label": "sec:dokumentacio",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{MANAGEMENT_SYSTEM_DOCUMENTATION_TITLE}}",
+      "label": "subsec:iranyitasi_rendszer_dokumentacioja",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{MANAGEMENT_SYSTEM_DOCUMENTATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{MANAGEMENT_SYSTEM_DOCUMENTATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{DOCUMENT_CONTROL_TITLE}}",
+      "label": "subsec:dokumentumok_kezelese",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{DOCUMENT_CONTROL_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{DOCUMENT_CONTROL_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{DOCUMENT_CONTROL_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{RECORD_CONTROL_TITLE}}",
+      "label": "sec:iranyitasi_rendszer_nyilvantartasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RECORD_REQUIREMENTS_TITLE}}",
+      "label": "subsec:nyilvantartasi_kovetelmenyek_ch08",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RECORD_REQUIREMENTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{RECORD_REQUIREMENTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{TECHNICAL_RECORDS_TITLE}}",
+      "label": "subsec:technikai_nyilvantartasok_ch08",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{TECHNICAL_RECORDS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{ACTIONS_TO_ADDRESS_RISKS_TITLE}}",
+      "label": "sec:kockazatok_lehetosegek_tevekenysegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RISK_IDENTIFICATION_TITLE}}",
+      "label": "subsec:kockazatok_azonositasa",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RISK_IDENTIFICATION_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{RISK_IDENTIFICATION_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{RISK_TREATMENT_TITLE}}",
+      "label": "subsec:kockazatkezeles",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{RISK_TREATMENT_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahinfo",
+        "box_title": "{{RISK_TREATMENT_INFO_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{RISK_TREATMENT_INFO_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{IMPROVEMENT_TITLE}}",
+      "label": "sec:fejlesztes",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{GENERAL_IMPROVEMENT_TITLE}}",
+      "label": "subsec:altalanos_fejlesztesi_tevekenysegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{GENERAL_IMPROVEMENT_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{GENERAL_IMPROVEMENT_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{CORRECTIVE_ACTIONS_TITLE}}",
+      "label": "subsec:helyesb ito_tevekenysegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{CORRECTIVE_ACTIONS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{CORRECTIVE_ACTIONS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahreq",
+        "box_title": "{{CORRECTIVE_ACTIONS_REQ_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{CORRECTIVE_ACTIONS_REQ_BOX_CONTENT}}"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{PREVENTIVE_ACTIONS_TITLE}}",
+      "label": "subsec:megelozo_tevekenysegek",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{PREVENTIVE_ACTIONS_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{INTERNAL_AUDITS_TITLE}}",
+      "label": "sec:belso_auditok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{AUDIT_PROGRAM_TITLE}}",
+      "label": "subsec:audit_program",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{AUDIT_PROGRAM_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{AUDIT_PROGRAM_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{AUDIT_PROGRAM_TABLE}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{AUDIT_EXECUTION_TITLE}}",
+      "label": "subsec:audit_vegrehajtas",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{AUDIT_EXECUTION_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "{{MANAGEMENT_REVIEWS_TITLE}}",
+      "label": "sec:vezetosegi_atvizsgalasok",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{REVIEW_FREQUENCY_TITLE}}",
+      "label": "subsec:atvizsgalas_gyakorisaga",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{REVIEW_FREQUENCY_CONTENT}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{REVIEW_INPUTS_TITLE}}",
+      "label": "subsec:atvizsgalas_bemeno_adatai",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{REVIEW_INPUTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{REVIEW_INPUTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{REVIEW_OUTPUTS_TITLE}}",
+      "label": "subsec:atvizsgalas_kimeno_adatai",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{REVIEW_OUTPUTS_INTRO}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "list_unordered",
+      "items": "{{REVIEW_OUTPUTS_ITEMS}}",
+      "metadata": {
+        "iso_mandatory": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "metadata": {
+        "box_style": "nahalert",
+        "box_title": "{{REVIEW_OUTPUTS_ALERT_BOX_TITLE}}",
+        "iso_mandatory": false
+      },
+      "content": "{{REVIEW_OUTPUTS_ALERT_BOX_CONTENT}}"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 7 - Folyamat követelmények Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 7",
+  "version": "1.0.0",
+  "mappings": {
+    "{{CHAPTER_TITLE}}": {
+      "source": "chapters.ch07.title"
+    },
+    "{{REQUEST_REVIEW_TITLE}}": {
+      "source": "chapters.ch07.sections.request_review.title"
+    },
+    "{{REVIEW_PROCESS_TITLE}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.review_process.title"
+    },
+    "{{REVIEW_PROCESS_INTRO}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.review_process.intro"
+    },
+    "{{REVIEW_PROCESS_ITEMS}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.review_process.items"
+    },
+    "{{DEVIATIONS_TITLE}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.deviations.title"
+    },
+    "{{DEVIATIONS_CONTENT}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.deviations.content"
+    },
+    "{{DEVIATIONS_INFO_BOX_TITLE}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.deviations.info_box.title"
+    },
+    "{{DEVIATIONS_INFO_BOX_CONTENT}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.deviations.info_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{RECORDS_TITLE}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.records.title"
+    },
+    "{{RECORDS_CONTENT}}": {
+      "source": "chapters.ch07.sections.request_review.subsections.records.content"
+    },
+    "{{METHOD_SELECTION_TITLE}}": {
+      "source": "chapters.ch07.sections.method_selection.title"
+    },
+    "{{METHOD_SELECTION_SUBSEC_TITLE}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.method_selection.title"
+    },
+    "{{METHOD_SELECTION_SUBSEC_INTRO}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.method_selection.intro"
+    },
+    "{{METHOD_SELECTION_SUBSEC_ITEMS}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.method_selection.items"
+    },
+    "{{LABORATORY_DEVELOPED_METHODS_TITLE}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.laboratory_developed_methods.title"
+    },
+    "{{LABORATORY_DEVELOPED_METHODS_CONTENT}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.laboratory_developed_methods.content"
+    },
+    "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_TITLE}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.laboratory_developed_methods.alert_box.title"
+    },
+    "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_CONTENT}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.laboratory_developed_methods.alert_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{METHOD_VERIFICATION_TITLE}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.method_verification.title"
+    },
+    "{{METHOD_VERIFICATION_INTRO}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.method_verification.intro"
+    },
+    "{{METHOD_VERIFICATION_ITEMS}}": {
+      "source": "chapters.ch07.sections.method_selection.subsections.method_verification.items"
+    },
+    "{{SAMPLING_TITLE}}": {
+      "source": "chapters.ch07.sections.sampling.title"
+    },
+    "{{SAMPLING_CONTENT}}": {
+      "source": "chapters.ch07.sections.sampling.content"
+    },
+    "{{HANDLING_ITEMS_TITLE}}": {
+      "source": "chapters.ch07.sections.handling_items.title"
+    },
+    "{{TRANSPORT_AND_STORAGE_TITLE}}": {
+      "source": "chapters.ch07.sections.handling_items.subsections.transport_and_storage.title"
+    },
+    "{{TRANSPORT_AND_STORAGE_INTRO}}": {
+      "source": "chapters.ch07.sections.handling_items.subsections.transport_and_storage.intro"
+    },
+    "{{TRANSPORT_AND_STORAGE_ITEMS}}": {
+      "source": "chapters.ch07.sections.handling_items.subsections.transport_and_storage.items"
+    },
+    "{{IDENTIFICATION_TITLE}}": {
+      "source": "chapters.ch07.sections.handling_items.subsections.identification.title"
+    },
+    "{{IDENTIFICATION_CONTENT}}": {
+      "source": "chapters.ch07.sections.handling_items.subsections.identification.content"
+    },
+    "{{IDENTIFICATION_TABLE}}": {
+      "source": "chapters.ch07.sections.handling_items.subsections.identification.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{TECHNICAL_RECORDS_TITLE}}": {
+      "source": "chapters.ch07.sections.technical_records.title"
+    },
+    "{{RECORD_REQUIREMENTS_TITLE}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_requirements.title"
+    },
+    "{{RECORD_REQUIREMENTS_INTRO}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_requirements.intro"
+    },
+    "{{RECORD_REQUIREMENTS_ITEMS}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_requirements.items"
+    },
+    "{{RECORD_RETENTION_TITLE}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_retention.title"
+    },
+    "{{RECORD_RETENTION_CONTENT}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_retention.content"
+    },
+    "{{RECORD_RETENTION_REQ_BOX_TITLE}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_retention.req_box.title"
+    },
+    "{{RECORD_RETENTION_REQ_BOX_CONTENT}}": {
+      "source": "chapters.ch07.sections.technical_records.subsections.record_retention.req_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{MEASUREMENT_UNCERTAINTY_TITLE}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.title"
+    },
+    "{{UNCERTAINTY_EVALUATION_TITLE}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_evaluation.title"
+    },
+    "{{UNCERTAINTY_EVALUATION_CONTENT}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_evaluation.content"
+    },
+    "{{UNCERTAINTY_BUDGET_TITLE}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_budget.title"
+    },
+    "{{UNCERTAINTY_BUDGET_INTRO}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_budget.intro"
+    },
+    "{{UNCERTAINTY_BUDGET_ITEMS}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_budget.items"
+    },
+    "{{UNCERTAINTY_BUDGET_ALERT_BOX_TITLE}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_budget.alert_box.title"
+    },
+    "{{UNCERTAINTY_BUDGET_ALERT_BOX_CONTENT}}": {
+      "source": "chapters.ch07.sections.measurement_uncertainty.subsections.uncertainty_budget.alert_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    },
+    "{{VALIDITY_OF_RESULTS_TITLE}}": {
+      "source": "chapters.ch07.sections.validity_of_results.title"
+    },
+    "{{QUALITY_CONTROL_TITLE}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.quality_control.title"
+    },
+    "{{QUALITY_CONTROL_INTRO}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.quality_control.intro"
+    },
+    "{{QUALITY_CONTROL_ITEMS}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.quality_control.items"
+    },
+    "{{MONITORING_TITLE}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.monitoring.title"
+    },
+    "{{MONITORING_CONTENT}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.monitoring.content"
+    },
+    "{{MONITORING_TABLE}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.monitoring.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{INTERLABORATORY_COMPARISONS_TITLE}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.interlaboratory_comparisons.title"
+    },
+    "{{INTERLABORATORY_COMPARISONS_CONTENT}}": {
+      "source": "chapters.ch07.sections.validity_of_results.subsections.interlaboratory_comparisons.content"
+    },
+    "{{REPORTING_RESULTS_TITLE}}": {
+      "source": "chapters.ch07.sections.reporting_results.title"
+    },
+    "{{CERTIFICATE_REQUIREMENTS_TITLE}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.certificate_requirements.title"
+    },
+    "{{CERTIFICATE_REQUIREMENTS_INTRO}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.certificate_requirements.intro"
+    },
+    "{{CERTIFICATE_REQUIREMENTS_ITEMS}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.certificate_requirements.items"
+    },
+    "{{ACCREDITATION_MARKING_TITLE}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.accreditation_marking.title"
+    },
+    "{{ACCREDITATION_MARKING_CONTENT}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.accreditation_marking.content"
+    },
+    "{{ACCREDITATION_MARKING_REQ_BOX_TITLE}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.accreditation_marking.req_box.title"
+    },
+    "{{ACCREDITATION_MARKING_REQ_BOX_CONTENT}}": {
+      "source": "chapters.ch07.sections.reporting_results.subsections.accreditation_marking.req_box",
+      "pipeline": [
+        {"transform": "format_info_box"}
+      ]
+    }
+  }
+}

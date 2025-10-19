@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter 2 - Rendelkező hivatkozások Format Mapping",
+  "description": "Mapping configuration from input data to template placeholders for Chapter 2",
+  "version": "1.0.0",
+  "simple_mappings": {
+    "{{FOOTNOTE}}": "chapters.ch02.footnote"
+  },
+  "complex_mappings": {
+    "{{INTERNATIONAL_STANDARDS_LIST}}": {
+      "source": "global.documents.international_standards",
+      "transform": "format_standard_list",
+      "description": "Format array of standards into list items: **CODE** -- Title*",
+      "example": "**MSZ EN ISO/IEC 17025:2018** -- Vizsgáló- és kalibrálólaboratóriumok felkészültségének általános követelményei*"
+    },
+    "{{ILAC_DOCUMENTS_LIST}}": {
+      "source": "global.documents.ilac_documents",
+      "transform": "format_document_list",
+      "description": "Format array of documents into list items: **CODE** -- Title*",
+      "example": "**ILAC-P8:11/2023** -- Az ILAC kölcsönös elismerési megállapodása*"
+    },
+    "{{EA_DOCUMENTS_LIST}}": {
+      "source": "global.documents.ea_documents",
+      "transform": "format_document_list",
+      "description": "Format array of documents into list items: **CODE** -- Title*",
+      "example": "**EA-4/02 M:2022** -- Mérési bizonytalanság meghatározása kalibrálásnál*"
+    },
+    "{{NAR_DOCUMENTS_LIST}}": {
+      "source": "global.documents.nar_documents",
+      "transform": "format_document_list",
+      "description": "Format array of documents into list items: **CODE** -- Title*",
+      "example": "**NAR-01** -- Az akkreditálási eljárás szabályzata*"
+    },
+    "{{REGULATIONS_LIST}}": {
+      "source": "global.documents.regulations",
+      "transform": "format_regulation_list",
+      "description": "Format array of regulations into list items: **CODE** rendelet Title*",
+      "example": "**1/1990 (IX.29) KHVM** rendelet a gépjárműfenntartó tevékenység feltételeiről*"
+    }
+  },
+  "transform_functions": {
+    "format_standard_list": {
+      "description": "Converts array of {code, title_hun} objects to formatted strings",
+      "logic": "array.map(item => `**${item.code}** -- ${item.title_hun}*`)"
+    },
+    "format_document_list": {
+      "description": "Converts array of {code, title} objects to formatted strings",
+      "logic": "array.map(item => `**${item.code}** -- ${item.title}*`)"
+    },
+    "format_regulation_list": {
+      "description": "Converts array of {code, title} objects to formatted strings with 'rendelet'",
+      "logic": "array.map(item => `**${item.code}** rendelet ${item.title}*`)"
+    }
+  },
+  "default_values": {
+    "footnote": "*Mindenkori aktuális kiadás az érvényes."
+  }
+}

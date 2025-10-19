@@ -1,0 +1,287 @@
+{
+  "chapter": "08",
+  "title": "IRÁNYÍTÁSI RENDSZER KÖVETELMÉNYEK",
+  "sections": {
+    "options": {
+      "title": "Választási lehetőségek (8.1)",
+      "subsections": {
+        "general": {
+          "title": "Általános irányítási rendszer (8.1.1)",
+          "content": "A laboratórium irányítási rendszert működtet, amely összhangban van az ISO 17025:2018 szabvány követelményeivel. Ez a Minőségirányítási Kézikönyv és a kapcsolódó eljárások, utasítások biztosítják a laboratóriumi tevékenységek következetes irányítását."
+        },
+        "option_a": {
+          "title": "Választott opció: A változat (8.1.2)",
+          "content": "A laboratórium az A opciót választotta, amely szerint a 4-7 fejezetekben meghatározott követelményeket teljesíti. Ez a választás a kis laboratóriumok számára megfelelőbb, egyszerűbb irányítási rendszert jelent, amely az ISO 9001 teljes követelményrendszerét nem alkalmazza."
+        }
+      }
+    },
+    "documentation": {
+      "title": "Dokumentáció (8.2)",
+      "subsections": {
+        "management_system_documentation": {
+          "title": "Irányítási rendszer dokumentációja (8.2.1-8.2.2)",
+          "intro": "A laboratórium irányítási rendszer dokumentációja tartalmazza:",
+          "items": [
+            "Minőségpolitika és minőségcélok",
+            "Minőségirányítási Kézikönyv (jelen dokumentum)",
+            "Eljárások és munkahelyi utasítások",
+            "Formanyomtatványok és jegyzőkönyvek",
+            "Külső eredetű dokumentumok (szabványok, jogszabályok)"
+          ]
+        },
+        "document_control": {
+          "title": "Dokumentumok kezelése (8.2.3)",
+          "intro": "Minden dokumentum verziókezelés alatt áll. A dokumentumkezelés biztosítja:",
+          "items": [
+            "Csak érvényes dokumentumok használatát",
+            "A változtatások egyértelmű azonosítását és nyomon követését",
+            "Az elavult dokumentumok visszavonását",
+            "A dokumentumok hozzáférhetőségét az érintett személyzet számára"
+          ],
+          "table": {
+            "title": "Dokumentum hierarchia és kódolási rendszer",
+            "columns": ["doc_level", "doc_type", "code_prefix", "approval", "example"],
+            "column_names": ["Szint", "Dokumentum típus", "Kód előtag", "Jóváhagyó", "Példa"],
+            "data": [
+              {
+                "doc_level": "1. szint",
+                "doc_type": "Minőségirányítási Kézikönyv",
+                "code_prefix": "MK",
+                "approval": "Ügyvezető",
+                "example": "MK-001"
+              },
+              {
+                "doc_level": "2. szint",
+                "doc_type": "Kalibrálási Eljárás",
+                "code_prefix": "KE",
+                "approval": "Laboratóriumvezető",
+                "example": "KE-HON-001"
+              },
+              {
+                "doc_level": "2. szint",
+                "doc_type": "Irányítási Eljárás",
+                "code_prefix": "IE",
+                "approval": "Minőségirányítási vezető",
+                "example": "IE-DOK-001"
+              },
+              {
+                "doc_level": "3. szint",
+                "doc_type": "Munkahelyi Utasítás",
+                "code_prefix": "MU",
+                "approval": "Laboratóriumvezető",
+                "example": "MU-KAL-005"
+              },
+              {
+                "doc_level": "4. szint",
+                "doc_type": "Formanyomtatvány/Jegyzőkönyv",
+                "code_prefix": "F",
+                "approval": "Folyamat felelős",
+                "example": "F-KAL-012"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "record_control": {
+      "title": "Irányítási rendszer nyilvántartások kezelése (8.3)",
+      "subsections": {
+        "record_requirements": {
+          "title": "Nyilvántartási követelmények (8.3.1)",
+          "intro": "A laboratórium nyilvántartásai:",
+          "items": [
+            "Olvashatók és könnyen hozzáférhetők",
+            "Védettek a sérülés, elvesztés és jogosulatlan hozzáférés ellen",
+            "Meghatározott ideig megőrzésre kerülnek",
+            "Visszakereshetők azonosító alapján"
+          ]
+        },
+        "technical_records": {
+          "title": "Technikai nyilvántartások (8.3.2)",
+          "content": "A technikai nyilvántartások (kalibrálási jegyzőkönyvek, bizonyítványok, stb.) kezelése a 7.5 fejezetben kerül részletezésre. Ezek a laboratóriumi tevékenység bizonyítékául szolgálnak és minimum 6 évig vagy 1 akkreditációs ciklus + 2 évig megőrzésre kerülnek."
+        }
+      }
+    },
+    "actions_to_address_risks": {
+      "title": "Kockázatokkal és lehetőségekkel kapcsolatos tevékenységek (8.4)",
+      "subsections": {
+        "risk_identification": {
+          "title": "Kockázatok azonosítása (8.4.1-8.4.2)",
+          "intro": "A laboratórium azonosítja a működését veszélyeztető kockázatokat:",
+          "items": [
+            "Pártatlanságot veszélyeztető kockázatok (lásd 4.1 fejezet)",
+            "Technikai kompetencia elvesztése (munkatársak távozása)",
+            "Etalon kalibrációjának lejárta",
+            "Berendezések meghibásodása",
+            "Környezeti feltételek nem megfelelősége",
+            "Dokumentáció elvesztése vagy sérülése"
+          ]
+        },
+        "risk_treatment": {
+          "title": "Kockázatkezelés (8.4.3)",
+          "content": "A kockázatok kezelésére cselekvési tervek készülnek, amelyek tartalmazzák a megelőző intézkedéseket, a felelősöket és a határidőket. A kockázatokat évente felül kell vizsgálni.",
+          "info_box": {
+            "type": "nahinfo",
+            "title": "[INFO] Kockázatkezelési mátrix példa",
+            "intro": "Kockázat: Egyetlen munkatárs rendelkezik hosszmérési kompetenciával",
+            "items": [
+              "Valószínűség: Közepes (betegség, szabadság, távozás)",
+              "Hatás: Magas (szolgáltatás leállása)",
+              "Kockázati szint: Magas",
+              "Kezelés: Második munkatárs képzése hosszmérésre (határidő: 6 hónap)",
+              "Felelős: Laboratóriumvezető"
+            ]
+          }
+        }
+      }
+    },
+    "improvement": {
+      "title": "Fejlesztés (8.5)",
+      "subsections": {
+        "general_improvement": {
+          "title": "Általános fejlesztési tevékenységek (8.5.1)",
+          "intro": "A laboratórium folyamatosan fejleszti irányítási rendszerét és technikai képességeit. A fejlesztési lehetőségek azonosítása:",
+          "items": [
+            "Belső auditok eredményei alapján",
+            "Vezetőségi átvizsgálások során",
+            "Vevői visszajelzések elemzése",
+            "Interlaboratóriumi összehasonlítások eredményei",
+            "Személyzet javaslatai"
+          ]
+        },
+        "corrective_actions": {
+          "title": "Helyesbítő tevékenységek (8.6)",
+          "intro": "Ha nem megfelelőség történik, helyesbítő tevékenységet kell kezdeményezni:",
+          "items": [
+            "A nem-megfelelőség okának azonosítása (gyökérok-elemzés)",
+            "Azonnali intézkedés a probléma megszüntetésére",
+            "Helyesbítő tevékenység megtervezése az ok megszüntetésére",
+            "A helyesbítő tevékenység végrehajtása",
+            "A hatékonyság ellenőrzése"
+          ],
+          "req_box": {
+            "type": "nahreq",
+            "title": "[KÖV] Helyesbítő tevékenység dokumentálása",
+            "intro": "Minden helyesbítő tevékenységről nyilvántartást kell vezetni:",
+            "items": [
+              "A nem-megfelelőség leírása (mi történt, mikor, hol)",
+              "Gyökérok-elemzés eredménye (miért történt)",
+              "Azonnali intézkedés (mit tettünk rögtön)",
+              "Helyesbítő tevékenység terve (hogyan előzzük meg újra)",
+              "Felelős személy és határidő",
+              "Hatékonyság értékelése (működött-e a megoldás)"
+            ]
+          }
+        },
+        "preventive_actions": {
+          "title": "Megelőző tevékenységek (8.7)",
+          "content": "A kockázatelemzés alapján megelőző tevékenységek kerülnek meghatározásra a potenciális nem-megfelelőségek elkerülésére. Ezek dokumentálása és nyomon követése a helyesbítő tevékenységekhez hasonló módon történik."
+        }
+      }
+    },
+    "internal_audits": {
+      "title": "Belső auditok (8.8)",
+      "subsections": {
+        "audit_program": {
+          "title": "Audit program (8.8.1)",
+          "intro": "A laboratórium éves belső audit programot működtet. Az auditok célja:",
+          "items": [
+            "Az ISO 17025 követelményeinek megfelelőség ellenőrzése",
+            "Az irányítási rendszer hatékonyságának értékelése",
+            "A fejlesztési lehetőségek azonosítása",
+            "Az előző auditok helyesbítő tevékenységeinek ellenőrzése"
+          ],
+          "table": {
+            "title": "Belső audit éves terv (példa)",
+            "columns": ["quarter", "audit_scope", "auditor", "date", "status"],
+            "column_names": ["Negyedév", "Audit terület", "Auditor", "Tervezett dátum", "Státusz"],
+            "data": [
+              {
+                "quarter": "Q1",
+                "audit_scope": "Dokumentumkezelés (8.2-8.3)",
+                "auditor": "Minőségirányítási vezető",
+                "date": "2025.03.15",
+                "status": "Tervezett"
+              },
+              {
+                "quarter": "Q2",
+                "audit_scope": "Személyzet kompetencia (6.2)",
+                "auditor": "Külső szakértő",
+                "date": "2025.06.10",
+                "status": "Tervezett"
+              },
+              {
+                "quarter": "Q3",
+                "audit_scope": "Kalibrálási folyamat (7.2-7.8)",
+                "auditor": "Minőségirányítási vezető",
+                "date": "2025.09.20",
+                "status": "Tervezett"
+              },
+              {
+                "quarter": "Q4",
+                "audit_scope": "Teljes rendszer átvizsgálás",
+                "auditor": "Külső szakértő",
+                "date": "2025.12.05",
+                "status": "Tervezett"
+              }
+            ]
+          }
+        },
+        "audit_execution": {
+          "title": "Audit végrehajtás (8.8.2)",
+          "content": "Az auditokat függetlenséggel rendelkező, kompetens auditorok végzik. Az auditok eredményeit dokumentálni kell, és a vezetőség tudomására kell hozni. Az audit során talált nem-megfelelőségekre helyesbítő tevékenységeket kell tervezni."
+        }
+      }
+    },
+    "management_reviews": {
+      "title": "Vezetőségi átvizsgálások (8.9)",
+      "subsections": {
+        "review_frequency": {
+          "title": "Átvizsgálás gyakorisága (8.9.1)",
+          "content": "A laboratóriumvezető legalább évente egyszer átvizsgálja az irányítási rendszert annak biztosítására, hogy az továbbra is megfelelő, adekvát és hatékony. Az átvizsgálás eredményeit dokumentálni kell."
+        },
+        "review_inputs": {
+          "title": "Átvizsgálás bemenő adatai (8.9.2)",
+          "intro": "A vezetőségi átvizsgálás során a következő információkat kell figyelembe venni:",
+          "items": [
+            "Előző átvizsgálások követő intézkedéseinek státusza",
+            "Minőségcélok teljesítése",
+            "Belső auditok eredményei",
+            "NAH felügyeleti és akkreditációs auditok eredményei",
+            "Vevői panaszok és visszajelzések",
+            "Helyesbítő és megelőző tevékenységek hatékonysága",
+            "Erőforrások megfelelősége",
+            "Személyzet kompetenciája és képzési igények",
+            "Kockázatelemzés eredményei",
+            "Interlaboratóriumi összehasonlítások eredményei"
+          ]
+        },
+        "review_outputs": {
+          "title": "Átvizsgálás kimenő adatai (8.9.3)",
+          "intro": "A vezetőségi átvizsgálás eredményeként döntések születnek:",
+          "items": [
+            "Az irányítási rendszer és folyamatok hatékonyságának javítása",
+            "A laboratóriumi tevékenységek fejlesztése",
+            "Szükséges erőforrások biztosítása",
+            "Minőségcélok felülvizsgálata és új célok meghatározása",
+            "Kockázatok újraértékelése"
+          ],
+          "alert_box": {
+            "type": "nahalert",
+            "title": "[FIGY] Vezetőségi átvizsgálás NAH követelményei",
+            "intro": "Az NAH audit során a vezetőségi átvizsgálásról ellenőrzik:",
+            "items": [
+              "Éves gyakoriság betartása (dátum dokumentált)",
+              "Minden kötelező bemeneti adat szerepel az átvizsgálásban",
+              "Konkrét döntések és cselekvési tervek születtek",
+              "Felelősök és határidők megnevezése",
+              "Előző átvizsgálás intézkedéseinek lezárása",
+              "Ügyvezető/laboratóriumvezető aláírása"
+            ],
+            "closing": "Vezetőségi átvizsgálás nélkül az akkreditáció felfüggesztésre kerülhet!"
+          }
+        }
+      }
+    }
+  }
+}
