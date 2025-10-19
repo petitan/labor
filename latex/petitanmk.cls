@@ -18,27 +18,34 @@
 %   chapter  - Fejezet dokumentum
 %   appendix - Melléklet dokumentum
 %   procedure - Eljárás dokumentum
-%   standalone - Önálló kalibrálási eljárás
+%   standalone - Önálló kalibrálási eljárás (document_type)
+%
+% v2.2.3 (Issue #3) - Document mode options:
+%   standalone - Standalone PDF mode (default, document_mode)
+%   embedded   - Embedded appendix mode with numeric appendix numbering
 %
 % ===============================================================================
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{petitanmk}[2025/01/15 v1.0 PeTitan ISO 17025 Document Class]
 
-% ===== DOCJL PLUGIN KOMPATIBILITÁS =====
-% A docjl petitan_iso17025 plugin által használt parancsok
-% Ezek NO-OP dummy parancsok, hogy ne okozzanak hibát
+% ===== DUMMY COMMANDS (for docjl compatibility) =====
+% These commands are defined by docjl templates but must exist for compilation
 \newcommand{\petitandoctype}[1]{}  % Dokumentum típus - ignoráljuk
 \newcommand{\CompanyName}[1]{}     % Cég név - ignoráljuk
 \newcommand{\CompanyAddress}[1]{}  % Cég cím - ignoráljuk
 \newcommand{\CompanyTaxNumber}[1]{}  % Adószám - ignoráljuk
 
 % ===== ALAPÉRTELMEZETT OPCIÓK =====
+% Document type flags
 \newif\if@petitan@main\@petitan@maintrue
 \newif\if@petitan@chapter\@petitan@chapterfalse
 \newif\if@petitan@appendix\@petitan@appendixfalse
 \newif\if@petitan@procedure\@petitan@procedurefalse
 \newif\if@petitan@standalone\@petitan@standalonefalse
+
+% v2.2.3 (Issue #3) - Document mode flags
+\newif\if@petitan@embedded\@petitan@embeddedfalse
 
 % ===== DOKUMENTUM TÍPUS OPCIÓK =====
 \DeclareOption{main}{%
@@ -81,21 +88,32 @@
     \@petitan@standalonetrue
 }
 
+% v2.2.3 (Issue #3) - Document mode option
+\DeclareOption{embedded}{%
+    \@petitan@embeddedtrue
+}
+
 % ===== ALAPÉRTELMEZETT OPCIÓK ÁTADÁSA =====
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
 
 % ===== ALAPDOKUMENTUM OSZTÁLY BETÖLTÉSE =====
+% v2.2.3 (Issue #3) - Changed default font size from 12pt to 11pt
 \if@petitan@standalone
-    \LoadClass[12pt,a4paper]{article}
+    \LoadClass[11pt,a4paper]{article}
 \else
-    \LoadClass[12pt,a4paper,twoside,openright]{report}
+    \LoadClass[11pt,a4paper,twoside,openright]{report}
 \fi
 
 % ===== KÖTELEZŐ CSOMAGOK =====
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[magyar]{babel}
+
+% v2.2.3 (Issue #3) - Palatino font family
+\RequirePackage{mathpazo}  % Palatino for text and math
+\RequirePackage[scaled=0.95]{helvet}  % Helvetica for sans-serif
+\RequirePackage{courier}  % Courier for monospace
 
 % Geometria beállítások
 \RequirePackage[margin=2.5cm]{geometry}
@@ -148,6 +166,50 @@
 \definecolor{petitangreen}{RGB}{0,153,51}
 \definecolor{petitanred}{RGB}{204,0,51}
 \definecolor{petitanorange}{RGB}{255,153,0}
+\definecolor{petitanpurple}{RGB}{153,51,153}
+\definecolor{petitanyellow}{RGB}{255,204,0}
+
+% ===== ISO 17025 INFO BOX STÍLUSOK (v2.2.4 - Issue #4) =====
+
+% nahinfo - Információs doboz (kék)
+\newtcolorbox{nahinfo}[1][]{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    fonttitle=\bfseries,
+    title={#1}
+}
+
+% nahalert - Figyelmeztető doboz (piros)
+\newtcolorbox{nahalert}[1][]{
+    colback=red!5!white,
+    colframe=red!75!black,
+    fonttitle=\bfseries,
+    title={#1}
+}
+
+% nahreq - Követelmény doboz (zöld)
+\newtcolorbox{nahreq}[1][]{
+    colback=green!5!white,
+    colframe=green!75!black,
+    fonttitle=\bfseries,
+    title={#1}
+}
+
+% nahsec - Biztonsági doboz (sárga)
+\newtcolorbox{nahsec}[1][]{
+    colback=yellow!5!white,
+    colframe=yellow!75!black,
+    fonttitle=\bfseries,
+    title={#1}
+}
+
+% nahvalid - Validációs doboz (lila)
+\newtcolorbox{nahvalid}[1][]{
+    colback=purple!5!white,
+    colframe=purple!75!black,
+    fonttitle=\bfseries,
+    title={#1}
+}
 
 % ===== CÉGADAT MAKRÓK =====
 \newcommand{\petitan}{PeTitan Kft.}
@@ -340,6 +402,8 @@
 \newcommand{\SetDocumentFooter}[3]{%
     \fancyfoot[L]{\footnotesize \nahszam{} | #1}
     \fancyfoot[C]{\footnotesize v#2 | #3}
+    % NOTE: \pageref{LastPage} requires lastpage package (line 98)
+    % LaTeX must be run TWICE for correct page numbers
     \fancyfoot[R]{\footnotesize \thepage/\pageref{LastPage}}
 }
 
@@ -650,6 +714,62 @@
         \geometry{margin=2cm}
     \fi
 }
+
+% ===== MATEMATIKAI KÖRNYEZETEK =====
+% Tételek, definíciók, példák támogatása
+
+\RequirePackage{amsthm}
+
+\newtheorem{theorem}{Tétel}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Állítás}
+\newtheorem{corollary}[theorem]{Következmény}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definíció}
+\newtheorem{example}[theorem]{Példa}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Megjegyzés}
+
+% ===== KÓD BLOKKOK TÁMOGATÁSA =====
+% Listings csomag konfiguráció
+
+\RequirePackage{listings}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    showstringspaces=false,
+    commentstyle=\color{green!50!black},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red!70!black},
+    tabsize=4,
+    captionpos=b
+}
+
+% UTF-8 támogatás listingshez (magyar karakterek)
+\lstset{
+    literate=%
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ö}{{\"o}}1 {ő}{{\H{o}}}1 {ú}{{\'u}}1 {ü}{{\"u}}1 {ű}{{\H{u}}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ö}{{\"O}}1 {Ő}{{\H{O}}}1 {Ú}{{\'U}}1 {Ü}{{\"U}}1 {Ű}{{\H{U}}}1
+}
+
+% ===== v2.2.3 (Issue #3) - EMBEDDED MODE: NUMERIC APPENDIX NUMBERING =====
+% When embedded as appendix in main QMS manual, use numeric numbering instead of alphabetic
+% This allows scaling beyond 26 appendices and follows ISO 17025 best practices
+\if@petitan@embedded
+    % Numeric appendix numbering instead of alphabetic (A, B, C... → 1, 2, 3...)
+    \renewcommand{\appendix}{%
+        \setcounter{chapter}{0}%
+        \renewcommand{\thechapter}{\arabic{chapter}}%
+        \renewcommand{\chaptername}{Melléklet}%
+        \renewcommand{\thesection}{\thechapter.\arabic{section}}%
+    }
+\fi
 
 % ===== OSZTÁLY VÉGE =====
 \endinput
