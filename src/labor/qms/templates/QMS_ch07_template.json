@@ -62,13 +62,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahinfo",
+      "content": "{{DEVIATIONS_INFO_BOX_CONTENT}}",
+      "title": "{{DEVIATIONS_INFO_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahinfo",
-        "box_title": "{{DEVIATIONS_INFO_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{DEVIATIONS_INFO_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -135,13 +135,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahalert",
+      "content": "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_CONTENT}}",
+      "title": "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahalert",
-        "box_title": "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{LABORATORY_DEVELOPED_METHODS_ALERT_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -286,13 +286,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahreq",
+      "content": "{{RECORD_RETENTION_REQ_BOX_CONTENT}}",
+      "title": "{{RECORD_RETENTION_REQ_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahreq",
-        "box_title": "{{RECORD_RETENTION_REQ_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{RECORD_RETENTION_REQ_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -343,13 +343,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahalert",
+      "content": "{{UNCERTAINTY_BUDGET_ALERT_BOX_CONTENT}}",
+      "title": "{{UNCERTAINTY_BUDGET_ALERT_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahalert",
-        "box_title": "{{UNCERTAINTY_BUDGET_ALERT_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{UNCERTAINTY_BUDGET_ALERT_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -471,13 +471,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahreq",
+      "content": "{{ACCREDITATION_MARKING_REQ_BOX_CONTENT}}",
+      "title": "{{ACCREDITATION_MARKING_REQ_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahreq",
-        "box_title": "{{ACCREDITATION_MARKING_REQ_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{ACCREDITATION_MARKING_REQ_BOX_CONTENT}}"
+      }
     }
   ]
 }

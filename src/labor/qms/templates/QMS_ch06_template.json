@@ -92,13 +92,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahinfo",
+      "content": "{{TRAINING_INFO_BOX_CONTENT}}",
+      "title": "{{TRAINING_INFO_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahinfo",
-        "box_title": "{{TRAINING_INFO_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{TRAINING_INFO_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -128,6 +128,35 @@
       "content": "{{AUTHORIZATION_NOTE}}",
       "metadata": {
         "iso_mandatory": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "{{PERSONNEL_MATRIX_TITLE}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{PERSONNEL_MATRIX_INTRO}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "table",
+      "content": "{{PERSONNEL_MATRIX_TABLE}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": "{{PERSONNEL_MATRIX_NOTE}}",
+      "metadata": {
+        "iso_mandatory": false
       }
     },
     {
@@ -257,13 +286,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahreq",
+      "content": "{{CALIBRATION_PROGRAM_REQ_BOX_CONTENT}}",
+      "title": "{{CALIBRATION_PROGRAM_REQ_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahreq",
-        "box_title": "{{CALIBRATION_PROGRAM_REQ_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{CALIBRATION_PROGRAM_REQ_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -305,13 +334,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahalert",
+      "content": "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_CONTENT}}",
+      "title": "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahalert",
-        "box_title": "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{METROLOGICAL_TRACEABILITY_ALERT_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",

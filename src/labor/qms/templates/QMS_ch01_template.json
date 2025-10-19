@@ -58,24 +58,54 @@
       }
     },
     {
-      "type": "paragraph",
-      "metadata": {
-        "box_style": "nahinfo",
-        "box_title": "{{INFO_BOX_TITLE}}",
-        "iso_mandatory": false
-      },
+      "type": "petitan_box",
+      "style": "nahinfo",
       "content": [
-        {"type": "bold", "content": "Alapszabvány:"},
-        {"type": "text", "content": " {{INFO_BOX_BASE_STANDARD}}\n\n"},
-        {"type": "bold", "content": "Tevékenység helyszíne:"},
-        {"type": "text", "content": " {{ACTIVITY_LOCATIONS}}\n\n"},
-        {"type": "bold", "content": "Cél:"},
-        {"type": "text", "content": " {{INFO_BOX_TARGET}}\n\n"},
-        {"type": "bold", "content": "Hatály:"},
-        {"type": "text", "content": " {{INFO_BOX_SCOPE_SUMMARY}}\n\n"},
-        {"type": "bold", "content": "Szakmai terület:"},
-        {"type": "text", "content": " {{TECHNICAL_AREA}}"}
-      ]
+        {
+          "type": "bold",
+          "content": "Alapszabvány:"
+        },
+        {
+          "type": "text",
+          "content": " {{INFO_BOX_BASE_STANDARD}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Tevékenység helyszíne:"
+        },
+        {
+          "type": "text",
+          "content": " {{ACTIVITY_LOCATIONS}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Cél:"
+        },
+        {
+          "type": "text",
+          "content": " {{INFO_BOX_TARGET}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Hatály:"
+        },
+        {
+          "type": "text",
+          "content": " {{INFO_BOX_SCOPE_SUMMARY}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Szakmai terület:"
+        },
+        {
+          "type": "text",
+          "content": " {{TECHNICAL_AREA}}"
+        }
+      ],
+      "title": "{{INFO_BOX_TITLE}}",
+      "metadata": {
+        "iso_mandatory": false
+      }
     },
     {
       "type": "page_break",

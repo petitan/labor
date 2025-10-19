@@ -147,13 +147,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahinfo",
+      "content": "{{INFO_BOX_CONTENT}}",
+      "title": "{{INFO_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahinfo",
-        "box_title": "{{INFO_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{INFO_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -172,13 +172,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahalert",
+      "content": "{{ALERT_BOX_CONTENT}}",
+      "title": "{{ALERT_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahalert",
-        "box_title": "{{ALERT_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{ALERT_BOX_CONTENT}}"
+      }
     }
   ]
 }

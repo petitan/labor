@@ -25,22 +25,46 @@
       }
     },
     {
-      "type": "paragraph",
-      "metadata": {
-        "box_style": "nahinfo",
-        "box_title": "[INFO] Fontosabb definíciók",
-        "iso_mandatory": false
-      },
+      "type": "petitan_box",
+      "style": "nahinfo",
       "content": [
-        {"type": "bold", "content": "Kalibrálás:"},
-        {"type": "text", "content": " {{DEF_CALIBRATION}}\n\n"},
-        {"type": "bold", "content": "Mérési bizonytalanság:"},
-        {"type": "text", "content": " {{DEF_UNCERTAINTY}}\n\n"},
-        {"type": "bold", "content": "Visszavezethetőség:"},
-        {"type": "text", "content": " {{DEF_TRACEABILITY}}\n\n"},
-        {"type": "bold", "content": "Akkreditálás:"},
-        {"type": "text", "content": " {{DEF_ACCREDITATION}}"}
-      ]
+        {
+          "type": "bold",
+          "content": "Kalibrálás:"
+        },
+        {
+          "type": "text",
+          "content": " {{DEF_CALIBRATION}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Mérési bizonytalanság:"
+        },
+        {
+          "type": "text",
+          "content": " {{DEF_UNCERTAINTY}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Visszavezethetőség:"
+        },
+        {
+          "type": "text",
+          "content": " {{DEF_TRACEABILITY}}\n\n"
+        },
+        {
+          "type": "bold",
+          "content": "Akkreditálás:"
+        },
+        {
+          "type": "text",
+          "content": " {{DEF_ACCREDITATION}}"
+        }
+      ],
+      "title": "[INFO] Fontosabb definíciók",
+      "metadata": {
+        "iso_mandatory": false
+      }
     },
     {
       "type": "heading",

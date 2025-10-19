@@ -213,13 +213,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahinfo",
+      "content": "{{RISK_TREATMENT_INFO_BOX_CONTENT}}",
+      "title": "{{RISK_TREATMENT_INFO_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahinfo",
-        "box_title": "{{RISK_TREATMENT_INFO_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{RISK_TREATMENT_INFO_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -277,13 +277,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahreq",
+      "content": "{{CORRECTIVE_ACTIONS_REQ_BOX_CONTENT}}",
+      "title": "{{CORRECTIVE_ACTIONS_REQ_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahreq",
-        "box_title": "{{CORRECTIVE_ACTIONS_REQ_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{CORRECTIVE_ACTIONS_REQ_BOX_CONTENT}}"
+      }
     },
     {
       "type": "heading",
@@ -428,13 +428,13 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "petitan_box",
+      "style": "nahalert",
+      "content": "{{REVIEW_OUTPUTS_ALERT_BOX_CONTENT}}",
+      "title": "{{REVIEW_OUTPUTS_ALERT_BOX_TITLE}}",
       "metadata": {
-        "box_style": "nahalert",
-        "box_title": "{{REVIEW_OUTPUTS_ALERT_BOX_TITLE}}",
         "iso_mandatory": false
-      },
-      "content": "{{REVIEW_OUTPUTS_ALERT_BOX_CONTENT}}"
+      }
     }
   ]
 }
