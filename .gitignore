@@ -90,3 +90,16 @@ dmypy.json
 # Generated test outputs
 *_output.tex
 *_output.pdf
+*_output.json
+*_test.json
+
+# Generated calibration documents (root directory only)
+/*.tex
+/*.pdf
+/*.json
+
+# Calibration test outputs
+test_generic_*.tex
+test_generic_*.pdf
+test_generic_*.json
+*_docjl.json
