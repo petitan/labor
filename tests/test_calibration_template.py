@@ -17,35 +17,35 @@ def test_template_file_exists():
 
 def test_template_is_valid_json():
     """Test that the template is valid JSON."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     assert isinstance(data, dict), "Template must be a JSON object"
 
 
 def test_template_has_docjll_root():
     """Test that template has 'docjll' root key."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     assert "docjll" in data, "Template must have 'docjll' root key"
 
 
 def test_template_docjll_is_array():
     """Test that 'docjll' is an array."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     assert isinstance(data["docjll"], list), "'docjll' must be an array"
 
 
 def test_template_has_blocks():
     """Test that template has at least one block."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     assert len(data["docjll"]) > 0, "Template must have at least one block"
 
 
 def test_all_blocks_are_objects():
     """Test that all blocks are objects."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     for i, block in enumerate(data["docjll"]):
         assert isinstance(block, dict), f"Block {i} must be an object"
@@ -53,7 +53,7 @@ def test_all_blocks_are_objects():
 
 def test_all_blocks_have_type():
     """Test that all blocks have a 'type' field."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
     for i, block in enumerate(data["docjll"]):
         assert "type" in block, f"Block {i} must have a 'type' field"
@@ -74,19 +74,19 @@ def test_block_types_are_valid():
         "image",
     }
 
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     for i, block in enumerate(data["docjll"]):
         block_type = block.get("type")
-        assert block_type in valid_types, (
-            f"Block {i} has invalid type '{block_type}'. " f"Valid types: {valid_types}"
-        )
+        assert (
+            block_type in valid_types
+        ), f"Block {i} has invalid type '{block_type}'. Valid types: {valid_types}"
 
 
 def test_template_has_placeholders():
     """Test that template contains placeholder variables."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         content = f.read()
 
     # Should contain at least some placeholder patterns
@@ -97,7 +97,7 @@ def test_template_has_placeholders():
 
 def test_template_has_heading_blocks():
     """Test that template has heading blocks."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     heading_blocks = [b for b in data["docjll"] if b.get("type") == "heading"]
@@ -106,7 +106,7 @@ def test_template_has_heading_blocks():
 
 def test_template_has_table_blocks():
     """Test that template has table blocks."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     table_blocks = [b for b in data["docjll"] if b.get("type") == "table"]
@@ -115,7 +115,7 @@ def test_template_has_table_blocks():
 
 def test_template_has_paragraph_blocks():
     """Test that template has paragraph blocks."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     paragraph_blocks = [b for b in data["docjll"] if b.get("type") == "paragraph"]
@@ -124,7 +124,7 @@ def test_template_has_paragraph_blocks():
 
 def test_template_has_list_blocks():
     """Test that template has list blocks."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     list_blocks = [b for b in data["docjll"] if b.get("type") in ("list_ordered", "list_unordered")]
@@ -133,7 +133,7 @@ def test_template_has_list_blocks():
 
 def test_heading_blocks_have_required_fields():
     """Test that heading blocks have required fields."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     heading_blocks = [b for b in data["docjll"] if b.get("type") == "heading"]
@@ -144,7 +144,7 @@ def test_heading_blocks_have_required_fields():
 
 def test_table_blocks_have_required_fields():
     """Test that table blocks have required fields."""
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         data = json.load(f)
 
     table_blocks = [b for b in data["docjll"] if b.get("type") == "table"]
@@ -159,10 +159,10 @@ def test_schema_validates_template():
     """Test that the JSON schema validates the template."""
     import jsonschema
 
-    with open(SCHEMA_PATH, encoding="utf-8") as f:
+    with SCHEMA_PATH.open(encoding="utf-8") as f:
         schema = json.load(f)
 
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+    with TEMPLATE_PATH.open(encoding="utf-8") as f:
         template = json.load(f)
 
     # Should not raise ValidationError

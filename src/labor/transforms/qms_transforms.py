@@ -155,10 +155,9 @@ def format_info_box(box_def: dict) -> list[dict]:
     # Items (if exists)
     items = box_def.get("items", [])
     if items:
-        # Format as bullet list with proper bullet character
-        # Using • (U+2022 BULLET) which renders correctly in LaTeX
-        items_text = "\n".join([f"• {item}" for item in items])
-        result.append({"type": "text", "content": items_text + "\n\n"})
+        # Use list_inline for proper LaTeX itemize rendering (docjl v2.2.6+)
+        result.append({"type": "list_inline", "list_type": "itemize", "items": items})
+        result.append({"type": "text", "content": "\n\n"})
 
     # Closing (if exists)
     closing = box_def.get("closing", "")

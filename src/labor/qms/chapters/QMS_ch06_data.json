@@ -21,8 +21,20 @@
           ],
           "table": {
             "title": "Személyzet kompetencia mátrix",
-            "columns": ["competency", "lab_manager", "qms_manager", "calibration_tech", "technician"],
-            "column_names": ["Kompetencia terület", "Laboratórium-vezető", "Minőség-irányítási vezető", "Kalibráló szakember", "Technikus"],
+            "columns": [
+              "competency",
+              "lab_manager",
+              "qms_manager",
+              "calibration_tech",
+              "technician"
+            ],
+            "column_names": [
+              "Kompetencia terület",
+              "Laboratórium-vezető",
+              "Minőség-irányítási vezető",
+              "Kalibráló szakember",
+              "Technikus"
+            ],
             "data": [
               {
                 "competency": "ISO 17025 ismerete",
@@ -104,6 +116,61 @@
             "Adatfeldolgozás és számítások ellenőrzése"
           ],
           "note": "A felhatalmazások személyre szólóak, időben korlátozott érvényűek, és a kompetencia értékelés alapján kerülnek megadásra vagy visszavonásra."
+        },
+        "personnel_competence_matrix": {
+          "title": "Személyzet kalibrálási kompetencia mátrixa (6.2.4)",
+          "intro": "A jelenlegi személyzet kalibrálási módszerenkénti kompetenciái:",
+          "table": {
+            "title": "Kompetenciamátrix (Ö: önálló, F: felügyelettel, B: betanulás, O: oktató, --: nincs feljogosítva)",
+            "columns": [
+              "name",
+              "method_1",
+              "method_2",
+              "method_3",
+              "method_4",
+              "method_5",
+              "method_6"
+            ],
+            "column_names": [
+              "Munkatárs",
+              "Gázelemző",
+              "Füstölés",
+              "Diagnosztika",
+              "Fényszóró",
+              "Nyomás",
+              "Fékerő"
+            ],
+            "data": [
+              {
+                "name": "{{STAFF_1_NAME}}",
+                "method_1": "Ö",
+                "method_2": "Ö",
+                "method_3": "F",
+                "method_4": "B",
+                "method_5": "Ö",
+                "method_6": "O"
+              },
+              {
+                "name": "{{STAFF_2_NAME}}",
+                "method_1": "F",
+                "method_2": "Ö",
+                "method_3": "Ö",
+                "method_4": "--",
+                "method_5": "B",
+                "method_6": "Ö"
+              },
+              {
+                "name": "{{STAFF_3_NAME}}",
+                "method_1": "B",
+                "method_2": "B",
+                "method_3": "--",
+                "method_4": "Ö",
+                "method_5": "F",
+                "method_6": "B"
+              }
+            ]
+          },
+          "note": "A teljes kompetenciamátrix a Minőségirányítási Kézikönyv mellékleteiben található, a személyzeti nyilvántartás részeként."
         }
       }
     },
@@ -127,8 +194,20 @@
           "content": "A laboratórium folyamatosan monitorozza és dokumentálja a környezeti feltételeket. A hőmérsékletet és páratartalmat naplózó műszerek használata kötelező. Az adatokat a kalibrálási jegyzőkönyvekben rögzíteni kell.",
           "table": {
             "title": "Környezeti feltételek követelményei mérési típusonként",
-            "columns": ["measurement_type", "temperature", "humidity", "vibration", "other"],
-            "column_names": ["Mérés típusa", "Hőmérséklet", "Páratartalom", "Rezgés", "Egyéb követelmény"],
+            "columns": [
+              "measurement_type",
+              "temperature",
+              "humidity",
+              "vibration",
+              "other"
+            ],
+            "column_names": [
+              "Mérés típusa",
+              "Hőmérséklet",
+              "Páratartalom",
+              "Rezgés",
+              "Egyéb követelmény"
+            ],
             "data": [
               {
                 "measurement_type": "Hosszmérés (μm szint)",
@@ -209,8 +288,22 @@
           "content": "A laboratórium minden berendezésről nyilvántartást vezet, amely tartalmazza az eszköz azonosítóját, gyártóját, típusát, sorozatszámát, beszerzési dátumát, kalibrálási előzményeit és karbantartási történetét.",
           "table": {
             "title": "Berendezés nyilvántartás (részlet)",
-            "columns": ["equipment_id", "name", "manufacturer", "last_calibration", "next_calibration", "status"],
-            "column_names": ["Eszköz ID", "Megnevezés", "Gyártó", "Utolsó kalibráció", "Következő kalibráció", "Státusz"],
+            "columns": [
+              "equipment_id",
+              "name",
+              "manufacturer",
+              "last_calibration",
+              "next_calibration",
+              "status"
+            ],
+            "column_names": [
+              "Eszköz ID",
+              "Megnevezés",
+              "Gyártó",
+              "Utolsó kalibráció",
+              "Következő kalibráció",
+              "Státusz"
+            ],
             "data": [
               {
                 "equipment_id": "ME-001",
@@ -284,8 +377,20 @@
           "content": "A laboratórium nyilvántartást vezet a jóváhagyott beszállítókról, amely tartalmazza az értékelés eredményeit és az éves felülvizsgálat dátumát.",
           "table": {
             "title": "Jóváhagyott beszállítók jegyzéke",
-            "columns": ["supplier_name", "service_type", "accreditation", "evaluation_date", "next_review"],
-            "column_names": ["Beszállító neve", "Szolgáltatás típusa", "Akkreditáció", "Értékelés dátuma", "Következő felülvizsgálat"],
+            "columns": [
+              "supplier_name",
+              "service_type",
+              "accreditation",
+              "evaluation_date",
+              "next_review"
+            ],
+            "column_names": [
+              "Beszállító neve",
+              "Szolgáltatás típusa",
+              "Akkreditáció",
+              "Értékelés dátuma",
+              "Következő felülvizsgálat"
+            ],
             "data": [
               {
                 "supplier_name": "Országos Mérésügyi Hivatal (OMH)",

@@ -27,14 +27,9 @@
             "column_names": ["Pozíció", "Személy", "Felelősségi kör"],
             "data": [
               {
-                "position": "Ügyvezető igazgató",
-                "person": "Petri Tamás",
-                "responsibilities": "Társaság általános irányítása, stratégiai döntések"
-              },
-              {
-                "position": "Laboratóriumvezető",
-                "person": "Petri Tamás",
-                "responsibilities": "Laboratórium szakmai irányítása, akkreditáció fenntartása"
+                "position": "Ügyvezető / Laboratóriumvezető",
+                "person": "{{MANAGING_DIRECTOR}}",
+                "responsibilities": "Társaság általános irányítása, stratégiai döntések, laboratórium szakmai irányítása, akkreditáció fenntartása"
               },
               {
                 "position": "Minőségirányítási vezető",

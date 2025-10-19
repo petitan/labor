@@ -18,10 +18,7 @@ Example:
 """
 
 from .base_converter import BaseConverter
+from .calibration_converter import CalibrationConverter
 from .qms_converter import QMSConverter
 
-__all__ = ["BaseConverter", "QMSConverter"]
-
-# Calibration converter will be imported after implementation
-# from .calibration_converter import CalibrationConverter
-# __all__.append("CalibrationConverter")
+__all__ = ["BaseConverter", "CalibrationConverter", "QMSConverter"]

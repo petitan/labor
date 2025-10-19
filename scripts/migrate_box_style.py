@@ -76,12 +76,12 @@ def migrate_json_file(file_path: Path, dry_run: bool = False) -> tuple[int, int]
     """
     print(f"Processing: {file_path}")
 
-    with open(file_path, "r", encoding="utf-8") as f:
+    with file_path.open(encoding="utf-8") as f:
         data = json.load(f)
 
     # Feltételezzük docjl JSON struktúrát
     if "docjll" not in data:
-        print(f"  ⚠ Nincs 'docjll' kulcs, kihagyva.")
+        print("  ⚠ Nincs 'docjll' kulcs, kihagyva.")
         return (0, 0)
 
     blocks = data["docjll"]
@@ -104,7 +104,7 @@ def migrate_json_file(file_path: Path, dry_run: bool = False) -> tuple[int, int]
 
     # Mentés (ha nem dry run)
     if not dry_run and migrated_count > 0:
-        with open(file_path, "w", encoding="utf-8") as f:
+        with file_path.open("w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"  💾 Saved: {migrated_count}/{total_blocks} blocks migrated")
     elif dry_run and migrated_count > 0:
@@ -113,7 +113,7 @@ def migrate_json_file(file_path: Path, dry_run: bool = False) -> tuple[int, int]
     return (total_blocks, migrated_count)
 
 
-def main():
+def main() -> None:
     """Fő migráló logika."""
     if len(sys.argv) < 2:
         print("Usage: python migrate_box_style.py <file_or_directory> [--dry-run]")

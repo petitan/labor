@@ -84,6 +84,9 @@
       "pipeline": [
         {"transform": "format_info_box"}
       ]
+    },
+    "{{MANAGING_DIRECTOR}}": {
+      "source": "global.personnel.managing_director.name"
     }
   }
 }

@@ -1,20 +1,12 @@
-"""Tests for generic converter module."""
+"""Tests for CalibrationConverter (formerly generic converter)."""
 
 import json
 from pathlib import Path
 
 import pytest
 
-from labor.generic_converter import (
-    apply_transform,
-    convert_with_format,
-    expand_repeatable_lists,
-    expand_repeatable_tables,
-    get_nested_value,
-    replace_in_structure,
-    set_nested_value,
-    substitute_simple_placeholders,
-)
+from labor.converters import CalibrationConverter
+from labor.transforms import TransformRegistry
 
 # Paths
 EMISSION_INPUT_PATH = Path(__file__).parent.parent / "examples" / "emission_calibration_input.json"
@@ -25,59 +17,65 @@ FORMAT_PATH = Path(__file__).parent.parent / "src" / "labor" / "calibration_form
 class TestHelperFunctions:
     """Tests for helper functions."""
 
+    def setup_method(self):
+        """Setup converter instance for tests."""
+        self.converter = CalibrationConverter()
+
     def test_get_nested_value_simple(self):
         """Test getting value from simple path."""
         data = {"procedure_code": "KE-GEM-E-10"}
-        assert get_nested_value(data, "procedure_code") == "KE-GEM-E-10"
+        assert self.converter.get_nested_value(data, "procedure_code") == "KE-GEM-E-10"
 
     def test_get_nested_value_nested(self):
         """Test getting value from nested path."""
         data = {"scope": {"equipment_description": "Test equipment"}}
-        assert get_nested_value(data, "scope.equipment_description") == "Test equipment"
+        assert (
+            self.converter.get_nested_value(data, "scope.equipment_description") == "Test equipment"
+        )
 
     def test_get_nested_value_missing(self):
         """Test getting value with missing path."""
         data = {"procedure_code": "TEST"}
-        assert get_nested_value(data, "scope.missing", "default") == "default"
+        assert self.converter.get_nested_value(data, "scope.missing", "default") == "default"
 
     def test_get_nested_value_array(self):
         """Test getting array value."""
         data = {"references": ["Ref1", "Ref2", "Ref3"]}
-        assert get_nested_value(data, "references") == ["Ref1", "Ref2", "Ref3"]
+        assert self.converter.get_nested_value(data, "references") == ["Ref1", "Ref2", "Ref3"]
 
     def test_set_nested_value_simple(self):
         """Test setting value with simple path."""
         data: dict[str, str] = {}
-        set_nested_value(data, "procedure_code", "TEST-001")
+        self.converter.set_nested_value(data, "procedure_code", "TEST-001")
         assert data == {"procedure_code": "TEST-001"}
 
     def test_set_nested_value_nested(self):
         """Test setting value with nested path."""
         data: dict[str, dict[str, str]] = {}
-        set_nested_value(data, "scope.equipment_description", "Test")
+        self.converter.set_nested_value(data, "scope.equipment_description", "Test")
         assert data == {"scope": {"equipment_description": "Test"}}
 
     def test_replace_in_structure_string(self):
         """Test replacing placeholder in string."""
-        result = replace_in_structure("Code: {{CODE}}", "{{CODE}}", "TEST-001")
+        result = self.converter.replace_in_structure("Code: {{CODE}}", "{{CODE}}", "TEST-001")
         assert result == "Code: TEST-001"
 
     def test_replace_in_structure_dict(self):
         """Test replacing placeholder in dict."""
         obj = {"title": "{{TITLE}}", "code": "{{CODE}}"}
-        result = replace_in_structure(obj, "{{CODE}}", "TEST-001")
+        result = self.converter.replace_in_structure(obj, "{{CODE}}", "TEST-001")
         assert result == {"title": "{{TITLE}}", "code": "TEST-001"}
 
     def test_replace_in_structure_list(self):
         """Test replacing placeholder in list."""
         obj = ["{{CODE}}", "Fixed", {"nested": "{{CODE}}"}]
-        result = replace_in_structure(obj, "{{CODE}}", "TEST-001")
+        result = self.converter.replace_in_structure(obj, "{{CODE}}", "TEST-001")
         assert result == ["TEST-001", "Fixed", {"nested": "TEST-001"}]
 
     def test_apply_transform_join_with_comma(self):
         """Test join_with_comma transform."""
         value = ["Ref1", "Ref2", "Ref3"]
-        result = apply_transform(value, "join_with_comma")
+        result = TransformRegistry.apply("join_with_comma", value)
         assert result == "Ref1, Ref2, Ref3"
 
     def test_apply_transform_standards_description(self):
@@ -86,18 +84,22 @@ class TestHelperFunctions:
             {"name": "Standard 1", "accuracy": "0.01%"},
             {"name": "Standard 2", "accuracy": "0.02%"},
         ]
-        result = apply_transform(value, "standards_description")
+        result = TransformRegistry.apply("standards_description", value)
         assert "Standard 1 (Pontosság: 0.01%)" in result
         assert "Standard 2 (Pontosság: 0.02%)" in result
 
     def test_apply_transform_kmk_parameter_2_label(self):
         """Test kmk_parameter_2_label transform."""
-        result = apply_transform(2.0, "kmk_parameter_2_label")
+        result = TransformRegistry.apply("kmk_parameter_2_label", 2.0)
         assert result == "Bővített bizonytalanság (k=2.0)"
 
 
 class TestPlaceholderSubstitution:
     """Tests for placeholder substitution."""
+
+    def setup_method(self):
+        """Setup converter instance for tests."""
+        self.converter = CalibrationConverter()
 
     def test_substitute_simple_placeholders(self):
         """Test simple placeholder substitution."""
@@ -110,7 +112,7 @@ class TestPlaceholderSubstitution:
             }
         }
 
-        result = substitute_simple_placeholders(template, input_data, format_config)
+        result = self.converter.substitute_simple_placeholders(template, input_data, format_config)
         assert result["title"] == "Test Procedure"
         assert result["code"] == "TEST-001"
 
@@ -124,7 +126,7 @@ class TestPlaceholderSubstitution:
             }
         }
 
-        result = substitute_simple_placeholders(template, input_data, format_config)
+        result = self.converter.substitute_simple_placeholders(template, input_data, format_config)
         assert result["ranges"] == ["Range 1", "Range 2"]
 
     def test_substitute_custom_mappings(self):
@@ -137,12 +139,16 @@ class TestPlaceholderSubstitution:
             }
         }
 
-        result = substitute_simple_placeholders(template, input_data, format_config)
+        result = self.converter.substitute_simple_placeholders(template, input_data, format_config)
         assert result["references"] == "Ref1, Ref2, Ref3"
 
 
 class TestRepeatableBlocks:
     """Tests for repeatable block expansion."""
+
+    def setup_method(self):
+        """Setup converter instance for tests."""
+        self.converter = CalibrationConverter()
 
     def test_expand_repeatable_tables(self):
         """Test expanding table with variable rows."""
@@ -177,7 +183,7 @@ class TestRepeatableBlocks:
             }
         }
 
-        result = expand_repeatable_tables(template, input_data, format_config)
+        result = self.converter.expand_repeatable_tables(template, input_data, format_config)
         rows = result["docjll"][0]["rows"]
         assert len(rows) == 3
         assert rows[0] == ["CO", "$CO$", "%"]
@@ -221,7 +227,7 @@ class TestRepeatableBlocks:
             }
         }
 
-        result = expand_repeatable_lists(template, input_data, format_config)
+        result = self.converter.expand_repeatable_lists(template, input_data, format_config)
         items = result["docjll"][0]["items"]
         assert len(items) == 2
         assert items[0][0]["content"] == "h"
@@ -233,13 +239,17 @@ class TestRepeatableBlocks:
 class TestFullConversion:
     """Tests for full conversion with real data."""
 
+    def setup_method(self):
+        """Setup converter instance for tests."""
+        self.converter = CalibrationConverter()
+
     def test_convert_emission_data(self):
         """Test converting emission calibration data."""
         # This test requires all files to exist
         if not all([EMISSION_INPUT_PATH.exists(), TEMPLATE_PATH.exists(), FORMAT_PATH.exists()]):
             pytest.skip("Required files not found")
 
-        docjl_data = convert_with_format(
+        docjl_data = self.converter.convert(
             str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
@@ -257,7 +267,7 @@ class TestFullConversion:
         if not all([EMISSION_INPUT_PATH.exists(), TEMPLATE_PATH.exists(), FORMAT_PATH.exists()]):
             pytest.skip("Required files not found")
 
-        docjl_data = convert_with_format(
+        docjl_data = self.converter.convert(
             str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
@@ -276,7 +286,7 @@ class TestFullConversion:
         if not all([EMISSION_INPUT_PATH.exists(), TEMPLATE_PATH.exists(), FORMAT_PATH.exists()]):
             pytest.skip("Required files not found")
 
-        docjl_data = convert_with_format(
+        docjl_data = self.converter.convert(
             str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
@@ -304,7 +314,7 @@ class TestFullConversion:
         if not all([EMISSION_INPUT_PATH.exists(), TEMPLATE_PATH.exists(), FORMAT_PATH.exists()]):
             pytest.skip("Required files not found")
 
-        docjl_data = convert_with_format(
+        docjl_data = self.converter.convert(
             str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 
@@ -323,7 +333,7 @@ class TestFullConversion:
         if not all([EMISSION_INPUT_PATH.exists(), TEMPLATE_PATH.exists(), FORMAT_PATH.exists()]):
             pytest.skip("Required files not found")
 
-        docjl_data = convert_with_format(
+        docjl_data = self.converter.convert(
             str(EMISSION_INPUT_PATH), str(TEMPLATE_PATH), str(FORMAT_PATH)
         )
 

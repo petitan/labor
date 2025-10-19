@@ -6,9 +6,8 @@ Also provides reusable formatting helpers for creating docjl inline arrays.
 """
 
 # Import transform modules to trigger auto-registration
-import contextlib
-
 from . import (
+    calibration_transforms,  # noqa: F401
     common_transforms,  # noqa: F401
     qms_transforms,  # noqa: F401
 )
@@ -24,11 +23,6 @@ from .formatting_helpers import (
     make_plain_text,
 )
 from .registry import TransformRegistry
-
-# Try to import calibration_transforms if it exists (optional)
-# Type ignore needed because mypy can't verify optional module at static analysis time
-with contextlib.suppress(ImportError):
-    from . import calibration_transforms as _calibration_transforms  # type: ignore  # noqa: F401
 
 __all__ = [
     "TransformRegistry",

@@ -61,6 +61,30 @@
     "{{AUTHORIZATION_NOTE}}": {
       "source": "chapters.ch06.sections.personnel.subsections.authorization.note"
     },
+    "{{PERSONNEL_MATRIX_TITLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.personnel_competence_matrix.title"
+    },
+    "{{PERSONNEL_MATRIX_INTRO}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.personnel_competence_matrix.intro"
+    },
+    "{{PERSONNEL_MATRIX_TABLE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.personnel_competence_matrix.table",
+      "pipeline": [
+        {"transform": "format_longtable"}
+      ]
+    },
+    "{{PERSONNEL_MATRIX_NOTE}}": {
+      "source": "chapters.ch06.sections.personnel.subsections.personnel_competence_matrix.note"
+    },
+    "{{STAFF_1_NAME}}": {
+      "source": "global.personnel.calibration_staff[0].name"
+    },
+    "{{STAFF_2_NAME}}": {
+      "source": "global.personnel.calibration_staff[1].name"
+    },
+    "{{STAFF_3_NAME}}": {
+      "source": "global.personnel.calibration_staff[2].name"
+    },
     "{{FACILITIES_TITLE}}": {
       "source": "chapters.ch06.sections.facilities.title"
     },

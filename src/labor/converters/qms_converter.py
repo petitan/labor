@@ -3,7 +3,7 @@
 import copy
 from typing import Any
 
-from transforms import TransformRegistry
+from labor.transforms import TransformRegistry
 
 from .base_converter import BaseConverter
 
