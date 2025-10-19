@@ -63,6 +63,59 @@ def set_nested_value(data: dict, json_path: str, value: Any) -> None:
     current[keys[-1]] = value
 
 
+def is_inline_array_substitution(content: str, placeholder: str, value: Any) -> bool:
+    """
+    Check if this is an inline array substitution case.
+
+    An inline array substitution occurs when:
+    1. The content is EXACTLY the placeholder (e.g., "{symbol}")
+    2. The value is a list (inline array structure)
+
+    Args:
+        content: Template part content
+        placeholder: Placeholder string (e.g., "{symbol}")
+        value: Field value from input data
+
+    Returns:
+        True if this should be replaced with inline array
+
+    Example:
+        >>> is_inline_array_substitution("{symbol}", "{symbol}", [{"type": "math", "content": "x"}])
+        True
+        >>> is_inline_array_substitution("{symbol}", "{symbol}", "x")
+        False
+        >>> is_inline_array_substitution("Text {symbol}", "{symbol}", [{"type": "math"}])
+        False
+    """
+    return content.strip() == placeholder and isinstance(value, list)
+
+
+def convert_table_cell_value(value: Any) -> str | list[Any]:
+    """
+    Convert a value for table cell usage.
+
+    Preserves inline array structure (lists) as-is for docjl rendering.
+    Converts all other types to strings.
+
+    Args:
+        value: Cell value from input data
+
+    Returns:
+        Inline array (list) if value is a list, otherwise string
+
+    Example:
+        >>> convert_table_cell_value([{"type": "math", "content": "x"}])
+        [{'type': 'math', 'content': 'x'}]
+        >>> convert_table_cell_value("text")
+        'text'
+        >>> convert_table_cell_value(42)
+        '42'
+    """
+    if isinstance(value, list):
+        return value  # Preserve inline array structure
+    return str(value)  # Convert to string for all other types
+
+
 def replace_in_structure(obj: Any, placeholder: str, value: str) -> Any:
     """
     Recursively replace placeholder in any data structure.
@@ -169,6 +222,75 @@ def substitute_simple_placeholders(
     return result
 
 
+def _matches_table_identification(block: dict, identification: dict) -> bool:
+    """
+    Check if table block matches identification criteria.
+
+    Args:
+        block: Table block to check
+        identification: Identification criteria (has_note_containing, has_caption_containing)
+
+    Returns:
+        True if block matches all criteria
+    """
+    note = block.get("note", "")
+    caption = block.get("caption", "")
+
+    note_match = (
+        "has_note_containing" not in identification or identification["has_note_containing"] in note
+    )
+    caption_match = (
+        "has_caption_containing" not in identification
+        or identification["has_caption_containing"] in caption
+    )
+
+    return note_match and caption_match
+
+
+def _find_table_block(docjll_blocks: list[dict], identification: dict) -> int | None:
+    """
+    Find matching table block index in docjll based on identification criteria.
+
+    Args:
+        docjll_blocks: List of docjll blocks
+        identification: Identification criteria
+
+    Returns:
+        Index of matching block, or None if not found
+    """
+    for i, block in enumerate(docjll_blocks):
+        if block.get("type") != "table":
+            continue
+
+        if _matches_table_identification(block, identification):
+            return i
+
+    return None
+
+
+def _build_table_rows(source_data: list[dict], row_fields: list[str]) -> list[list[Any]]:
+    """
+    Build table rows from source data.
+
+    Args:
+        source_data: List of data items
+        row_fields: Field names for each column
+
+    Returns:
+        List of table rows (each row is a list of cell values)
+    """
+    new_rows: list[list[Any]] = []
+
+    for item in source_data:
+        row: list[str | list[Any]] = []
+        for field in row_fields:
+            value = item.get(field, "")
+            row.append(convert_table_cell_value(value))
+        new_rows.append(row)
+
+    return new_rows
+
+
 def expand_repeatable_tables(template_data: dict, input_data: dict, format_config: dict) -> dict:
     """
     Expand tables with variable number of rows based on input data.
@@ -197,47 +319,109 @@ def expand_repeatable_tables(template_data: dict, input_data: dict, format_confi
         identification = block_config.get("identification", {})
         row_fields = block_config.get("row_fields", [])
 
-        for i, block in enumerate(result.get("docjll", [])):
-            if block.get("type") != "table":
-                continue
+        block_index = _find_table_block(result.get("docjll", []), identification)
+        if block_index is None:
+            continue
 
-            # Check identification criteria
-            note = block.get("note", "")
-            caption = block.get("caption", "")
-
-            matches = True
-            if (
-                "has_note_containing" in identification
-                and identification["has_note_containing"] not in note
-            ):
-                matches = False
-            if (
-                "has_caption_containing" in identification
-                and identification["has_caption_containing"] not in caption
-            ):
-                matches = False
-
-            if not matches:
-                continue
-
-            # Found matching table - expand rows
-            new_rows: list[list[Any]] = []
-            for item in source_data:
-                row: list[str | list[Any]] = []
-                for field in row_fields:
-                    value = item.get(field, "")
-                    # Megőrizzük az inline array struktúrát (lista)
-                    # Ha value lista (inline array), akkor NEM konvertáljuk string-re!
-                    if isinstance(value, list):
-                        row.append(value)  # Inline array megőrzése
-                    else:
-                        row.append(str(value))  # String konverzió csak nem-lista esetén
-                new_rows.append(row)
-
-            result["docjll"][i]["rows"] = new_rows
-            break
+        # Build and replace rows
+        new_rows = _build_table_rows(source_data, row_fields)
+        result["docjll"][block_index]["rows"] = new_rows
 
     return result
+
+
+def _find_list_block(docjll_blocks: list[dict], identification: dict) -> int | None:
+    """
+    Find matching list block index in docjll based on identification criteria.
+
+    Args:
+        docjll_blocks: List of docjll blocks
+        identification: Identification criteria (e.g., has_items_containing)
+
+    Returns:
+        Index of matching block, or None if not found
+    """
+    for i, block in enumerate(docjll_blocks):
+        if block.get("type") != "list_unordered":
+            continue
+
+        # Check identification criteria
+        items = block.get("items", [])
+        items_str = json.dumps(items)
+
+        if (
+            "has_items_containing" in identification
+            and identification["has_items_containing"] in items_str
+        ):
+            return i
+
+    return None
+
+
+def _process_template_part(
+    template_part: dict, item_data: dict
+) -> tuple[list[dict] | None, dict | None]:
+    """
+    Process a single template part with item data.
+
+    Args:
+        template_part: Template part to process
+        item_data: Data for this item
+
+    Returns:
+        Tuple of (inline_array_elements, processed_part)
+        - If inline array substitution: (array_elements, None)
+        - If normal substitution: (None, processed_part)
+    """
+    part = copy.deepcopy(template_part)
+
+    if "content" not in part:
+        return (None, part)
+
+    content = part["content"]
+
+    # Check for inline array substitution
+    for field, value in item_data.items():
+        placeholder = f"{{{field}}}"
+
+        if is_inline_array_substitution(content, placeholder, value):
+            # Return inline array elements (list of dicts)
+            return (value, None)
+
+    # Normal placeholder replacement
+    for field, value in item_data.items():
+        placeholder = f"{{{field}}}"
+        value_str = str(value) if not isinstance(value, list) else json.dumps(value)
+        content = content.replace(placeholder, value_str)
+
+    part["content"] = content
+    return (None, part)
+
+
+def _build_list_item(item_template: list[dict], item_data: dict) -> list[dict]:
+    """
+    Build a list item from template and data.
+
+    Args:
+        item_template: Template for list item
+        item_data: Data for this item
+
+    Returns:
+        Processed list item (list of dicts)
+    """
+    new_item = []
+
+    for template_part in item_template:
+        inline_array, processed_part = _process_template_part(template_part, item_data)
+
+        if inline_array is not None:
+            # Inline array substitution: extend with array elements
+            new_item.extend(inline_array)
+        elif processed_part is not None:
+            # Normal part: append
+            new_item.append(processed_part)
+
+    return new_item
 
 
 def expand_repeatable_lists(template_data: dict, input_data: dict, format_config: dict) -> dict:
@@ -268,45 +452,15 @@ def expand_repeatable_lists(template_data: dict, input_data: dict, format_config
         identification = block_config.get("identification", {})
         item_template = block_config.get("item_template", [])
 
-        for i, block in enumerate(result.get("docjll", [])):
-            if block.get("type") != "list_unordered":
-                continue
+        block_index = _find_list_block(result.get("docjll", []), identification)
+        if block_index is None:
+            continue
 
-            # Check identification criteria
-            items = block.get("items", [])
-            items_str = json.dumps(items)
+        # Build new items from source data
+        new_items = [_build_list_item(item_template, item_data) for item_data in source_data]
 
-            matches = True
-            if (
-                "has_items_containing" in identification
-                and identification["has_items_containing"] not in items_str
-            ):
-                matches = False
-
-            if not matches:
-                continue
-
-            # Found matching list - expand items
-            new_items = []
-            for item_data in source_data:
-                # Build item from template
-                new_item = []
-                for template_part in item_template:
-                    part = copy.deepcopy(template_part)
-
-                    # Replace {field} placeholders with actual data
-                    if "content" in part:
-                        content = part["content"]
-                        for field, value in item_data.items():
-                            content = content.replace(f"{{{field}}}", str(value))
-                        part["content"] = content
-
-                    new_item.append(part)
-
-                new_items.append(new_item)
-
-            result["docjll"][i]["items"] = new_items
-            break
+        # Replace items in result
+        result["docjll"][block_index]["items"] = new_items
 
     return result
 

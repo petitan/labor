@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "1.0",
+  "description": "Universal calibration procedure format configuration. Maps input data to template placeholders for any calibration procedure type.",
+
+  "simple_mappings": {
+    "{{MELLEKLET_ID}}": "procedure_code",
+    "{{ELJARAS_CIM}}": "procedure_title_short",
+    "{{ELJARAS_KOD}}": "procedure_code",
+    "{{ELJARAS_CIM_TELJES}}": "procedure_title",
+    "{{MERESI_TARTOMANY}}": "measurement_range",
+    "{{PONTOSSAGI_KOVETELMENY}}": "accuracy_requirement",
+    "{{VERZIO}}": "version",
+    "{{HATALYBALEPES_DATUM}}": "effective_date",
+    "{{JOVAHAGYTA}}": "approved_by",
+
+    "{{BERENDEZES_LEIRAS}}": "scope.equipment_description",
+    "{{ELJARAS_TIPUS}}": "scope.procedure_type",
+    "{{MUKODESI_ELV}}": "scope.working_principle",
+
+    "{{KALIBRALASI_MODSZER}}": "calibration_method.method_description",
+    "{{MERES_EGYENLET}}": "calibration_method.measurement_equation",
+    "{{HOMERSEKLET_HATASA}}": "calibration_method.influence_quantities.temperature",
+    "{{LEGNYOMAS_HATASA}}": "calibration_method.influence_quantities.pressure",
+    "{{PARATARTALOM_HATASA}}": "calibration_method.influence_quantities.humidity",
+
+    "{{METROLOGIAI_JELLEMZOK}}": "metrological_characteristics",
+
+    "{{HOMERSEKLET_MIN}}": "environmental_conditions.temperature.min",
+    "{{HOMERSEKLET_MAX}}": "environmental_conditions.temperature.max",
+    "{{HOMERSEKLET_MEGJEGYZES}}": "environmental_conditions.temperature.notes",
+    "{{PARATARTALOM_MIN}}": "environmental_conditions.humidity.min",
+    "{{PARATARTALOM_MAX}}": "environmental_conditions.humidity.max",
+    "{{PARATARTALOM_MEGJEGYZES}}": "environmental_conditions.humidity.notes",
+    "{{STABILIZALODASI_IDO}}": "environmental_conditions.stabilization_time",
+
+    "{{ATVETEL_LEIRAS}}": "preparation.acceptance_conditions",
+    "{{JELOLES_LEIRAS}}": "preparation.identification",
+    "{{ELOKESZITES_LEIRAS}}": "preparation.preparation_procedure",
+    "{{ETALON_ELOKESZITES}}": "preparation.standard_preparation",
+    "{{BIZTONSAG}}": "preparation.safety_measures",
+
+    "{{MUVELETI_SORREND}}": "calibration_procedure.operational_sequence",
+    "{{SZAMITAS_LEIRAS}}": "calibration_procedure.calculation_procedure",
+    "{{BIZONYTALANSAG_LEIRAS}}": "calibration_procedure.uncertainty_determination",
+    "{{MINOSITES_SZABALY}}": "calibration_procedure.conformity_assessment",
+
+    "{{KOMPONENS_NEV}}": "uncertainty_budget.measurement_point",
+
+    "{{EREDMENY_KOZLES}}": "results.reporting_format",
+    "{{MUSZAKI_NEV}}": "results.example_serial_number",
+
+    "{{VALIDALAS_NYILATKOZAT}}": "validation.statement"
+  },
+
+  "array_mappings": {
+    "scope.measurement_ranges": {
+      "placeholders": ["{{TARTOMANY_1}}", "{{TARTOMANY_2}}", "{{TARTOMANY_3}}"]
+    },
+    "scope.applicable_to": {
+      "placeholders": ["{{ALKALMAZHATO_1}}", "{{ALKALMAZHATO_2}}", "{{ALKALMAZHATO_3}}"]
+    },
+    "scope.not_applicable_to": {
+      "placeholders": ["{{NEM_ALKALMAZHATO_1}}", "{{NEM_ALKALMAZHATO_2}}"]
+    },
+    "equipment.measuring_instruments": {
+      "placeholders": ["{{MEROESZKOZ_1}}", "{{MEROESZKOZ_2}}"]
+    },
+    "equipment.auxiliary_equipment": {
+      "placeholders": ["{{SEGEDESZKOZ_1}}", "{{SEGEDESZKOZ_2}}"]
+    }
+  },
+
+  "custom_mappings": {
+    "{{HIVATKOZASOK}}": {
+      "source": "references",
+      "transform": "join_with_comma"
+    },
+    "{{ETALONOK_LEIRAS}}": {
+      "source": "equipment.reference_standards",
+      "transform": "standards_description"
+    },
+    "{{KMK_PARAMETER_1}}": {
+      "source": "static",
+      "value": "Kombinált standard bizonytalanság"
+    },
+    "{{KMK_ERTEK_1}}": {
+      "source": "uncertainty_budget.combined_uncertainty"
+    },
+    "{{KMK_PARAMETER_2}}": {
+      "source": "uncertainty_budget.coverage_factor",
+      "transform": "kmk_parameter_2_label"
+    },
+    "{{KMK_ERTEK_2}}": {
+      "source": "uncertainty_budget.expanded_uncertainty"
+    }
+  },
+
+  "repeatable_blocks": {
+    "notations": {
+      "type": "table",
+      "source": "notations",
+      "identification": {
+        "type": "table",
+        "has_note_containing": "ISMÉTELHETŐ",
+        "has_caption_containing": "Jelölések"
+      },
+      "row_fields": ["name", "symbol", "unit"],
+      "placeholder_rows": [
+        ["{{JELOLES_1_NEV}}", "{{JELOLES_1_SZIMBOLUM}}", "{{JELOLES_1_EGYSEG}}"],
+        ["{{JELOLES_2_NEV}}", "{{JELOLES_2_SZIMBOLUM}}", "{{JELOLES_2_EGYSEG}}"],
+        ["{{JELOLES_3_NEV}}", "{{JELOLES_3_SZIMBOLUM}}", "{{JELOLES_3_EGYSEG}}"]
+      ]
+    },
+
+    "uncertainty_components": {
+      "type": "table",
+      "source": "uncertainty_budget.components",
+      "identification": {
+        "type": "table",
+        "has_note_containing": "ISMÉTELHETŐ",
+        "has_caption_containing": "Bizonytalansági"
+      },
+      "row_fields": ["source", "value", "distribution", "sensitivity", "contribution"],
+      "placeholder_rows": [
+        ["{{FORRAS_1}}", "{{ERTEK_1}}", "{{ELOSZLAS_1}}", "{{ERZEKENY_1}}", "{{JARULÉK_1}}"],
+        ["{{FORRAS_2}}", "{{ERTEK_2}}", "{{ELOSZLAS_2}}", "{{ERZEKENY_2}}", "{{JARULÉK_2}}"],
+        ["{{FORRAS_3}}", "{{ERTEK_3}}", "{{ELOSZLAS_3}}", "{{ERZEKENY_3}}", "{{JARULÉK_3}}"]
+      ]
+    },
+
+    "equation_variables": {
+      "type": "list_unordered",
+      "source": "calibration_method.equation_variables",
+      "identification": {
+        "type": "list_unordered",
+        "has_items_containing": "{{VALTOZO"
+      },
+      "item_template": [
+        {"type": "math", "content": "{symbol}"},
+        {"type": "text", "content": " -- {description} [{unit}]"}
+      ],
+      "placeholder_items": [
+        [
+          {"type": "math", "content": "{{VALTOZO_1}}"},
+          {"type": "text", "content": "{{VALTOZO_1_LEIRAS}} [{{VALTOZO_1_EGYSEG}}]"}
+        ],
+        [
+          {"type": "math", "content": "{{VALTOZO_2}}"},
+          {"type": "text", "content": "{{VALTOZO_2_LEIRAS}} [{{VALTOZO_2_EGYSEG}}]"}
+        ],
+        [
+          {"type": "math", "content": "{{VALTOZO_3}}"},
+          {"type": "text", "content": "{{VALTOZO_3_LEIRAS}} [{{VALTOZO_3_EGYSEG}}]"}
+        ]
+      ]
+    },
+
+    "measurement_results": {
+      "type": "table",
+      "source": "results.measurement_points",
+      "identification": {
+        "type": "table",
+        "has_caption_containing": "eredmény"
+      },
+      "row_fields": ["point", "result"],
+      "placeholder_rows": [
+        ["{{MERESI_PONT_1}}", "{{EREDMENY_1}}"],
+        ["{{MERESI_PONT_2}}", "{{EREDMENY_2}}"]
+      ]
+    },
+
+    "validation_criteria": {
+      "type": "table",
+      "source": "validation.criteria",
+      "identification": {
+        "type": "table",
+        "has_caption_containing": "kritérium"
+      },
+      "row_fields": ["criterion", "requirement", "result"],
+      "placeholder_rows": [
+        ["{{KRITERIUM_1}}", "{{KOVETELMENY_1}}", "{{TELJESITES_1}}"],
+        ["{{KRITERIUM_2}}", "{{KOVETELMENY_2}}", "{{TELJESITES_2}}"]
+      ]
+    }
+  }
+}

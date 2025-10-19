@@ -1,0 +1,322 @@
+{
+  "$comment": "Example input data for vehicle emission analyzer calibration procedure",
+  "procedure_code": "KE-GEM-E-10",
+  "procedure_title": "Gépjármű-emissziómérők kalibrálása",
+  "procedure_title_short": "Emissziómérő kalibrálás",
+  "measurement_range": "CO: 1% ; 3,5% (mol/mol), CO₂: 10% ; 14% (mol/mol), HC: 600 ppm ; 2000 ppm (mol/mol)",
+  "accuracy_requirement": "Infravörös sugárelnyelés elvén működő gázelemzők laboratóriumi és helyszíni kalibrálása",
+  "version": "1.0",
+  "effective_date": "2024-01-01",
+  "references": [
+    "KHVM rendelet 5/1990 (IV.12.) számú, 6. sz. melléklet",
+    "ILAC G8-09/2019 - Útmutató a CMC-k meghatározásához",
+    "EA-4/02 - Mérési bizonytalanság kifejezése kalibrálásban",
+    "ISO/IEC 17025:2018 - A vizsgáló- és kalibráló laboratóriumok felkészültségének általános követelményei",
+    "NAR-18 - NAT szabályzat a kalibrálólaboratóriumok akkreditálásához"
+  ],
+  "approved_by": "Dr. Kovács János (Minőségügyi vezető)",
+
+  "scope": {
+    "equipment_description": "Jelen eljárás az infravörös sugárelnyelés elvén működő gépjármű-emissziómérők kalibrálására vonatkozik, amelyek a kipufogógázban található CO, CO₂ és HC komponensek koncentrációját mérik.",
+    "measurement_ranges": [
+      "CO: 0-10% (mol/mol)",
+      "CO₂: 0-20% (mol/mol)",
+      "HC (propán referencia): 0-5000 ppm (mol/mol)"
+    ],
+    "procedure_type": "Összehasonlító mérés tanúsított gázelegyekkel",
+    "applicable_to": [
+      "NDIR (nem diszperzív infravörös) típusú gázelemzők",
+      "Műszaki vizsgáló állomások emissziómérő berendezései",
+      "Laboratóriumi gázelemző rendszerek"
+    ],
+    "not_applicable_to": [
+      "Paramágneses oxigénmérők (lásd: KE-GEM-E-11)",
+      "Elektrokémiai szenzorok (lásd: KE-GEM-E-12)",
+      "Hordozható füstmérő berendezések"
+    ],
+    "working_principle": "A kalibrálás során a műszert tanúsított gázelegyekkel táplálják. Az eszköz által mutatott érték és a tanúsítvány szerinti koncentráció különbsége adja a műszer hibáját minden egyes gázkomponensre."
+  },
+
+  "calibration_method": {
+    "method_description": "A kalibrálást összehasonlító módszerrel végezzük tanúsított referencia gázelegyekkel. Minden komponenst 2 különböző koncentrációs szinten mérünk: alacsony (idle) és magas (2500 rpm) tartományban.",
+    "measurement_equation": "h = X_m - X_h + \\delta_{et} + \\delta_{felb} + \\delta_{ism}",
+    "equation_variables": [
+      {
+        "symbol": "h",
+        "description": "a mérés hibája",
+        "unit": "[(ppm)n/n; (%)n/n)]"
+      },
+      {
+        "symbol": "X_m",
+        "description": "mért koncentráció érték",
+        "unit": "[(ppm)n/n; (%)n/n)]"
+      },
+      {
+        "symbol": "X_h",
+        "description": "helyes (referencia) érték",
+        "unit": "[(ppm)n/n; (%)n/n)]"
+      },
+      {
+        "symbol": "\\delta_{et}",
+        "description": "az etalonból (tanúsított gázelegy) eredő bizonytalansági összetevő",
+        "unit": "[(ppm)n/n; (%)n/n)]"
+      },
+      {
+        "symbol": "\\delta_{felb}",
+        "description": "a kijelzés felbontásából eredő bizonytalansági összetevő",
+        "unit": "[(ppm)n/n; (%)n/n)]"
+      },
+      {
+        "symbol": "\\delta_{ism}",
+        "description": "az ismétlőképességből eredő bizonytalansági összetevő",
+        "unit": "[(ppm)n/n; (%)n/n)]"
+      }
+    ],
+    "influence_quantities": {
+      "temperature": "±0.02% / °C (IR cella hőmérséklet függése)",
+      "pressure": "±0.1% / kPa (gáznyomás hatás)",
+      "humidity": "vizsgálandó gáz nedvességtartalmától függően ±0.5%"
+    }
+  },
+
+  "metrological_characteristics": "Komponensenként mért hiba, linearitás, ismételhetőség, driftjellemzők, válaszidő.",
+
+  "notations": [
+    {
+      "name": "Szén-monoxid koncentráció",
+      "symbol": "$CO$",
+      "unit": "% (mol/mol)"
+    },
+    {
+      "name": "Szén-dioxid koncentráció",
+      "symbol": "$CO_2$",
+      "unit": "% (mol/mol)"
+    },
+    {
+      "name": "Szénhidrogén koncentráció (propán ekvivalens)",
+      "symbol": "$HC$ $(C_3H_8)$",
+      "unit": "ppm (mol/mol)"
+    },
+    {
+      "name": "Mért érték",
+      "symbol": "$X_m$",
+      "unit": "[(ppm)n/n; (%)n/n)]"
+    },
+    {
+      "name": "Helyes (referencia) érték",
+      "symbol": "$X_h$",
+      "unit": "[(ppm)n/n; (%)n/n)]"
+    },
+    {
+      "name": "Mérési hiba",
+      "symbol": "$h$",
+      "unit": "[(ppm)n/n; (%)n/n)]"
+    },
+    {
+      "name": "Bővített mérési bizonytalanság",
+      "symbol": "$U$",
+      "unit": "[(ppm)n/n; (%)n/n)]"
+    }
+  ],
+
+  "equipment": {
+    "reference_standards": [
+      {
+        "name": "Tanúsított anyagminták CO 1,00% (n/n)",
+        "serial_number": "CRM-CO-1000-2024",
+        "accuracy": "0,01% (n/n)",
+        "calibration_valid_until": "2025-06-30"
+      },
+      {
+        "name": "Tanúsított anyagminták CO 3,50% (n/n)",
+        "serial_number": "CRM-CO-3500-2024",
+        "accuracy": "0,02% (n/n)",
+        "calibration_valid_until": "2025-06-30"
+      },
+      {
+        "name": "Tanúsított anyagminták CO₂ 10,00% (n/n)",
+        "serial_number": "CRM-CO2-1000-2024",
+        "accuracy": "0,03% (n/n)",
+        "calibration_valid_until": "2025-06-30"
+      },
+      {
+        "name": "Tanúsított anyagminták CO₂ 14,00% (n/n)",
+        "serial_number": "CRM-CO2-1400-2024",
+        "accuracy": "0,06% (n/n)",
+        "calibration_valid_until": "2025-06-30"
+      },
+      {
+        "name": "Tanúsított anyagminták C₃H₈ 600 ppm (n/n)",
+        "serial_number": "CRM-C3H8-0600-2024",
+        "accuracy": "4 ppm (n/n)",
+        "calibration_valid_until": "2025-06-30"
+      },
+      {
+        "name": "Tanúsított anyagminták C₃H₈ 2000 ppm (n/n)",
+        "serial_number": "CRM-C3H8-2000-2024",
+        "accuracy": "8 ppm (n/n)",
+        "calibration_valid_until": "2025-06-30"
+      }
+    ],
+    "measuring_instruments": [
+      "Digitális hőmérő (±0.1°C)",
+      "Digitális barométer (±0.5 hPa)",
+      "Gázáramlás szabályozó (0-2 l/min, ±2%)"
+    ],
+    "auxiliary_equipment": [
+      "Gázpalack nyomáscsökkentő szelep",
+      "PTFE gázvezető csövek (6 mm)",
+      "Gyorscsatlakozók (Swagelok típus)",
+      "Gáz-kibocsátó ventilátor (szellőztetéshez)"
+    ]
+  },
+
+  "environmental_conditions": {
+    "temperature": {
+      "min": 20,
+      "max": 25,
+      "notes": "IR cella hőmérséklet-stabilizálása kritikus"
+    },
+    "humidity": {
+      "min": 30,
+      "max": 70,
+      "notes": "Kondenzációmentes, gázvezetéki szárazság ellenőrzése"
+    },
+    "stabilization_time": "A műszert minimum 30 percig melegedni kell hagyni bekapcsolva, mielőtt a kalibrálás megkezdődik. A referencia gázokat 2 órával korábban be kell hozni a laboratóriumba."
+  },
+
+  "preparation": {
+    "acceptance_conditions": "Ellenőrizni kell a műszer épségét, gázcsatlakozók tömítettségét, optikai elemek tisztaságát, kijelző működését.",
+    "identification": "A műszert egyedi azonosítóval látjuk el a LIMS rendszerben (emissziós eszközök kategória).",
+    "preparation_procedure": "Vizuális ellenőrzés, nullapont beállítás, leak test (szivárgás teszt), IR cella tisztítása szükség esetén.",
+    "standard_preparation": "A tanúsított gázpalackokat nyomáscsökkentő szeleppel felszereljük. A gázvezetéket 2 percig átöblítjük minden komponens mérése előtt.",
+    "safety_measures": "A gázpalackokat álló helyzetben rögzíteni kell. A helyiséget folyamatosan szellőztetni kell. CO gáz veszélyes, ezért CO-detektor alkalmazása kötelező."
+  },
+
+  "calibration_procedure": {
+    "operational_sequence": "1. Műszer bemelegítése (30 perc), 2. Nullapont ellenőrzés (tiszta levegő/N₂), 3. CO alacsony szint (1%), 4. CO magas szint (3.5%), 5. CO₂ alacsony szint (10%), 6. CO₂ magas szint (14%), 7. HC alacsony szint (600 ppm), 8. HC magas szint (2000 ppm), 9. Adatok rögzítése.",
+    "calculation_procedure": "A mérési hibát minden komponensre és minden szintre kiszámítjuk: h = X_m - X_h. A linearitást a két mérési pont közötti egyenestől való eltéréssel jellemezzük.",
+    "uncertainty_determination": "A bizonytalanságot az EA-4/02 útmutató szerint számítjuk, figyelembe véve a referencia gázelegy bizonytalanságát, a kijelzés felbontását és az ismétlőképességet.",
+    "conformity_assessment": "A műszer megfelelő, ha minden komponensnél és minden szintnél a mérési hiba az előírt tűréshatáron belül van (KHVM rendelet szerint)."
+  },
+
+  "uncertainty_budget": {
+    "measurement_point": "CO 3.5% mérési pont",
+    "components": [
+      {
+        "source": "Referencia gázelegy (tanúsítvány)",
+        "value": "0.02% (n/n)",
+        "distribution": "normál",
+        "sensitivity": "1.0",
+        "contribution": "0.020%"
+      },
+      {
+        "source": "Kijelzés felbontása",
+        "value": "0.01% (n/n)",
+        "distribution": "egyenletes",
+        "sensitivity": "1.0",
+        "contribution": "0.006%"
+      },
+      {
+        "source": "Ismételhetőség (5 mérés szórása)",
+        "value": "0.015% (n/n)",
+        "distribution": "normál",
+        "sensitivity": "1.0",
+        "contribution": "0.015%"
+      },
+      {
+        "source": "Hőmérséklet hatás",
+        "value": "0.014% (n/n)",
+        "distribution": "egyenletes",
+        "sensitivity": "0.5",
+        "contribution": "0.007%"
+      },
+      {
+        "source": "Nyomás hatás",
+        "value": "0.007% (n/n)",
+        "distribution": "egyenletes",
+        "sensitivity": "0.5",
+        "contribution": "0.004%"
+      }
+    ],
+    "combined_uncertainty": "0.027% (n/n)",
+    "coverage_factor": 2.0,
+    "expanded_uncertainty": "0.054% (n/n)",
+    "degrees_of_freedom": 30
+  },
+
+  "results": {
+    "reporting_format": "Az eredményeket a KE-GEM-J-10 kalibrálási jegyzőkönyv formátumban adjuk ki, amely tartalmazza minden komponens hibáját mindkét szinten, a bizonytalanságot és a megfelelőségi nyilatkozatot.",
+    "measurement_points": [
+      {
+        "point": "CO 1.00% (idle)",
+        "result": "$h = -0.02 \\pm 0.05$ % (n/n)"
+      },
+      {
+        "point": "CO 3.50% (2500 rpm)",
+        "result": "$h = +0.03 \\pm 0.05$ % (n/n)"
+      },
+      {
+        "point": "CO₂ 10.00% (idle)",
+        "result": "$h = -0.04 \\pm 0.06$ % (n/n)"
+      },
+      {
+        "point": "CO₂ 14.00% (2500 rpm)",
+        "result": "$h = +0.02 \\pm 0.08$ % (n/n)"
+      },
+      {
+        "point": "HC 600 ppm (idle)",
+        "result": "$h = -3 \\pm 8$ ppm (n/n)"
+      },
+      {
+        "point": "HC 2000 ppm (2500 rpm)",
+        "result": "$h = +5 \\pm 12$ ppm (n/n)"
+      }
+    ],
+    "example_serial_number": "EMI-2024-042"
+  },
+
+  "validation": {
+    "statement": "Jelen eljárást 2024. január 5-én validáltuk egy ismert összetételű gázelegy-mintával. A mért koncentrációk mindhárom komponensnél a tanúsítvány szerinti értékektől a mérési bizonytalanságon belül tértek el.",
+    "validation_date": "2024-01-05",
+    "criteria": [
+      {
+        "criterion": "CO mérési bizonytalanság",
+        "requirement": "$U < 0.1$ % (n/n)",
+        "result": "✓ MEGFELEL ($U = 0.054$ % n/n)"
+      },
+      {
+        "criterion": "CO₂ mérési bizonytalanság",
+        "requirement": "$U < 0.15$ % (n/n)",
+        "result": "✓ MEGFELEL ($U = 0.08$ % n/n)"
+      },
+      {
+        "criterion": "HC mérési bizonytalanság",
+        "requirement": "$U < 20$ ppm (n/n)",
+        "result": "✓ MEGFELEL ($U = 12$ ppm n/n)"
+      },
+      {
+        "criterion": "Referencia gázok érvényessége",
+        "requirement": "Érvényes tanúsítvány",
+        "result": "✓ MEGFELEL (2025-06-30-ig)"
+      },
+      {
+        "criterion": "Linearitás",
+        "requirement": "R² > 0.998",
+        "result": "✓ MEGFELEL (R² = 0.9995)"
+      }
+    ]
+  },
+
+  "metadata": {
+    "created_date": "2024-01-01T10:00:00Z",
+    "created_by": "Nagy Péter (Kalibráló mérnök)",
+    "revision_history": [
+      {
+        "version": "1.0",
+        "date": "2024-01-01",
+        "changes": "Első kiadás az új KHVM rendelet alapján"
+      }
+    ]
+  }
+}

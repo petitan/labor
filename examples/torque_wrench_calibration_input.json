@@ -1,0 +1,302 @@
+{
+  "procedure_code": "PET-KAL-M-05",
+  "procedure_title": "Nyomatékulcsok kalibrálása összehasonlító módszerrel nyomaték-etalon használatával",
+  "procedure_title_short": "Nyomatékulcs kalibrálás",
+  "measurement_range": "10 -- 300 Nm",
+  "accuracy_requirement": "±3% leolvasás",
+  "version": "1.0",
+  "effective_date": "2025-01-15",
+  "references": [
+    "ISO/IEC 17025:2018",
+    "ISO 6789-1:2017 Assembly tools for screws and nuts — Hand torque tools",
+    "DIN 51309:2013 Testing of materials and components — Calibration of torque measuring devices",
+    "EA-4/02 M:2022",
+    "EURAMET cg-14 v2.0 (2021) Guidelines on the Calibration of Static Torque Measuring Devices"
+  ],
+  "approved_by": "Kalibrálólaboratórium vezetője",
+
+  "scope": {
+    "equipment_description": "Ez a kalibrálási eljárás kézi nyomatékulcsok (csavaró nyomatékmérő szerszámok) kalibrálására vonatkozik összehasonlító módszerrel. Az eljárás alkalmas kattanó típusú, mutató típusú és digitális nyomatékulcsok kalibrálására referenciaként szolgáló nyomaték-etalon használatával.",
+    "measurement_ranges": [
+      "10 -- 50 Nm",
+      "20 -- 100 Nm",
+      "50 -- 250 Nm",
+      "100 -- 300 Nm"
+    ],
+    "procedure_type": "Összehasonlító mérés nyomaték-etalon használatával",
+    "applicable_to": [
+      "Kattanó típusú nyomatékulcsok",
+      "Mutató típusú nyomatékulcsok",
+      "Digitális nyomatékulcsok",
+      "Előbeállítható nyomatékulcsok"
+    ],
+    "not_applicable_to": [
+      "Hidraulikus nyomatékulcsok",
+      "Pneumatikus nyomatékulcsok",
+      "Nyomatékszorzók",
+      "10 Nm alatti nyomatékulcsok"
+    ],
+    "working_principle": "A kalibrálás során a vizsgált nyomatékulcsot nyomaték-etalon berendezésre szereljük fel. A nyomatékulcs működtetése során mérjük a kifejtett nyomatékot és összehasonlítjuk a névleges értékkel. A mérés jobbra és balra forgásirányban is történik."
+  },
+
+  "calibration_method": {
+    "method_description": "A kalibrálás nyomaték-etalonnal történő összehasonlító módszerrel valósul meg. A nyomatékulcsot az etalon berendezés befogójába helyezzük és előírt sebességgel terheljük. Minden mérési pontban 5 mérést végzünk és a középértéket vesszük figyelembe.",
+    "measurement_equation": "\\Delta M = M_{\\text{mért}} - M_{\\text{beállított}}",
+    "equation_variables": [
+      {
+        "symbol": [{"type": "math", "content": "\\Delta M"}],
+        "description": "mérési hiba",
+        "unit": "Nm"
+      },
+      {
+        "symbol": [{"type": "math", "content": "M_{\\text{mért}}"}],
+        "description": "etalon által mért nyomaték értéke",
+        "unit": "Nm"
+      },
+      {
+        "symbol": [{"type": "math", "content": "M_{\\text{beállított}}"}],
+        "description": "nyomatékulcs beállított értéke",
+        "unit": "Nm"
+      }
+    ],
+    "influence_quantities": {
+      "temperature": "±0.05%/°C hőmérsékletfüggés. A kalibrálás során (23 ± 2)°C hőmérsékleten kell végezni a mérést.",
+      "humidity": "Nincs közvetlen hatás, de a korrózió elkerülése érdekében max. 60% relatív páratartalom megengedett.",
+      "loading_rate": "A terhelési sebesség 2-5 Nm/s között legyen a pontos mérés érdekében."
+    }
+  },
+
+  "metrological_characteristics": "Mérési hiba minden mérési pontban, ismétlőképesség, hisztérézis (ha van), irányérzékenység (jobbra/balra forgás)",
+
+  "notations": [
+    {
+      "name": "Mérési hiba",
+      "symbol": [{"type": "math", "content": "\\Delta M"}],
+      "unit": "Nm"
+    },
+    {
+      "name": "Mért nyomaték",
+      "symbol": [{"type": "math", "content": "M_{\\text{mért}}"}],
+      "unit": "Nm"
+    },
+    {
+      "name": "Beállított nyomaték",
+      "symbol": [{"type": "math", "content": "M_{\\text{beállított}}"}],
+      "unit": "Nm"
+    },
+    {
+      "name": "Relatív hiba",
+      "symbol": [{"type": "math", "content": "\\delta M"}],
+      "unit": "%"
+    },
+    {
+      "name": "Kombinált standard bizonytalanság",
+      "symbol": [{"type": "math", "content": "u_c"}],
+      "unit": "Nm"
+    },
+    {
+      "name": "Bővített bizonytalanság",
+      "symbol": "U",
+      "unit": "Nm"
+    },
+    {
+      "name": "Lefedési tényező",
+      "symbol": "k",
+      "unit": "-"
+    },
+    {
+      "name": "Ismétlőképesség",
+      "symbol": "R",
+      "unit": "%"
+    }
+  ],
+
+  "equipment": {
+    "reference_standards": [
+      {
+        "name": "Burster 8661 Nyomaték-etalon berendezés",
+        "serial_number": "TRQ2024001",
+        "accuracy": "±0.1% leolvasás (Class 0.1)",
+        "calibration_valid_until": "2025-11-20"
+      },
+      {
+        "name": "Norbar Pro-Test Nyomatékműszer kalibrálóberendezés",
+        "serial_number": "PT300-2023",
+        "accuracy": "±0.2% teljes skála",
+        "calibration_valid_until": "2025-09-15"
+      }
+    ],
+    "measuring_instruments": [
+      "Digitális hőmérő ±0.1°C pontossággal",
+      "Páratartalom mérő ±2% pontossággal",
+      "Asztali kronométer"
+    ],
+    "auxiliary_equipment": [
+      "Megfelelő befogóadapterek",
+      "Nyomatékulcs-tartó állvány",
+      "Tisztítószerek és kendők"
+    ]
+  },
+
+  "environmental_conditions": {
+    "temperature": {
+      "min": 20,
+      "max": 26,
+      "notes": "A kalibrálás ideje alatt (23 ± 2)°C. Folyamatos monitoring szükséges."
+    },
+    "humidity": {
+      "min": 30,
+      "max": 60,
+      "notes": "Nem párásodó környezet. RH ≤ 60%"
+    },
+    "stabilization_time": "Minimum 2 óra a labor környezetében a kalibrálás előtt. Nyomatékulcs előterhelése 3-szor a maximális értékkel."
+  },
+
+  "preparation": {
+    "acceptance_conditions": "A nyomatékulcs legyen tiszta, sértetlen, működőképes. Ellenőrizni kell a beállítási mechanizmus működését és a leolvashatóságot.",
+    "identification": "A nyomatékulcs típusának, gyártási számának, mérési tartományának dokumentálása. Fényképes dokumentáció készítése.",
+    "preparation_procedure": "Nyomatékulcs tisztítása, vizuális ellenőrzés, mechanikai sérülések keresése. Előterhelés végrehajtása a maximális értékkel 3-szor.",
+    "standard_preparation": "Etalon berendezés bemelegítése, nullpontbeállítás ellenőrzése, kalibráció érvényességének ellenőrzése.",
+    "safety_measures": "Megfelelő befogás ellenőrzése, túlterhelés elkerülése, biztonságos munkavégzés. Védőszemüveg használata ajánlott."
+  },
+
+  "calibration_procedure": {
+    "operational_sequence": "1) Környezeti feltételek ellenőrzése, 2) Etalon nullázása, 3) Nyomatékulcs befogása, 4) Mérési pontok felvétele növekvő sorrendben, 5) 5 ismétlés pontanként, 6) Jobbra és balra forgásirány, 7) Adatok rögzítése",
+    "calculation_procedure": "Minden mérési pontban számoljuk: mérési hibát (ΔM), relatív hibát (δM %), ismétlőképességet, irányérzékenységet. Statisztikai kiértékelés: átlag, szórás, min-max értékek.",
+    "uncertainty_determination": "A mérési bizonytalanság számítása a GUM szerint történik. Figyelembe vesszük: etalon bizonytalanságát, ismétlőképességet, hőmérséklet hatást, leolvasási bizonytalanságot.",
+    "conformity_assessment": "Megfelelőség értékelése az ISO 6789-1:2017 szerint. A mért értékeknek a ±3% tűrésmezőn belül kell lenniük minden mérési pontban."
+  },
+
+  "uncertainty_budget": {
+    "measurement_point": "200 Nm mérési pont",
+    "components": [
+      {
+        "source": "Etalon bizonytalansága",
+        "value": "0.4 Nm",
+        "distribution": "normál",
+        "sensitivity": "1.0",
+        "contribution": "0.40 Nm"
+      },
+      {
+        "source": "Ismétlőképesség",
+        "value": "0.8 Nm",
+        "distribution": "normál",
+        "sensitivity": "1.0",
+        "contribution": "0.80 Nm"
+      },
+      {
+        "source": "Hőmérséklet hatás",
+        "value": "0.2 Nm",
+        "distribution": "téglalap",
+        "sensitivity": "1.0",
+        "contribution": "0.12 Nm"
+      },
+      {
+        "source": "Leolvasási bizonytalanság",
+        "value": "0.1 Nm",
+        "distribution": "egyenletes",
+        "sensitivity": "1.0",
+        "contribution": "0.06 Nm"
+      },
+      {
+        "source": "Befogási excentricitás",
+        "value": "0.3 Nm",
+        "distribution": "egyenletes",
+        "sensitivity": "1.0",
+        "contribution": "0.17 Nm"
+      }
+    ],
+    "combined_uncertainty": "0.94 Nm",
+    "coverage_factor": 2.0,
+    "expanded_uncertainty": "1.9 Nm",
+    "degrees_of_freedom": 48
+  },
+
+  "acceptance_criteria": {
+    "decision_rule": "A döntési szabály az ILAC G8:09/2019 4.2.2. pontja szerint. Védősáv alkalmazása: w = U (mérési bizonytalansággal egyenlő). Megfelel ha |ΔM| ≤ MPE - U, ahol MPE = ±3% leolvasás a maximális megengedett hiba.",
+    "conformity_statement_rules": "Megfelelőségi nyilatkozat csak akkor adható ha a fenti kritérium teljesül minden mérési pontban és minden forgásirányban."
+  },
+
+  "results": {
+    "reporting_format": "A kalibrálási jegyzőkönyvben minden mérési pontban feltüntetjük: beállított értéket, etalon által mért értéket (5 mérés átlaga), mérési hibát (ΔM), relatív hibát (%), bővített bizonytalanságot (U, k=2), ismétlőképességet (%), irányérzékenységet.",
+    "measurement_points": [
+      {
+        "point": "20 Nm (20%)",
+        "result": [
+          {"type": "math", "content": "\\Delta M = +0.2 \\pm 0.8"},
+          {"type": "text", "content": " Nm (+1.0%)"}
+        ]
+      },
+      {
+        "point": "50 Nm (50%)",
+        "result": [
+          {"type": "math", "content": "\\Delta M = -0.4 \\pm 1.2"},
+          {"type": "text", "content": " Nm (-0.8%)"}
+        ]
+      },
+      {
+        "point": "100 Nm (100%)",
+        "result": [
+          {"type": "math", "content": "\\Delta M = +0.8 \\pm 1.5"},
+          {"type": "text", "content": " Nm (+0.8%)"}
+        ]
+      },
+      {
+        "point": "150 Nm (150%)",
+        "result": [
+          {"type": "math", "content": "\\Delta M = -0.6 \\pm 1.7"},
+          {"type": "text", "content": " Nm (-0.4%)"}
+        ]
+      },
+      {
+        "point": "200 Nm (200%)",
+        "result": [
+          {"type": "math", "content": "\\Delta M = +1.2 \\pm 1.9"},
+          {"type": "text", "content": " Nm (+0.6%)"}
+        ]
+      }
+    ],
+    "example_serial_number": "2025-TRQ-001"
+  },
+
+  "validation": {
+    "statement": "Az eljárás validálása laboratóriumi körülmények között történt 2024. december 15-én. A validálás során több különböző típusú és tartományú nyomatékulcsot kalibráltunk és ellenőriztük a következő kritériumokat.",
+    "validation_date": "2024-12-15",
+    "criteria": [
+      {
+        "criterion": "Mérési bizonytalanság",
+        "requirement": [
+          {"type": "math", "content": "U < 1.5\\%"},
+          {"type": "text", "content": " a beállított értékből"}
+        ],
+        "result": "✓ MEGFELELŐ (U = 0.95% @ 200 Nm)"
+      },
+      {
+        "criterion": "Ismétlőképesség",
+        "requirement": [
+          {"type": "math", "content": "R \\leq 1.0\\%"}
+        ],
+        "result": "✓ MEGFELELŐ (R = 0.8%)"
+      },
+      {
+        "criterion": "Irányérzékenység",
+        "requirement": [
+          {"type": "math", "content": "\\Delta M_{\\text{jobb-bal}} \\leq 2.0\\%"}
+        ],
+        "result": "✓ MEGFELELŐ (ΔM = 1.2%)"
+      },
+      {
+        "criterion": "Linearitás",
+        "requirement": [{"type": "math", "content": "R^2 \\geq 0.995"}],
+        "result": "✓ MEGFELELŐ (R² = 0.9978)"
+      },
+      {
+        "criterion": "Hisztérézis",
+        "requirement": [
+          {"type": "math", "content": "H \\leq 1.5\\%"}
+        ],
+        "result": "✓ MEGFELELŐ (H = 1.1%)"
+      }
+    ]
+  }
+}

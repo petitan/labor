@@ -25,6 +25,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{petitanmk}[2025/01/15 v1.0 PeTitan ISO 17025 Document Class]
 
+% ===== DOCJL PLUGIN KOMPATIBILITÁS =====
+% A docjl petitan_iso17025 plugin által használt parancsok
+% Ezek NO-OP dummy parancsok, hogy ne okozzanak hibát
+\newcommand{\petitandoctype}[1]{}  % Dokumentum típus - ignoráljuk
+\newcommand{\CompanyName}[1]{}     % Cég név - ignoráljuk
+\newcommand{\CompanyAddress}[1]{}  % Cég cím - ignoráljuk
+\newcommand{\CompanyTaxNumber}[1]{}  % Adószám - ignoráljuk
+
 % ===== ALAPÉRTELMEZETT OPCIÓK =====
 \newif\if@petitan@main\@petitan@maintrue
 \newif\if@petitan@chapter\@petitan@chapterfalse
